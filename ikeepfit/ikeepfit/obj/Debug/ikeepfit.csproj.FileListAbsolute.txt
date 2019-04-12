@@ -37,3 +37,9 @@ D:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\System.Web.WebPages.Deployment.resourc
 D:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.dll
 D:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.pdb
+D:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.csprojResolveAssemblyReference.cache
+D:\ikeepfit\ikeepfit\ikeepfit\bin\Antlr3.Runtime.dll
+D:\ikeepfit\ikeepfit\ikeepfit\bin\System.Web.Optimization.dll
+D:\ikeepfit\ikeepfit\ikeepfit\bin\WebGrease.dll
+D:\ikeepfit\ikeepfit\ikeepfit\bin\Antlr3.Runtime.pdb
+D:\ikeepfit\ikeepfit\ikeepfit\bin\System.Web.Optimization.xml
