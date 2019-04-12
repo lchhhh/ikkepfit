@@ -9,12 +9,12 @@ using ikeepfit.Models;
 
 namespace ikeepfit.Controllers
 {
-    public class PlanMarkController : Controller
+    public class PlanmarkController : Controller
     {
         private ikeepfitEntities db = new ikeepfitEntities();
 
         //
-        // GET: /PlanMark/
+        // GET: /Planmark/
 
         public ActionResult Index()
         {
@@ -23,7 +23,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // GET: /PlanMark/Details/5
+        // GET: /Planmark/Details/5
 
         public ActionResult Details(string id = null)
         {
@@ -36,7 +36,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // GET: /PlanMark/Create
+        // GET: /Planmark/Create
 
         public ActionResult Create()
         {
@@ -46,7 +46,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // POST: /PlanMark/Create
+        // POST: /Planmark/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -65,7 +65,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // GET: /PlanMark/Edit/5
+        // GET: /Planmark/Edit/5
 
         public ActionResult Edit(string id = null)
         {
@@ -80,7 +80,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // POST: /PlanMark/Edit/5
+        // POST: /Planmark/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -98,7 +98,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // GET: /PlanMark/Delete/5
+        // GET: /Planmark/Delete/5
 
         public ActionResult Delete(string id = null)
         {
@@ -111,7 +111,7 @@ namespace ikeepfit.Controllers
         }
 
         //
-        // POST: /PlanMark/Delete/5
+        // POST: /Planmark/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
