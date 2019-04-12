@@ -11,7 +11,7 @@ namespace ikeepfit.Controllers
 {
     public class PlandayController : Controller
     {
-        private ikeepfitEFContext db = new ikeepfitEFContext();
+        private ikeepfitEntities db = new ikeepfitEntities();
 
         //
         // GET: /Planday/
