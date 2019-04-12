@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{12089B47-A4F1-45DE-8404-26EAE88A37F8}</ProjectGuid>
+    <ProjectGuid>{60C2C1F0-C022-4DCF-B3FC-4575E9B6C91B}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -120,77 +120,77 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ikeepfitEF.Context.cs">
+    <Compile Include="Models\ikeepfitModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ikeepfitEF.Context.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ikeepfitEF.cs">
+    <Compile Include="Models\ikeepfitModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ikeepfitEF.Designer.cs">
+    <Compile Include="Models\ikeepfitModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ikeepfitEF.edmx</DependentUpon>
+      <DependentUpon>ikeepfitModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_article.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_articletype.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_course.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_course_day.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_food.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_foodtype.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_knowledge.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_knowledgemark.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_mark.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_plan.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_planday.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_planmark.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_user.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_userfans.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_userlike.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_user_collection.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_user_course.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mt_user_plan.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>ikeepfitEF.tt</DependentUpon>
+      <DependentUpon>ikeepfitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,24 +215,24 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\ikeepfitEF.edmx">
+    <EntityDeploy Include="Models\ikeepfitModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ikeepfitEF.Designer.cs</LastGenOutput>
+      <LastGenOutput>ikeepfitModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\ikeepfitEF.Context.tt">
+    <Content Include="Models\ikeepfitModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ikeepfitEF.edmx</DependentUpon>
-      <LastGenOutput>ikeepfitEF.Context.cs</LastGenOutput>
+      <DependentUpon>ikeepfitModel.edmx</DependentUpon>
+      <LastGenOutput>ikeepfitModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\ikeepfitEF.edmx.diagram">
-      <DependentUpon>ikeepfitEF.edmx</DependentUpon>
+    <Content Include="Models\ikeepfitModel.edmx.diagram">
+      <DependentUpon>ikeepfitModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\ikeepfitEF.tt">
+    <Content Include="Models\ikeepfitModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ikeepfitEF.edmx</DependentUpon>
-      <LastGenOutput>ikeepfitEF.cs</LastGenOutput>
+      <DependentUpon>ikeepfitModel.edmx</DependentUpon>
+      <LastGenOutput>ikeepfitModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -268,21 +268,6 @@
   <ItemGroup>
     <Content Include="Views\Planday\Delete.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Planmark\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Planmark\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Planmark\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Planmark\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Planmark\Delete.cshtml" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -299,9 +284,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61502</DevelopmentServerPort>
+          <DevelopmentServerPort>62972</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8788/</IISUrl>
+          <IISUrl>http://localhost:62972/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

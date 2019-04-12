@@ -35,6 +35,5 @@ D:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\System.Web.Razor.resources.dll
 D:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-D:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.csprojResolveAssemblyReference.cache
 D:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.dll
 D:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.pdb
