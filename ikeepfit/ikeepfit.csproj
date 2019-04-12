@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4D4AE2D3-8C43-482B-8B7D-710E45C3577E}</ProjectGuid>
+    <ProjectGuid>{12089B47-A4F1-45DE-8404-26EAE88A37F8}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -116,7 +116,7 @@
   <ItemGroup>
     <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Controllers\PlandayController.cs" />
-    <Compile Include="Controllers\PlanMarkController.cs" />
+    <Compile Include="Controllers\PlanmarkController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,19 +269,19 @@
     <Content Include="Views\Planday\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\PlanMark\Index.cshtml" />
+    <Content Include="Views\Planmark\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\PlanMark\Details.cshtml" />
+    <Content Include="Views\Planmark\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\PlanMark\Create.cshtml" />
+    <Content Include="Views\Planmark\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\PlanMark\Edit.cshtml" />
+    <Content Include="Views\Planmark\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\PlanMark\Delete.cshtml" />
+    <Content Include="Views\Planmark\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -299,7 +299,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>59934</DevelopmentServerPort>
+          <DevelopmentServerPort>61502</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:8788/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
