@@ -1,0 +1,1203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ikeepfitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="mt_article">
+          <Key>
+            <PropertyRef Name="mt_article_id" />
+          </Key>
+          <Property Name="mt_articletype_id" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_article_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="mt_article_title" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_article_time" Type="date" />
+          <Property Name="mt_article_like" Type="int" />
+          <Property Name="mt_article_look" Type="int" />
+          <Property Name="mt_article_collect" Type="int" />
+          <Property Name="mt_article_cotent" Type="nvarchar(max)" />
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mt_articletype">
+          <Key>
+            <PropertyRef Name="mt_articletype_id" />
+          </Key>
+          <Property Name="mt_articletype_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="mt_articletype_name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mt_course">
+          <Key>
+            <PropertyRef Name="mt_course_id" />
+          </Key>
+          <Property Name="mt_course_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_course_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_course_video" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="mt_course_day">
+          <Key>
+            <PropertyRef Name="mt_courseday_id" />
+          </Key>
+          <Property Name="mt_course_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_courseday_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_courseday_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_courseday_count" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_courseday_time" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_courseday_kcalorie" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_courseday_video" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="mt_food">
+          <Key>
+            <PropertyRef Name="mt_food_id" />
+          </Key>
+          <Property Name="mt_food_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_foodtype_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_remarks" Type="nvarchar(max)" />
+          <Property Name="mt_food_heat" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_prptein" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_ch" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_fat" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_cholesterol" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Mg" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Ca" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Fe" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Zn" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Cu" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Mn" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_Ka" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_fibrin" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_va" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_vc" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_ve" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_food_carotin" Type="nvarchar" MaxLength="10" />
+          <Property Name="Column_21" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="mt_foodtype">
+          <Key>
+            <PropertyRef Name="mt_foodtype_id" />
+          </Key>
+          <Property Name="mt_foodtype_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_foodtype_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_foodtype_remarks" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="mt_knowledge">
+          <Key>
+            <PropertyRef Name="mt_knowledge_id" />
+          </Key>
+          <Property Name="mt_knowledge_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_knowledge_title" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_knowledge_time" Type="date" />
+          <Property Name="mt_knowledge_remarks" Type="nvarchar(max)" />
+          <Property Name="mt_knowledge_content" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="mt_knowledgemark">
+          <Key>
+            <PropertyRef Name="mt_knowledgemark_id" />
+          </Key>
+          <Property Name="mt_knowledgemark_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_knowledge_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_mark_id" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="mt_mark">
+          <Key>
+            <PropertyRef Name="mt_mark_id" />
+          </Key>
+          <Property Name="mt_mark_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_mark_name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mt_plan">
+          <Key>
+            <PropertyRef Name="mt_plan_id" />
+          </Key>
+          <Property Name="mt_plan_id" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_plan_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_plan_title" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_plan_remarks" Type="nvarchar" MaxLength="50" />
+          <Property Name="mt_plan_week" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_plan_day" Type="int" />
+          <Property Name="mt_plan_strength" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="mt_planday">
+          <Key>
+            <PropertyRef Name="mt_planday_id" />
+          </Key>
+          <Property Name="mt_plan_id" Type="nchar" MaxLength="10" />
+          <Property Name="mt_planday_id" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_planday_day" Type="int" />
+          <Property Name="mt_planday_title" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_planday_remarks" Type="nvarchar(max)" />
+          <Property Name="mt_planday_video" Type="nvarchar(max)" />
+          <Property Name="mt_planday_step" Type="nvarchar" MaxLength="50" />
+          <Property Name="mt_planday_kcalorie" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="mt_planmark">
+          <Key>
+            <PropertyRef Name="mt_planmark_id" />
+          </Key>
+          <Property Name="mt_planmark_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_plan_id" Type="nchar" MaxLength="10" />
+          <Property Name="mt_mark_id" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="mt_user">
+          <Key>
+            <PropertyRef Name="mt_user_id" />
+          </Key>
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="mt_user_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_user_pwd" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_user_email" Type="nvarchar" MaxLength="20" />
+          <Property Name="mt_user_height" Type="float" />
+          <Property Name="mt_user_weight" Type="float" />
+          <Property Name="mt_user_birth" Type="date" />
+          <Property Name="mt_user_bodyfat" Type="float" />
+          <Property Name="mt_user_icon" Type="image" />
+        </EntityType>
+        <EntityType Name="mt_user_collection">
+          <Key>
+            <PropertyRef Name="mt_usercollect_id" />
+          </Key>
+          <Property Name="mt_usercollect_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_article_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_artitle_status" Type="int" />
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mt_user_course">
+          <Key>
+            <PropertyRef Name="mt_user_courseid" />
+          </Key>
+          <Property Name="mt_course_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_user_courseid" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_user_coursekday" Type="int" />
+          <Property Name="mt_usercourse_kmotion" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_usercourse_ktime" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_usercourse_kcalorie" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mt_user_plan">
+          <Key>
+            <PropertyRef Name="mt_user_planid" />
+          </Key>
+          <Property Name="mt_plan_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_user_planid" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_user_plankday" Type="int" />
+          <Property Name="mt_user_plankweek" Type="int" />
+          <Property Name="mt_user_planktime" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_user_plankcalorie" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mt_userfans">
+          <Key>
+            <PropertyRef Name="mt_userfans_id" />
+          </Key>
+          <Property Name="mt_userfans_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_userfans_followerid" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_userfans_followedid" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_userfans_status" Type="int" />
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mt_userlike">
+          <Key>
+            <PropertyRef Name="mt_userlike_id" />
+          </Key>
+          <Property Name="mt_userlike_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mt_article_id" Type="nvarchar" MaxLength="10" />
+          <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+          <End Role="mt_articletype" Type="Self.mt_articletype" Multiplicity="0..1" />
+          <End Role="mt_article" Type="Self.mt_article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_articletype">
+              <PropertyRef Name="mt_articletype_id" />
+            </Principal>
+            <Dependent Role="mt_article">
+              <PropertyRef Name="mt_articletype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_article_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_article" Type="Self.mt_article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_article">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_COURS_REFERENCE_MT_COURS">
+          <End Role="mt_course" Type="Self.mt_course" Multiplicity="0..1" />
+          <End Role="mt_course_day" Type="Self.mt_course_day" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_course">
+              <PropertyRef Name="mt_course_id" />
+            </Principal>
+            <Dependent Role="mt_course_day">
+              <PropertyRef Name="mt_course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_FOOD_REFERENCE_MT_FOODT">
+          <End Role="mt_foodtype" Type="Self.mt_foodtype" Multiplicity="0..1" />
+          <End Role="mt_food" Type="Self.mt_food" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_foodtype">
+              <PropertyRef Name="mt_foodtype_id" />
+            </Principal>
+            <Dependent Role="mt_food">
+              <PropertyRef Name="mt_foodtype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_KNOWL_REFERENCE_MT_KNOWL">
+          <End Role="mt_knowledge" Type="Self.mt_knowledge" Multiplicity="0..1" />
+          <End Role="mt_knowledgemark" Type="Self.mt_knowledgemark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_knowledge">
+              <PropertyRef Name="mt_knowledge_id" />
+            </Principal>
+            <Dependent Role="mt_knowledgemark">
+              <PropertyRef Name="mt_knowledge_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_KNOWL_REFERENCE_MT_MARK">
+          <End Role="mt_mark" Type="Self.mt_mark" Multiplicity="0..1" />
+          <End Role="mt_knowledgemark" Type="Self.mt_knowledgemark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_mark">
+              <PropertyRef Name="mt_mark_id" />
+            </Principal>
+            <Dependent Role="mt_knowledgemark">
+              <PropertyRef Name="mt_mark_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_PLAND_REFERENCE_MT_PLAN">
+          <End Role="mt_plan" Type="Self.mt_plan" Multiplicity="0..1" />
+          <End Role="mt_planday" Type="Self.mt_planday" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_plan">
+              <PropertyRef Name="mt_plan_id" />
+            </Principal>
+            <Dependent Role="mt_planday">
+              <PropertyRef Name="mt_plan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_PLANM_REFERENCE_MT_MARK">
+          <End Role="mt_mark" Type="Self.mt_mark" Multiplicity="0..1" />
+          <End Role="mt_planmark" Type="Self.mt_planmark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_mark">
+              <PropertyRef Name="mt_mark_id" />
+            </Principal>
+            <Dependent Role="mt_planmark">
+              <PropertyRef Name="mt_mark_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_PLANM_REFERENCE_MT_PLAN">
+          <End Role="mt_plan" Type="Self.mt_plan" Multiplicity="0..1" />
+          <End Role="mt_planmark" Type="Self.mt_planmark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_plan">
+              <PropertyRef Name="mt_plan_id" />
+            </Principal>
+            <Dependent Role="mt_planmark">
+              <PropertyRef Name="mt_plan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_USER__REFERENCE_MT_COURS">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_user_course" Type="Self.mt_user_course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_user_course">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_user_collection_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_user_collection" Type="Self.mt_user_collection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_user_collection">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_user_plan_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="0..1" />
+          <End Role="mt_user_plan" Type="Self.mt_user_plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_user_plan">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_userfans_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="0..1" />
+          <End Role="mt_userfans" Type="Self.mt_userfans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_userfans">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_userlike_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_userlike" Type="Self.mt_userlike" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_userlike">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ikeepfitModelStoreContainer">
+          <EntitySet Name="mt_article" EntityType="Self.mt_article" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_articletype" EntityType="Self.mt_articletype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_course" EntityType="Self.mt_course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_course_day" EntityType="Self.mt_course_day" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_food" EntityType="Self.mt_food" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_foodtype" EntityType="Self.mt_foodtype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_knowledge" EntityType="Self.mt_knowledge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_knowledgemark" EntityType="Self.mt_knowledgemark" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_mark" EntityType="Self.mt_mark" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_plan" EntityType="Self.mt_plan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_planday" EntityType="Self.mt_planday" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_planmark" EntityType="Self.mt_planmark" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_user" EntityType="Self.mt_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_user_collection" EntityType="Self.mt_user_collection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_user_course" EntityType="Self.mt_user_course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_user_plan" EntityType="Self.mt_user_plan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_userfans" EntityType="Self.mt_userfans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mt_userlike" EntityType="Self.mt_userlike" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC" Association="Self.FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+            <End Role="mt_articletype" EntitySet="mt_articletype" />
+            <End Role="mt_article" EntitySet="mt_article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_article_mt_user" Association="Self.FK_mt_article_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_article" EntitySet="mt_article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_COURS_REFERENCE_MT_COURS" Association="Self.FK_MT_COURS_REFERENCE_MT_COURS">
+            <End Role="mt_course" EntitySet="mt_course" />
+            <End Role="mt_course_day" EntitySet="mt_course_day" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_FOOD_REFERENCE_MT_FOODT" Association="Self.FK_MT_FOOD_REFERENCE_MT_FOODT">
+            <End Role="mt_foodtype" EntitySet="mt_foodtype" />
+            <End Role="mt_food" EntitySet="mt_food" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_KNOWL_REFERENCE_MT_KNOWL" Association="Self.FK_MT_KNOWL_REFERENCE_MT_KNOWL">
+            <End Role="mt_knowledge" EntitySet="mt_knowledge" />
+            <End Role="mt_knowledgemark" EntitySet="mt_knowledgemark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_KNOWL_REFERENCE_MT_MARK" Association="Self.FK_MT_KNOWL_REFERENCE_MT_MARK">
+            <End Role="mt_mark" EntitySet="mt_mark" />
+            <End Role="mt_knowledgemark" EntitySet="mt_knowledgemark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_PLAND_REFERENCE_MT_PLAN" Association="Self.FK_MT_PLAND_REFERENCE_MT_PLAN">
+            <End Role="mt_plan" EntitySet="mt_plan" />
+            <End Role="mt_planday" EntitySet="mt_planday" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_PLANM_REFERENCE_MT_MARK" Association="Self.FK_MT_PLANM_REFERENCE_MT_MARK">
+            <End Role="mt_mark" EntitySet="mt_mark" />
+            <End Role="mt_planmark" EntitySet="mt_planmark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_PLANM_REFERENCE_MT_PLAN" Association="Self.FK_MT_PLANM_REFERENCE_MT_PLAN">
+            <End Role="mt_plan" EntitySet="mt_plan" />
+            <End Role="mt_planmark" EntitySet="mt_planmark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_USER__REFERENCE_MT_COURS" Association="Self.FK_MT_USER__REFERENCE_MT_COURS">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_user_course" EntitySet="mt_user_course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_user_collection_mt_user" Association="Self.FK_mt_user_collection_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_user_collection" EntitySet="mt_user_collection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_user_plan_mt_user" Association="Self.FK_mt_user_plan_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_user_plan" EntitySet="mt_user_plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_userfans_mt_user" Association="Self.FK_mt_userfans_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_userfans" EntitySet="mt_userfans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_userlike_mt_user" Association="Self.FK_mt_userlike_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_userlike" EntitySet="mt_userlike" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ikeepfitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="mt_article">
+          <Key>
+            <PropertyRef Name="mt_article_id" />
+          </Key>
+          <Property Name="mt_articletype_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_article_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_article_title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_article_time" Type="DateTime" Precision="0" />
+          <Property Name="mt_article_like" Type="Int32" />
+          <Property Name="mt_article_look" Type="Int32" />
+          <Property Name="mt_article_collect" Type="Int32" />
+          <Property Name="mt_article_cotent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="mt_articletype" Relationship="Self.FK_MT_ARTIC_REFERENCE_MT_ARTIC" FromRole="mt_article" ToRole="mt_articletype" />
+          <NavigationProperty Name="mt_user" Relationship="Self.FK_mt_article_mt_user" FromRole="mt_article" ToRole="mt_user" />
+        </EntityType>
+        <EntityType Name="mt_articletype">
+          <Key>
+            <PropertyRef Name="mt_articletype_id" />
+          </Key>
+          <Property Name="mt_articletype_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_articletype_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_article" Relationship="Self.FK_MT_ARTIC_REFERENCE_MT_ARTIC" FromRole="mt_articletype" ToRole="mt_article" />
+        </EntityType>
+        <EntityType Name="mt_course">
+          <Key>
+            <PropertyRef Name="mt_course_id" />
+          </Key>
+          <Property Name="mt_course_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_course_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_course_video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_course_day" Relationship="Self.FK_MT_COURS_REFERENCE_MT_COURS" FromRole="mt_course" ToRole="mt_course_day" />
+        </EntityType>
+        <EntityType Name="mt_course_day">
+          <Key>
+            <PropertyRef Name="mt_courseday_id" />
+          </Key>
+          <Property Name="mt_course_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_courseday_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_courseday_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_courseday_count" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_courseday_time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_courseday_kcalorie" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_courseday_video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_course" Relationship="Self.FK_MT_COURS_REFERENCE_MT_COURS" FromRole="mt_course_day" ToRole="mt_course" />
+        </EntityType>
+        <EntityType Name="mt_food">
+          <Key>
+            <PropertyRef Name="mt_food_id" />
+          </Key>
+          <Property Name="mt_food_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_foodtype_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_heat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_prptein" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_ch" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_fat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_cholesterol" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Mg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Ca" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Fe" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Zn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Cu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Mn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_Ka" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_fibrin" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_va" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_vc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_ve" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_food_carotin" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Column_21" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_foodtype" Relationship="Self.FK_MT_FOOD_REFERENCE_MT_FOODT" FromRole="mt_food" ToRole="mt_foodtype" />
+        </EntityType>
+        <EntityType Name="mt_foodtype">
+          <Key>
+            <PropertyRef Name="mt_foodtype_id" />
+          </Key>
+          <Property Name="mt_foodtype_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_foodtype_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_foodtype_remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_food" Relationship="Self.FK_MT_FOOD_REFERENCE_MT_FOODT" FromRole="mt_foodtype" ToRole="mt_food" />
+        </EntityType>
+        <EntityType Name="mt_knowledge">
+          <Key>
+            <PropertyRef Name="mt_knowledge_id" />
+          </Key>
+          <Property Name="mt_knowledge_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_knowledge_title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_knowledge_time" Type="DateTime" Precision="0" />
+          <Property Name="mt_knowledge_remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mt_knowledge_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_knowledgemark" Relationship="Self.FK_MT_KNOWL_REFERENCE_MT_KNOWL" FromRole="mt_knowledge" ToRole="mt_knowledgemark" />
+        </EntityType>
+        <EntityType Name="mt_knowledgemark">
+          <Key>
+            <PropertyRef Name="mt_knowledgemark_id" />
+          </Key>
+          <Property Name="mt_knowledgemark_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_knowledge_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_mark_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_knowledge" Relationship="Self.FK_MT_KNOWL_REFERENCE_MT_KNOWL" FromRole="mt_knowledgemark" ToRole="mt_knowledge" />
+          <NavigationProperty Name="mt_mark" Relationship="Self.FK_MT_KNOWL_REFERENCE_MT_MARK" FromRole="mt_knowledgemark" ToRole="mt_mark" />
+        </EntityType>
+        <EntityType Name="mt_mark">
+          <Key>
+            <PropertyRef Name="mt_mark_id" />
+          </Key>
+          <Property Name="mt_mark_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_mark_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_knowledgemark" Relationship="Self.FK_MT_KNOWL_REFERENCE_MT_MARK" FromRole="mt_mark" ToRole="mt_knowledgemark" />
+          <NavigationProperty Name="mt_planmark" Relationship="Self.FK_MT_PLANM_REFERENCE_MT_MARK" FromRole="mt_mark" ToRole="mt_planmark" />
+        </EntityType>
+        <EntityType Name="mt_plan">
+          <Key>
+            <PropertyRef Name="mt_plan_id" />
+          </Key>
+          <Property Name="mt_plan_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="mt_plan_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_plan_title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_plan_remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mt_plan_week" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_plan_day" Type="Int32" />
+          <Property Name="mt_plan_strength" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_planday" Relationship="Self.FK_MT_PLAND_REFERENCE_MT_PLAN" FromRole="mt_plan" ToRole="mt_planday" />
+          <NavigationProperty Name="mt_planmark" Relationship="Self.FK_MT_PLANM_REFERENCE_MT_PLAN" FromRole="mt_plan" ToRole="mt_planmark" />
+        </EntityType>
+        <EntityType Name="mt_planday">
+          <Key>
+            <PropertyRef Name="mt_planday_id" />
+          </Key>
+          <Property Name="mt_plan_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="mt_planday_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="mt_planday_day" Type="Int32" />
+          <Property Name="mt_planday_title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_planday_remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mt_planday_video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mt_planday_step" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mt_planday_kcalorie" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_plan" Relationship="Self.FK_MT_PLAND_REFERENCE_MT_PLAN" FromRole="mt_planday" ToRole="mt_plan" />
+        </EntityType>
+        <EntityType Name="mt_planmark">
+          <Key>
+            <PropertyRef Name="mt_planmark_id" />
+          </Key>
+          <Property Name="mt_planmark_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_plan_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="mt_mark_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_mark" Relationship="Self.FK_MT_PLANM_REFERENCE_MT_MARK" FromRole="mt_planmark" ToRole="mt_mark" />
+          <NavigationProperty Name="mt_plan" Relationship="Self.FK_MT_PLANM_REFERENCE_MT_PLAN" FromRole="mt_planmark" ToRole="mt_plan" />
+        </EntityType>
+        <EntityType Name="mt_user">
+          <Key>
+            <PropertyRef Name="mt_user_id" />
+          </Key>
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_user_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_pwd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_height" Type="Double" />
+          <Property Name="mt_user_weight" Type="Double" />
+          <Property Name="mt_user_birth" Type="DateTime" Precision="0" />
+          <Property Name="mt_user_bodyfat" Type="Double" />
+          <Property Name="mt_user_icon" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="mt_article" Relationship="Self.FK_mt_article_mt_user" FromRole="mt_user" ToRole="mt_article" />
+          <NavigationProperty Name="mt_user_course" Relationship="Self.FK_MT_USER__REFERENCE_MT_COURS" FromRole="mt_user" ToRole="mt_user_course" />
+          <NavigationProperty Name="mt_user_collection" Relationship="Self.FK_mt_user_collection_mt_user" FromRole="mt_user" ToRole="mt_user_collection" />
+          <NavigationProperty Name="mt_user_plan" Relationship="Self.FK_mt_user_plan_mt_user" FromRole="mt_user" ToRole="mt_user_plan" />
+          <NavigationProperty Name="mt_userfans" Relationship="Self.FK_mt_userfans_mt_user" FromRole="mt_user" ToRole="mt_userfans" />
+          <NavigationProperty Name="mt_userlike" Relationship="Self.FK_mt_userlike_mt_user" FromRole="mt_user" ToRole="mt_userlike" />
+        </EntityType>
+        <EntityType Name="mt_user_collection">
+          <Key>
+            <PropertyRef Name="mt_usercollect_id" />
+          </Key>
+          <Property Name="mt_usercollect_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_article_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_artitle_status" Type="Int32" />
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="mt_user" Relationship="Self.FK_mt_user_collection_mt_user" FromRole="mt_user_collection" ToRole="mt_user" />
+        </EntityType>
+        <EntityType Name="mt_user_course">
+          <Key>
+            <PropertyRef Name="mt_user_courseid" />
+          </Key>
+          <Property Name="mt_course_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_courseid" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_user_coursekday" Type="Int32" />
+          <Property Name="mt_usercourse_kmotion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_usercourse_ktime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_usercourse_kcalorie" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="mt_user" Relationship="Self.FK_MT_USER__REFERENCE_MT_COURS" FromRole="mt_user_course" ToRole="mt_user" />
+        </EntityType>
+        <EntityType Name="mt_user_plan">
+          <Key>
+            <PropertyRef Name="mt_user_planid" />
+          </Key>
+          <Property Name="mt_plan_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_planid" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_user_plankday" Type="Int32" />
+          <Property Name="mt_user_plankweek" Type="Int32" />
+          <Property Name="mt_user_planktime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_plankcalorie" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_user" Relationship="Self.FK_mt_user_plan_mt_user" FromRole="mt_user_plan" ToRole="mt_user" />
+        </EntityType>
+        <EntityType Name="mt_userfans">
+          <Key>
+            <PropertyRef Name="mt_userfans_id" />
+          </Key>
+          <Property Name="mt_userfans_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_userfans_followerid" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_userfans_followedid" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_userfans_status" Type="Int32" />
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mt_user" Relationship="Self.FK_mt_userfans_mt_user" FromRole="mt_userfans" ToRole="mt_user" />
+        </EntityType>
+        <EntityType Name="mt_userlike">
+          <Key>
+            <PropertyRef Name="mt_userlike_id" />
+          </Key>
+          <Property Name="mt_userlike_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mt_article_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mt_user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="mt_user" Relationship="Self.FK_mt_userlike_mt_user" FromRole="mt_userlike" ToRole="mt_user" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+          <End Role="mt_articletype" Type="Self.mt_articletype" Multiplicity="0..1" />
+          <End Role="mt_article" Type="Self.mt_article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_articletype">
+              <PropertyRef Name="mt_articletype_id" />
+            </Principal>
+            <Dependent Role="mt_article">
+              <PropertyRef Name="mt_articletype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_article_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_article" Type="Self.mt_article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_article">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_COURS_REFERENCE_MT_COURS">
+          <End Role="mt_course" Type="Self.mt_course" Multiplicity="0..1" />
+          <End Role="mt_course_day" Type="Self.mt_course_day" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_course">
+              <PropertyRef Name="mt_course_id" />
+            </Principal>
+            <Dependent Role="mt_course_day">
+              <PropertyRef Name="mt_course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_FOOD_REFERENCE_MT_FOODT">
+          <End Role="mt_foodtype" Type="Self.mt_foodtype" Multiplicity="0..1" />
+          <End Role="mt_food" Type="Self.mt_food" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_foodtype">
+              <PropertyRef Name="mt_foodtype_id" />
+            </Principal>
+            <Dependent Role="mt_food">
+              <PropertyRef Name="mt_foodtype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_KNOWL_REFERENCE_MT_KNOWL">
+          <End Role="mt_knowledge" Type="Self.mt_knowledge" Multiplicity="0..1" />
+          <End Role="mt_knowledgemark" Type="Self.mt_knowledgemark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_knowledge">
+              <PropertyRef Name="mt_knowledge_id" />
+            </Principal>
+            <Dependent Role="mt_knowledgemark">
+              <PropertyRef Name="mt_knowledge_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_KNOWL_REFERENCE_MT_MARK">
+          <End Role="mt_mark" Type="Self.mt_mark" Multiplicity="0..1" />
+          <End Role="mt_knowledgemark" Type="Self.mt_knowledgemark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_mark">
+              <PropertyRef Name="mt_mark_id" />
+            </Principal>
+            <Dependent Role="mt_knowledgemark">
+              <PropertyRef Name="mt_mark_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_PLANM_REFERENCE_MT_MARK">
+          <End Role="mt_mark" Type="Self.mt_mark" Multiplicity="0..1" />
+          <End Role="mt_planmark" Type="Self.mt_planmark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_mark">
+              <PropertyRef Name="mt_mark_id" />
+            </Principal>
+            <Dependent Role="mt_planmark">
+              <PropertyRef Name="mt_mark_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_PLAND_REFERENCE_MT_PLAN">
+          <End Role="mt_plan" Type="Self.mt_plan" Multiplicity="0..1" />
+          <End Role="mt_planday" Type="Self.mt_planday" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_plan">
+              <PropertyRef Name="mt_plan_id" />
+            </Principal>
+            <Dependent Role="mt_planday">
+              <PropertyRef Name="mt_plan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_PLANM_REFERENCE_MT_PLAN">
+          <End Role="mt_plan" Type="Self.mt_plan" Multiplicity="0..1" />
+          <End Role="mt_planmark" Type="Self.mt_planmark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_plan">
+              <PropertyRef Name="mt_plan_id" />
+            </Principal>
+            <Dependent Role="mt_planmark">
+              <PropertyRef Name="mt_plan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MT_USER__REFERENCE_MT_COURS">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_user_course" Type="Self.mt_user_course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_user_course">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_user_collection_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_user_collection" Type="Self.mt_user_collection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_user_collection">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_user_plan_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="0..1" />
+          <End Role="mt_user_plan" Type="Self.mt_user_plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_user_plan">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_userfans_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="0..1" />
+          <End Role="mt_userfans" Type="Self.mt_userfans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_userfans">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mt_userlike_mt_user">
+          <End Role="mt_user" Type="Self.mt_user" Multiplicity="1" />
+          <End Role="mt_userlike" Type="Self.mt_userlike" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mt_user">
+              <PropertyRef Name="mt_user_id" />
+            </Principal>
+            <Dependent Role="mt_userlike">
+              <PropertyRef Name="mt_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ikeepfitEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="mt_article" EntityType="Self.mt_article" />
+          <EntitySet Name="mt_articletype" EntityType="Self.mt_articletype" />
+          <EntitySet Name="mt_course" EntityType="Self.mt_course" />
+          <EntitySet Name="mt_course_day" EntityType="Self.mt_course_day" />
+          <EntitySet Name="mt_food" EntityType="Self.mt_food" />
+          <EntitySet Name="mt_foodtype" EntityType="Self.mt_foodtype" />
+          <EntitySet Name="mt_knowledge" EntityType="Self.mt_knowledge" />
+          <EntitySet Name="mt_knowledgemark" EntityType="Self.mt_knowledgemark" />
+          <EntitySet Name="mt_mark" EntityType="Self.mt_mark" />
+          <EntitySet Name="mt_plan" EntityType="Self.mt_plan" />
+          <EntitySet Name="mt_planday" EntityType="Self.mt_planday" />
+          <EntitySet Name="mt_planmark" EntityType="Self.mt_planmark" />
+          <EntitySet Name="mt_user" EntityType="Self.mt_user" />
+          <EntitySet Name="mt_user_collection" EntityType="Self.mt_user_collection" />
+          <EntitySet Name="mt_user_course" EntityType="Self.mt_user_course" />
+          <EntitySet Name="mt_user_plan" EntityType="Self.mt_user_plan" />
+          <EntitySet Name="mt_userfans" EntityType="Self.mt_userfans" />
+          <EntitySet Name="mt_userlike" EntityType="Self.mt_userlike" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC" Association="Self.FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+            <End Role="mt_articletype" EntitySet="mt_articletype" />
+            <End Role="mt_article" EntitySet="mt_article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_article_mt_user" Association="Self.FK_mt_article_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_article" EntitySet="mt_article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_COURS_REFERENCE_MT_COURS" Association="Self.FK_MT_COURS_REFERENCE_MT_COURS">
+            <End Role="mt_course" EntitySet="mt_course" />
+            <End Role="mt_course_day" EntitySet="mt_course_day" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_FOOD_REFERENCE_MT_FOODT" Association="Self.FK_MT_FOOD_REFERENCE_MT_FOODT">
+            <End Role="mt_foodtype" EntitySet="mt_foodtype" />
+            <End Role="mt_food" EntitySet="mt_food" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_KNOWL_REFERENCE_MT_KNOWL" Association="Self.FK_MT_KNOWL_REFERENCE_MT_KNOWL">
+            <End Role="mt_knowledge" EntitySet="mt_knowledge" />
+            <End Role="mt_knowledgemark" EntitySet="mt_knowledgemark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_KNOWL_REFERENCE_MT_MARK" Association="Self.FK_MT_KNOWL_REFERENCE_MT_MARK">
+            <End Role="mt_mark" EntitySet="mt_mark" />
+            <End Role="mt_knowledgemark" EntitySet="mt_knowledgemark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_PLANM_REFERENCE_MT_MARK" Association="Self.FK_MT_PLANM_REFERENCE_MT_MARK">
+            <End Role="mt_mark" EntitySet="mt_mark" />
+            <End Role="mt_planmark" EntitySet="mt_planmark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_PLAND_REFERENCE_MT_PLAN" Association="Self.FK_MT_PLAND_REFERENCE_MT_PLAN">
+            <End Role="mt_plan" EntitySet="mt_plan" />
+            <End Role="mt_planday" EntitySet="mt_planday" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_PLANM_REFERENCE_MT_PLAN" Association="Self.FK_MT_PLANM_REFERENCE_MT_PLAN">
+            <End Role="mt_plan" EntitySet="mt_plan" />
+            <End Role="mt_planmark" EntitySet="mt_planmark" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MT_USER__REFERENCE_MT_COURS" Association="Self.FK_MT_USER__REFERENCE_MT_COURS">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_user_course" EntitySet="mt_user_course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_user_collection_mt_user" Association="Self.FK_mt_user_collection_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_user_collection" EntitySet="mt_user_collection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_user_plan_mt_user" Association="Self.FK_mt_user_plan_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_user_plan" EntitySet="mt_user_plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_userfans_mt_user" Association="Self.FK_mt_userfans_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_userfans" EntitySet="mt_userfans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mt_userlike_mt_user" Association="Self.FK_mt_userlike_mt_user">
+            <End Role="mt_user" EntitySet="mt_user" />
+            <End Role="mt_userlike" EntitySet="mt_userlike" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ikeepfitModelStoreContainer" CdmEntityContainer="ikeepfitEntities">
+          <EntitySetMapping Name="mt_article">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_article">
+              <MappingFragment StoreEntitySet="mt_article">
+                <ScalarProperty Name="mt_articletype_id" ColumnName="mt_articletype_id" />
+                <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+                <ScalarProperty Name="mt_article_title" ColumnName="mt_article_title" />
+                <ScalarProperty Name="mt_article_time" ColumnName="mt_article_time" />
+                <ScalarProperty Name="mt_article_like" ColumnName="mt_article_like" />
+                <ScalarProperty Name="mt_article_look" ColumnName="mt_article_look" />
+                <ScalarProperty Name="mt_article_collect" ColumnName="mt_article_collect" />
+                <ScalarProperty Name="mt_article_cotent" ColumnName="mt_article_cotent" />
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_articletype">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_articletype">
+              <MappingFragment StoreEntitySet="mt_articletype">
+                <ScalarProperty Name="mt_articletype_id" ColumnName="mt_articletype_id" />
+                <ScalarProperty Name="mt_articletype_name" ColumnName="mt_articletype_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_course">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_course">
+              <MappingFragment StoreEntitySet="mt_course">
+                <ScalarProperty Name="mt_course_id" ColumnName="mt_course_id" />
+                <ScalarProperty Name="mt_course_name" ColumnName="mt_course_name" />
+                <ScalarProperty Name="mt_course_video" ColumnName="mt_course_video" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_course_day">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_course_day">
+              <MappingFragment StoreEntitySet="mt_course_day">
+                <ScalarProperty Name="mt_course_id" ColumnName="mt_course_id" />
+                <ScalarProperty Name="mt_courseday_id" ColumnName="mt_courseday_id" />
+                <ScalarProperty Name="mt_courseday_name" ColumnName="mt_courseday_name" />
+                <ScalarProperty Name="mt_courseday_count" ColumnName="mt_courseday_count" />
+                <ScalarProperty Name="mt_courseday_time" ColumnName="mt_courseday_time" />
+                <ScalarProperty Name="mt_courseday_kcalorie" ColumnName="mt_courseday_kcalorie" />
+                <ScalarProperty Name="mt_courseday_video" ColumnName="mt_courseday_video" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_food">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_food">
+              <MappingFragment StoreEntitySet="mt_food">
+                <ScalarProperty Name="mt_food_id" ColumnName="mt_food_id" />
+                <ScalarProperty Name="mt_foodtype_id" ColumnName="mt_foodtype_id" />
+                <ScalarProperty Name="mt_food_remarks" ColumnName="mt_food_remarks" />
+                <ScalarProperty Name="mt_food_heat" ColumnName="mt_food_heat" />
+                <ScalarProperty Name="mt_food_prptein" ColumnName="mt_food_prptein" />
+                <ScalarProperty Name="mt_food_ch" ColumnName="mt_food_ch" />
+                <ScalarProperty Name="mt_food_fat" ColumnName="mt_food_fat" />
+                <ScalarProperty Name="mt_food_cholesterol" ColumnName="mt_food_cholesterol" />
+                <ScalarProperty Name="mt_food_Mg" ColumnName="mt_food_Mg" />
+                <ScalarProperty Name="mt_food_Ca" ColumnName="mt_food_Ca" />
+                <ScalarProperty Name="mt_food_Fe" ColumnName="mt_food_Fe" />
+                <ScalarProperty Name="mt_food_Zn" ColumnName="mt_food_Zn" />
+                <ScalarProperty Name="mt_food_Cu" ColumnName="mt_food_Cu" />
+                <ScalarProperty Name="mt_food_Mn" ColumnName="mt_food_Mn" />
+                <ScalarProperty Name="mt_food_Ka" ColumnName="mt_food_Ka" />
+                <ScalarProperty Name="mt_food_fibrin" ColumnName="mt_food_fibrin" />
+                <ScalarProperty Name="mt_food_va" ColumnName="mt_food_va" />
+                <ScalarProperty Name="mt_food_vc" ColumnName="mt_food_vc" />
+                <ScalarProperty Name="mt_food_ve" ColumnName="mt_food_ve" />
+                <ScalarProperty Name="mt_food_carotin" ColumnName="mt_food_carotin" />
+                <ScalarProperty Name="Column_21" ColumnName="Column_21" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_foodtype">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_foodtype">
+              <MappingFragment StoreEntitySet="mt_foodtype">
+                <ScalarProperty Name="mt_foodtype_id" ColumnName="mt_foodtype_id" />
+                <ScalarProperty Name="mt_foodtype_name" ColumnName="mt_foodtype_name" />
+                <ScalarProperty Name="mt_foodtype_remarks" ColumnName="mt_foodtype_remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_knowledge">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_knowledge">
+              <MappingFragment StoreEntitySet="mt_knowledge">
+                <ScalarProperty Name="mt_knowledge_id" ColumnName="mt_knowledge_id" />
+                <ScalarProperty Name="mt_knowledge_title" ColumnName="mt_knowledge_title" />
+                <ScalarProperty Name="mt_knowledge_time" ColumnName="mt_knowledge_time" />
+                <ScalarProperty Name="mt_knowledge_remarks" ColumnName="mt_knowledge_remarks" />
+                <ScalarProperty Name="mt_knowledge_content" ColumnName="mt_knowledge_content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_knowledgemark">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_knowledgemark">
+              <MappingFragment StoreEntitySet="mt_knowledgemark">
+                <ScalarProperty Name="mt_knowledgemark_id" ColumnName="mt_knowledgemark_id" />
+                <ScalarProperty Name="mt_knowledge_id" ColumnName="mt_knowledge_id" />
+                <ScalarProperty Name="mt_mark_id" ColumnName="mt_mark_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_mark">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_mark">
+              <MappingFragment StoreEntitySet="mt_mark">
+                <ScalarProperty Name="mt_mark_id" ColumnName="mt_mark_id" />
+                <ScalarProperty Name="mt_mark_name" ColumnName="mt_mark_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_plan">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_plan">
+              <MappingFragment StoreEntitySet="mt_plan">
+                <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+                <ScalarProperty Name="mt_plan_name" ColumnName="mt_plan_name" />
+                <ScalarProperty Name="mt_plan_title" ColumnName="mt_plan_title" />
+                <ScalarProperty Name="mt_plan_remarks" ColumnName="mt_plan_remarks" />
+                <ScalarProperty Name="mt_plan_week" ColumnName="mt_plan_week" />
+                <ScalarProperty Name="mt_plan_day" ColumnName="mt_plan_day" />
+                <ScalarProperty Name="mt_plan_strength" ColumnName="mt_plan_strength" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_planday">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_planday">
+              <MappingFragment StoreEntitySet="mt_planday">
+                <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+                <ScalarProperty Name="mt_planday_id" ColumnName="mt_planday_id" />
+                <ScalarProperty Name="mt_planday_day" ColumnName="mt_planday_day" />
+                <ScalarProperty Name="mt_planday_title" ColumnName="mt_planday_title" />
+                <ScalarProperty Name="mt_planday_remarks" ColumnName="mt_planday_remarks" />
+                <ScalarProperty Name="mt_planday_video" ColumnName="mt_planday_video" />
+                <ScalarProperty Name="mt_planday_step" ColumnName="mt_planday_step" />
+                <ScalarProperty Name="mt_planday_kcalorie" ColumnName="mt_planday_kcalorie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_planmark">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_planmark">
+              <MappingFragment StoreEntitySet="mt_planmark">
+                <ScalarProperty Name="mt_planmark_id" ColumnName="mt_planmark_id" />
+                <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+                <ScalarProperty Name="mt_mark_id" ColumnName="mt_mark_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_user">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_user">
+              <MappingFragment StoreEntitySet="mt_user">
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+                <ScalarProperty Name="mt_user_name" ColumnName="mt_user_name" />
+                <ScalarProperty Name="mt_user_pwd" ColumnName="mt_user_pwd" />
+                <ScalarProperty Name="mt_user_email" ColumnName="mt_user_email" />
+                <ScalarProperty Name="mt_user_height" ColumnName="mt_user_height" />
+                <ScalarProperty Name="mt_user_weight" ColumnName="mt_user_weight" />
+                <ScalarProperty Name="mt_user_birth" ColumnName="mt_user_birth" />
+                <ScalarProperty Name="mt_user_bodyfat" ColumnName="mt_user_bodyfat" />
+                <ScalarProperty Name="mt_user_icon" ColumnName="mt_user_icon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_user_collection">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_user_collection">
+              <MappingFragment StoreEntitySet="mt_user_collection">
+                <ScalarProperty Name="mt_usercollect_id" ColumnName="mt_usercollect_id" />
+                <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+                <ScalarProperty Name="mt_artitle_status" ColumnName="mt_artitle_status" />
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_user_course">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_user_course">
+              <MappingFragment StoreEntitySet="mt_user_course">
+                <ScalarProperty Name="mt_course_id" ColumnName="mt_course_id" />
+                <ScalarProperty Name="mt_user_courseid" ColumnName="mt_user_courseid" />
+                <ScalarProperty Name="mt_user_coursekday" ColumnName="mt_user_coursekday" />
+                <ScalarProperty Name="mt_usercourse_kmotion" ColumnName="mt_usercourse_kmotion" />
+                <ScalarProperty Name="mt_usercourse_ktime" ColumnName="mt_usercourse_ktime" />
+                <ScalarProperty Name="mt_usercourse_kcalorie" ColumnName="mt_usercourse_kcalorie" />
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_user_plan">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_user_plan">
+              <MappingFragment StoreEntitySet="mt_user_plan">
+                <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+                <ScalarProperty Name="mt_user_planid" ColumnName="mt_user_planid" />
+                <ScalarProperty Name="mt_user_plankday" ColumnName="mt_user_plankday" />
+                <ScalarProperty Name="mt_user_plankweek" ColumnName="mt_user_plankweek" />
+                <ScalarProperty Name="mt_user_planktime" ColumnName="mt_user_planktime" />
+                <ScalarProperty Name="mt_user_plankcalorie" ColumnName="mt_user_plankcalorie" />
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_userfans">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_userfans">
+              <MappingFragment StoreEntitySet="mt_userfans">
+                <ScalarProperty Name="mt_userfans_id" ColumnName="mt_userfans_id" />
+                <ScalarProperty Name="mt_userfans_followerid" ColumnName="mt_userfans_followerid" />
+                <ScalarProperty Name="mt_userfans_followedid" ColumnName="mt_userfans_followedid" />
+                <ScalarProperty Name="mt_userfans_status" ColumnName="mt_userfans_status" />
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mt_userlike">
+            <EntityTypeMapping TypeName="ikeepfitModel.mt_userlike">
+              <MappingFragment StoreEntitySet="mt_userlike">
+                <ScalarProperty Name="mt_userlike_id" ColumnName="mt_userlike_id" />
+                <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+                <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ikeepfitModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
