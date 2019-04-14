@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03521A3D-C2C7-4DA9-84F0-FBD99459120A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ikeepfit.Model</RootNamespace>
+    <AssemblyName>ikeepfit.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ikeepfitModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ikeepfitModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ikeepfitModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ikeepfitModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ikeepfitModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="mt_article.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_articletype.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_course.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_course_day.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_food.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_foodtype.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_knowledge.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_knowledgemark.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_mark.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_plan.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_planday.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_planmark.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_user.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_userfans.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_userlike.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_user_collection.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_user_course.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_user_plan.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ikeepfitModels.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ikeepfitModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ikeepfitModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ikeepfitModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ikeepfitModels.edmx</DependentUpon>
+      <LastGenOutput>ikeepfitModels.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ikeepfitModels.edmx.diagram">
+      <DependentUpon>ikeepfitModels.edmx</DependentUpon>
+    </None>
+    <None Include="ikeepfitModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ikeepfitModels.edmx</DependentUpon>
+      <LastGenOutput>ikeepfitModels.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

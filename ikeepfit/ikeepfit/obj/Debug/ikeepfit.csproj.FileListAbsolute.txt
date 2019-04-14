@@ -72,3 +72,5 @@ E:\ikeepfit\ikeepfit\ikeepfit\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccou
 E:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.csprojResolveAssemblyReference.cache
 E:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.dll
 E:\ikeepfit\ikeepfit\ikeepfit\obj\Debug\ikeepfit.pdb
+E:\ikeepfit\ikeepfit\ikeepfit\bin\ikeepfit.Model.dll
+E:\ikeepfit\ikeepfit\ikeepfit\bin\ikeepfit.Model.pdb
