@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1e2c6b6abe224407bc60f81f262c346b" Name="Diagram1">
+        <EntityTypeShape EntityType="ikeepfitModel.mt_article" Width="1.5" PointX="6" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_articletype" Width="1.5" PointX="3.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_course" Width="1.5" PointX="10.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_course_day" Width="1.5" PointX="13" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_food" Width="1.5" PointX="11" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_foodtype" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_knowledge" Width="1.5" PointX="5.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_knowledgemark" Width="1.5" PointX="8" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_mark" Width="1.5" PointX="5.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_plan" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_planday" Width="1.5" PointX="8" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_planmark" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_user" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_user_collection" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_user_course" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_user_plan" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_userfans" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.mt_userlike" Width="1.5" PointX="3" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ikeepfitModel.sysdiagram" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_ARTIC_REFERENCE_MT_ARTIC" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_mt_article_mt_user" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_COURS_REFERENCE_MT_COURS" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_FOOD_REFERENCE_MT_FOODT" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_KNOWL_REFERENCE_MT_KNOWL" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_KNOWL_REFERENCE_MT_MARK" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_PLANM_REFERENCE_MT_MARK" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_PLAND_REFERENCE_MT_PLAN" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_PLANM_REFERENCE_MT_PLAN" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_MT_USER__REFERENCE_MT_COURS" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_mt_user_collection_mt_user" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_mt_user_plan_mt_user" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_mt_userfans_mt_user" ManuallyRouted="false" />
+        <AssociationConnector Association="ikeepfitModel.FK_mt_userlike_mt_user" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

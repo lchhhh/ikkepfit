@@ -1,0 +1,12 @@
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\ikeepfit.Model.dll.config
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\ikeepfit.Model.dll
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\ikeepfit.Model.pdb
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\EntityFramework.dll
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\EntityFramework.xml
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\ikeepfit\ikeepfit\ikeepfit.Model\obj\Debug\ikeepfit.Model.csprojResolveAssemblyReference.cache
+E:\ikeepfit\ikeepfit\ikeepfit.Model\obj\Debug\ikeepfit.Model.dll
+E:\ikeepfit\ikeepfit\ikeepfit.Model\obj\Debug\ikeepfit.Model.pdb
