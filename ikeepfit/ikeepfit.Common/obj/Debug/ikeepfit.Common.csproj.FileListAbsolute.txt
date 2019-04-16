@@ -1,0 +1,11 @@
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\ikeepfit.Common.dll.config
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\ikeepfit.Common.dll
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\ikeepfit.Common.pdb
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\EntityFramework.dll
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\EntityFramework.xml
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\ikeepfit\ikeepfit\ikeepfit.Common\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\ikeepfit\ikeepfit\ikeepfit.Common\obj\Debug\ikeepfit.Common.dll
+D:\ikeepfit\ikeepfit\ikeepfit.Common\obj\Debug\ikeepfit.Common.pdb

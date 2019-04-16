@@ -1,0 +1,16 @@
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.DAL.dll.config
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.DAL.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.DAL.pdb
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\EntityFramework.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\EntityFramework.xml
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\obj\Debug\ikeepfit.DAL.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\obj\Debug\ikeepfit.DAL.pdb
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.IDAL.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.Model.dll
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.IDAL.pdb
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\bin\Debug\ikeepfit.Model.pdb
+D:\ikeepfit\ikeepfit\ikeepfit.DAL\obj\Debug\ikeepfit.DAL.csprojResolveAssemblyReference.cache

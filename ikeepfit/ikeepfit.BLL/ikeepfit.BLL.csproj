@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ACDEA58-72DE-4B80-A390-5FBB520A4D78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ikeepfit.BLL</RootNamespace>
+    <AssemblyName>ikeepfit.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlanInfoBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ikeepfit.Common\ikeepfit.Common.csproj">
+      <Project>{cad7e7c3-ca28-424d-9994-82c2a8b67453}</Project>
+      <Name>ikeepfit.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Core\ikeepfit.Core.csproj">
+      <Project>{fbaba48e-5e92-4184-9d52-f23eaa35c67e}</Project>
+      <Name>ikeepfit.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.DAL\ikeepfit.DAL.csproj">
+      <Project>{ecbfefb1-c31d-4a5d-a7e2-81f954cd5c1d}</Project>
+      <Name>ikeepfit.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.IBLL\ikeepfit.IBLL.csproj">
+      <Project>{783c74b0-7dfa-4cc7-825c-6ac7aa26d11a}</Project>
+      <Name>ikeepfit.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.IDAL\ikeepfit.IDAL.csproj">
+      <Project>{1dbe67fa-10f4-421d-af5f-4dd2ef9e264f}</Project>
+      <Name>ikeepfit.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Model\ikeepfit.Model.csproj">
+      <Project>{d23e2434-88fc-42ad-a41a-4e5c525b8be9}</Project>
+      <Name>ikeepfit.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
