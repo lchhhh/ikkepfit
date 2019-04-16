@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ikeepfitModelStoreContainer" CdmEntityContainer="ikeepfitEntities">
+    <EntitySetMapping Name="mt_article">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_article">
+        <MappingFragment StoreEntitySet="mt_article">
+          <ScalarProperty Name="mt_articletype_id" ColumnName="mt_articletype_id" />
+          <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+          <ScalarProperty Name="mt_article_title" ColumnName="mt_article_title" />
+          <ScalarProperty Name="mt_article_time" ColumnName="mt_article_time" />
+          <ScalarProperty Name="mt_article_like" ColumnName="mt_article_like" />
+          <ScalarProperty Name="mt_article_look" ColumnName="mt_article_look" />
+          <ScalarProperty Name="mt_article_collect" ColumnName="mt_article_collect" />
+          <ScalarProperty Name="mt_article_cotent" ColumnName="mt_article_cotent" />
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_articletype">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_articletype">
+        <MappingFragment StoreEntitySet="mt_articletype">
+          <ScalarProperty Name="mt_articletype_id" ColumnName="mt_articletype_id" />
+          <ScalarProperty Name="mt_articletype_name" ColumnName="mt_articletype_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_course">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_course">
+        <MappingFragment StoreEntitySet="mt_course">
+          <ScalarProperty Name="mt_course_id" ColumnName="mt_course_id" />
+          <ScalarProperty Name="mt_course_name" ColumnName="mt_course_name" />
+          <ScalarProperty Name="mt_course_video" ColumnName="mt_course_video" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_course_day">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_course_day">
+        <MappingFragment StoreEntitySet="mt_course_day">
+          <ScalarProperty Name="mt_course_id" ColumnName="mt_course_id" />
+          <ScalarProperty Name="mt_courseday_id" ColumnName="mt_courseday_id" />
+          <ScalarProperty Name="mt_courseday_name" ColumnName="mt_courseday_name" />
+          <ScalarProperty Name="mt_courseday_count" ColumnName="mt_courseday_count" />
+          <ScalarProperty Name="mt_courseday_time" ColumnName="mt_courseday_time" />
+          <ScalarProperty Name="mt_courseday_kcalorie" ColumnName="mt_courseday_kcalorie" />
+          <ScalarProperty Name="mt_courseday_video" ColumnName="mt_courseday_video" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_food">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_food">
+        <MappingFragment StoreEntitySet="mt_food">
+          <ScalarProperty Name="mt_food_id" ColumnName="mt_food_id" />
+          <ScalarProperty Name="mt_foodtype_id" ColumnName="mt_foodtype_id" />
+          <ScalarProperty Name="mt_food_remarks" ColumnName="mt_food_remarks" />
+          <ScalarProperty Name="mt_food_heat" ColumnName="mt_food_heat" />
+          <ScalarProperty Name="mt_food_prptein" ColumnName="mt_food_prptein" />
+          <ScalarProperty Name="mt_food_ch" ColumnName="mt_food_ch" />
+          <ScalarProperty Name="mt_food_fat" ColumnName="mt_food_fat" />
+          <ScalarProperty Name="mt_food_cholesterol" ColumnName="mt_food_cholesterol" />
+          <ScalarProperty Name="mt_food_Mg" ColumnName="mt_food_Mg" />
+          <ScalarProperty Name="mt_food_Ca" ColumnName="mt_food_Ca" />
+          <ScalarProperty Name="mt_food_Fe" ColumnName="mt_food_Fe" />
+          <ScalarProperty Name="mt_food_Zn" ColumnName="mt_food_Zn" />
+          <ScalarProperty Name="mt_food_Cu" ColumnName="mt_food_Cu" />
+          <ScalarProperty Name="mt_food_Mn" ColumnName="mt_food_Mn" />
+          <ScalarProperty Name="mt_food_Ka" ColumnName="mt_food_Ka" />
+          <ScalarProperty Name="mt_food_fibrin" ColumnName="mt_food_fibrin" />
+          <ScalarProperty Name="mt_food_va" ColumnName="mt_food_va" />
+          <ScalarProperty Name="mt_food_vc" ColumnName="mt_food_vc" />
+          <ScalarProperty Name="mt_food_ve" ColumnName="mt_food_ve" />
+          <ScalarProperty Name="mt_food_carotin" ColumnName="mt_food_carotin" />
+          <ScalarProperty Name="Column_21" ColumnName="Column_21" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_foodtype">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_foodtype">
+        <MappingFragment StoreEntitySet="mt_foodtype">
+          <ScalarProperty Name="mt_foodtype_id" ColumnName="mt_foodtype_id" />
+          <ScalarProperty Name="mt_foodtype_name" ColumnName="mt_foodtype_name" />
+          <ScalarProperty Name="mt_foodtype_remarks" ColumnName="mt_foodtype_remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_knowledge">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_knowledge">
+        <MappingFragment StoreEntitySet="mt_knowledge">
+          <ScalarProperty Name="mt_knowledge_id" ColumnName="mt_knowledge_id" />
+          <ScalarProperty Name="mt_knowledge_title" ColumnName="mt_knowledge_title" />
+          <ScalarProperty Name="mt_knowledge_time" ColumnName="mt_knowledge_time" />
+          <ScalarProperty Name="mt_knowledge_remarks" ColumnName="mt_knowledge_remarks" />
+          <ScalarProperty Name="mt_knowledge_content" ColumnName="mt_knowledge_content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_knowledgemark">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_knowledgemark">
+        <MappingFragment StoreEntitySet="mt_knowledgemark">
+          <ScalarProperty Name="mt_knowledgemark_id" ColumnName="mt_knowledgemark_id" />
+          <ScalarProperty Name="mt_knowledge_id" ColumnName="mt_knowledge_id" />
+          <ScalarProperty Name="mt_mark_id" ColumnName="mt_mark_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_mark">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_mark">
+        <MappingFragment StoreEntitySet="mt_mark">
+          <ScalarProperty Name="mt_mark_id" ColumnName="mt_mark_id" />
+          <ScalarProperty Name="mt_mark_name" ColumnName="mt_mark_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_plan">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_plan">
+        <MappingFragment StoreEntitySet="mt_plan">
+          <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+          <ScalarProperty Name="mt_plan_name" ColumnName="mt_plan_name" />
+          <ScalarProperty Name="mt_plan_title" ColumnName="mt_plan_title" />
+          <ScalarProperty Name="mt_plan_remarks" ColumnName="mt_plan_remarks" />
+          <ScalarProperty Name="mt_plan_week" ColumnName="mt_plan_week" />
+          <ScalarProperty Name="mt_plan_day" ColumnName="mt_plan_day" />
+          <ScalarProperty Name="mt_plan_strength" ColumnName="mt_plan_strength" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_planday">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_planday">
+        <MappingFragment StoreEntitySet="mt_planday">
+          <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+          <ScalarProperty Name="mt_planday_id" ColumnName="mt_planday_id" />
+          <ScalarProperty Name="mt_planday_day" ColumnName="mt_planday_day" />
+          <ScalarProperty Name="mt_planday_title" ColumnName="mt_planday_title" />
+          <ScalarProperty Name="mt_planday_remarks" ColumnName="mt_planday_remarks" />
+          <ScalarProperty Name="mt_planday_video" ColumnName="mt_planday_video" />
+          <ScalarProperty Name="mt_planday_step" ColumnName="mt_planday_step" />
+          <ScalarProperty Name="mt_planday_kcalorie" ColumnName="mt_planday_kcalorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_planmark">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_planmark">
+        <MappingFragment StoreEntitySet="mt_planmark">
+          <ScalarProperty Name="mt_planmark_id" ColumnName="mt_planmark_id" />
+          <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+          <ScalarProperty Name="mt_mark_id" ColumnName="mt_mark_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_user">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_user">
+        <MappingFragment StoreEntitySet="mt_user">
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+          <ScalarProperty Name="mt_user_name" ColumnName="mt_user_name" />
+          <ScalarProperty Name="mt_user_pwd" ColumnName="mt_user_pwd" />
+          <ScalarProperty Name="mt_user_email" ColumnName="mt_user_email" />
+          <ScalarProperty Name="mt_user_height" ColumnName="mt_user_height" />
+          <ScalarProperty Name="mt_user_weight" ColumnName="mt_user_weight" />
+          <ScalarProperty Name="mt_user_birth" ColumnName="mt_user_birth" />
+          <ScalarProperty Name="mt_user_bodyfat" ColumnName="mt_user_bodyfat" />
+          <ScalarProperty Name="mt_user_icon" ColumnName="mt_user_icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_user_collection">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_user_collection">
+        <MappingFragment StoreEntitySet="mt_user_collection">
+          <ScalarProperty Name="mt_usercollect_id" ColumnName="mt_usercollect_id" />
+          <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+          <ScalarProperty Name="mt_artitle_status" ColumnName="mt_artitle_status" />
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_user_course">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_user_course">
+        <MappingFragment StoreEntitySet="mt_user_course">
+          <ScalarProperty Name="mt_course_id" ColumnName="mt_course_id" />
+          <ScalarProperty Name="mt_user_courseid" ColumnName="mt_user_courseid" />
+          <ScalarProperty Name="mt_user_coursekday" ColumnName="mt_user_coursekday" />
+          <ScalarProperty Name="mt_usercourse_kmotion" ColumnName="mt_usercourse_kmotion" />
+          <ScalarProperty Name="mt_usercourse_ktime" ColumnName="mt_usercourse_ktime" />
+          <ScalarProperty Name="mt_usercourse_kcalorie" ColumnName="mt_usercourse_kcalorie" />
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_user_plan">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_user_plan">
+        <MappingFragment StoreEntitySet="mt_user_plan">
+          <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+          <ScalarProperty Name="mt_user_planid" ColumnName="mt_user_planid" />
+          <ScalarProperty Name="mt_user_plankday" ColumnName="mt_user_plankday" />
+          <ScalarProperty Name="mt_user_plankweek" ColumnName="mt_user_plankweek" />
+          <ScalarProperty Name="mt_user_planktime" ColumnName="mt_user_planktime" />
+          <ScalarProperty Name="mt_user_plankcalorie" ColumnName="mt_user_plankcalorie" />
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_userfans">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_userfans">
+        <MappingFragment StoreEntitySet="mt_userfans">
+          <ScalarProperty Name="mt_userfans_id" ColumnName="mt_userfans_id" />
+          <ScalarProperty Name="mt_userfans_followerid" ColumnName="mt_userfans_followerid" />
+          <ScalarProperty Name="mt_userfans_followedid" ColumnName="mt_userfans_followedid" />
+          <ScalarProperty Name="mt_userfans_status" ColumnName="mt_userfans_status" />
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_userlike">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_userlike">
+        <MappingFragment StoreEntitySet="mt_userlike">
+          <ScalarProperty Name="mt_userlike_id" ColumnName="mt_userlike_id" />
+          <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ikeepfitModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysSample">
+      <EntityTypeMapping TypeName="ikeepfitModel.SysSample">
+        <MappingFragment StoreEntitySet="SysSample">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Bir" ColumnName="Bir" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

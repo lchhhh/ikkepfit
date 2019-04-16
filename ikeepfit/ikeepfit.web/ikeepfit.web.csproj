@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -655,6 +656,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Plan\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -662,6 +664,36 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ikeepfit.BLL\ikeepfit.BLL.csproj">
+      <Project>{2acdea58-72de-4b80-a390-5fbb520a4d78}</Project>
+      <Name>ikeepfit.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Common\ikeepfit.Common.csproj">
+      <Project>{cad7e7c3-ca28-424d-9994-82c2a8b67453}</Project>
+      <Name>ikeepfit.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Core\ikeepfit.Core.csproj">
+      <Project>{fbaba48e-5e92-4184-9d52-f23eaa35c67e}</Project>
+      <Name>ikeepfit.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.DAL\ikeepfit.DAL.csproj">
+      <Project>{ecbfefb1-c31d-4a5d-a7e2-81f954cd5c1d}</Project>
+      <Name>ikeepfit.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.IBLL\ikeepfit.IBLL.csproj">
+      <Project>{783c74b0-7dfa-4cc7-825c-6ac7aa26d11a}</Project>
+      <Name>ikeepfit.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.IDAL\ikeepfit.IDAL.csproj">
+      <Project>{1dbe67fa-10f4-421d-af5f-4dd2ef9e264f}</Project>
+      <Name>ikeepfit.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Model\ikeepfit.Model.csproj">
+      <Project>{d23e2434-88fc-42ad-a41a-4e5c525b8be9}</Project>
+      <Name>ikeepfit.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
