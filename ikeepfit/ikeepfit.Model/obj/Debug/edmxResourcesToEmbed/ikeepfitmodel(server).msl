@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ikeepfitModel1StoreContainer" CdmEntityContainer="ikeepfitEntities1">
+    <EntitySetMapping Name="mt_plan">
+      <EntityTypeMapping TypeName="ikeepfitModel1.mt_plan">
+        <MappingFragment StoreEntitySet="mt_plan">
+          <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+          <ScalarProperty Name="mt_plan_name" ColumnName="mt_plan_name" />
+          <ScalarProperty Name="mt_plan_title" ColumnName="mt_plan_title" />
+          <ScalarProperty Name="mt_plan_remarks" ColumnName="mt_plan_remarks" />
+          <ScalarProperty Name="mt_plan_week" ColumnName="mt_plan_week" />
+          <ScalarProperty Name="mt_plan_day" ColumnName="mt_plan_day" />
+          <ScalarProperty Name="mt_plan_strength" ColumnName="mt_plan_strength" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_knowledge">
+      <EntityTypeMapping TypeName="ikeepfitModel1.mt_knowledge">
+        <MappingFragment StoreEntitySet="mt_knowledge">
+          <ScalarProperty Name="mt_knowledge_content" ColumnName="mt_knowledge_content" />
+          <ScalarProperty Name="mt_knowledge_remarks" ColumnName="mt_knowledge_remarks" />
+          <ScalarProperty Name="mt_knowledge_time" ColumnName="mt_knowledge_time" />
+          <ScalarProperty Name="mt_knowledge_title" ColumnName="mt_knowledge_title" />
+          <ScalarProperty Name="mt_knowledge_id" ColumnName="mt_knowledge_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -159,7 +162,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -656,7 +658,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Plan\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -666,33 +667,25 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ikeepfit.BLL\ikeepfit.BLL.csproj">
-      <Project>{2acdea58-72de-4b80-a390-5fbb520a4d78}</Project>
-      <Name>ikeepfit.BLL</Name>
+    <ProjectReference Include="..\ikeepfit.IRepository\ikeepfit.IRepository.csproj">
+      <Project>{ee740a18-46b5-4f13-90d6-6fcaf8592df2}</Project>
+      <Name>ikeepfit.IRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ikeepfit.Common\ikeepfit.Common.csproj">
-      <Project>{cad7e7c3-ca28-424d-9994-82c2a8b67453}</Project>
-      <Name>ikeepfit.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ikeepfit.Core\ikeepfit.Core.csproj">
-      <Project>{fbaba48e-5e92-4184-9d52-f23eaa35c67e}</Project>
-      <Name>ikeepfit.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ikeepfit.DAL\ikeepfit.DAL.csproj">
-      <Project>{ecbfefb1-c31d-4a5d-a7e2-81f954cd5c1d}</Project>
-      <Name>ikeepfit.DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ikeepfit.IBLL\ikeepfit.IBLL.csproj">
-      <Project>{783c74b0-7dfa-4cc7-825c-6ac7aa26d11a}</Project>
-      <Name>ikeepfit.IBLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ikeepfit.IDAL\ikeepfit.IDAL.csproj">
-      <Project>{1dbe67fa-10f4-421d-af5f-4dd2ef9e264f}</Project>
-      <Name>ikeepfit.IDAL</Name>
+    <ProjectReference Include="..\ikeepfit.IServices\ikeepfit.IServices.csproj">
+      <Project>{6e836aeb-4176-4e31-a2f1-3c4f4e434d79}</Project>
+      <Name>ikeepfit.IServices</Name>
     </ProjectReference>
     <ProjectReference Include="..\ikeepfit.Model\ikeepfit.Model.csproj">
-      <Project>{d23e2434-88fc-42ad-a41a-4e5c525b8be9}</Project>
+      <Project>{3914370a-0514-4dcb-96e1-685a5c9e40c0}</Project>
       <Name>ikeepfit.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Repository\ikeepfit.Repository.csproj">
+      <Project>{a033e6b8-64cf-45a0-839e-ab26502cb96a}</Project>
+      <Name>ikeepfit.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ikeepfit.Services\ikeepfit.Services.csproj">
+      <Project>{d30ee25c-b719-497b-a0d5-a7e3f393a19b}</Project>
+      <Name>ikeepfit.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

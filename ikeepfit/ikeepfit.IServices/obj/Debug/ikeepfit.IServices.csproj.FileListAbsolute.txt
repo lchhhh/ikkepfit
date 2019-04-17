@@ -1,0 +1,14 @@
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\ikeepfit.IServices.dll.config
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\ikeepfit.IServices.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\ikeepfit.IServices.pdb
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\EntityFramework.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\EntityFramework.SqlServer.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\EntityFramework.xml
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\EntityFramework.SqlServer.xml
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\obj\Debug\ikeepfit.IServices.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\obj\Debug\ikeepfit.IServices.pdb
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\ikeepfit.Model.dll
+D:\个人文件\ikeepfit\ikeepfit.IServices\bin\Debug\ikeepfit.Model.pdb
+D:\个人文件\ikeepfit\ikeepfit.IServices\obj\Debug\ikeepfit.IServices.csprojResolveAssemblyReference.cache

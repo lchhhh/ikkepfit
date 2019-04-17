@@ -1,0 +1,16 @@
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.Repository.dll.config
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.Repository.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.Repository.pdb
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\EntityFramework.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.IRepository.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.Model.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.IRepository.pdb
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\ikeepfit.Model.pdb
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\EntityFramework.xml
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\obj\Debug\ikeepfit.Repository.csprojResolveAssemblyReference.cache
+D:\个人文件\ikeepfit\ikeepfit.Repository\obj\Debug\ikeepfit.Repository.dll
+D:\个人文件\ikeepfit\ikeepfit.Repository\obj\Debug\ikeepfit.Repository.pdb

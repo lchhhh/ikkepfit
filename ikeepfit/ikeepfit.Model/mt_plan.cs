@@ -14,21 +14,12 @@ namespace ikeepfit.Model
     
     public partial class mt_plan
     {
-        public mt_plan()
-        {
-            this.mt_planday = new HashSet<mt_planday>();
-            this.mt_planmark = new HashSet<mt_planmark>();
-        }
-    
         public string mt_plan_id { get; set; }
         public string mt_plan_name { get; set; }
         public string mt_plan_title { get; set; }
         public string mt_plan_remarks { get; set; }
-        public string mt_plan_week { get; set; }
+        public Nullable<int> mt_plan_week { get; set; }
         public Nullable<int> mt_plan_day { get; set; }
         public string mt_plan_strength { get; set; }
-    
-        public virtual ICollection<mt_planday> mt_planday { get; set; }
-        public virtual ICollection<mt_planmark> mt_planmark { get; set; }
     }
 }
