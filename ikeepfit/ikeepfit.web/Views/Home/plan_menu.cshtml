@@ -21,24 +21,26 @@
     <div class="page-content-wrap">
         <form class="layui-form" action="">
             <div class="layui-form-item">
-                <div class="layui-inline tool-btn">
-                    <button onclick="func7();" class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs" ><i class="layui-icon">&#xe654;</i></button>
-                    <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs" data-url="/admin/category/listorderall.html"><i class="iconfont">&#xe656;</i></button>
-                </div>
                 <div class="layui-inline">
                         <input type="text" name="title" placeholder="请输入计划id" autocomplete="off" class="layui-input">  
                 </div>
                 <div class="layui-inline">
                     <input type="text" name="title" placeholder="请输入计划名" autocomplete="off" class="layui-input">
                 </div>
-                <button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
+                <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
+                </div>
+
+                <div class="layui-inline">
+                    <button onclick="func7();" class="layui-btn layui-btn-normal addBtn hidden-xs" data-id="1" data-url="plan_menu_add">添加</button>
+                </div>
             </div>
         </form>
         <div class="layui-form" id="table-list">
             <table class="layui-table" lay-data="{width: 892, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
                 <thead>
                     <tr>
-                        <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+                        <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
                         <th lay-data="{field:'id', width:80, sort: true, fixed: true}">计划ID</th>
                         <th lay-data="{field:'name', width:80}">计划名</th>
                         <th lay-data="{field:'sex', width:80, sort: true}">主标题</th>
@@ -47,11 +49,13 @@
                         <th lay-data="{field:'classify', width:80}">每周天数</th>
                         <th lay-data="{field:'wealth', width:135, sort: true}">强度</th>
                         <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}">操作</th>
-                    </tr>         
+                    </tr>
+                </thead>
+                <tbody>
                     @foreach (var item in ViewBag.planlist)
                     {
                         <tr>
-                            <td>checkbox</td>
+                            <td><input type="checkbox" name="" lay-skin="primary" data-id="3"></td>
                             <td>@item.mt_plan_id</td>
                             <td>@item.mt_plan_name</td>
                             <td>@item.mt_plan_title</td>
@@ -59,48 +63,30 @@
                             <td>@item.mt_plan_week</td>
                             <td>@item.mt_plan_day</td>
                             <td>@item.mt_plan_strength</td>
-                            <td><a id="@item.mt_plan_id" class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a></td>
+                            <td>
+                                <div class="layui-inline">
+                                    <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url="menu-add.html">删除</button>
+                                    <button class="layui-btn layui-btn-mini layui-btn-normal edit-btn" data-id="1" data-url="menu-add.html">编辑</button>
+                                    <button class="layui-btn layui-btn-mini" data-id="1" data-url="menu-add.html">添加课程</button>
+                                </div>
+                            </td>
                         </tr>
                     }
-                </thead>
+                </tbody>
             </table>
-            <script type="text/html" id="barDemo">
-                <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-            </script>
         </div>
     </div>
     <script src="~/Content/layui/layui.js" type="text/javascript" charset="utf-8"></script>
     <script src="~/Content/js/common.js" type="text/javascript" charset="utf-8"></script>
     <script>
-        layui.use(['form', 'jquery', 'layer', 'dialog'], function () {
-            var $ = layui.jquery;
-
-            //修改状态
-            $('#table-list').on('click', '.table-list-status', function () {
-                var That = $(this);
-                var status = That.attr('data-status');
-                var id = That.parent().attr('data-id');
-                if (status == 1) {
-                    That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('隐藏').attr('data-status', 2);
-                } else if (status == 2) {
-                    That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('显示').attr('data-status', 1);
-
-                }
-            })
-
-        });
-    </script>
-    <script>
     layui.use('table', function () {
         var table = layui.table;
         //监听表格复选框选择
-        table.on('checkbox(demo)', function (obj) {
+        table.on('checkbox', function (obj) {
             console.log(obj)
         });
         //监听工具条
-        table.on('tool(demo)', function (obj) {
+        table.on('tool', function (obj) {
             var data = obj.data;
             if (obj.event === 'detail') {
                 layer.msg('ID：' + data.id + ' 的查看操作');
