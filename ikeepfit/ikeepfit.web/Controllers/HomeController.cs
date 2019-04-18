@@ -13,7 +13,11 @@ namespace ikeepfit.web.Controllers
 {
     public class HomeController : Controller
     {
-        IPlanServices planservices = new PlanServices();
+        IPlanServices planservices;
+        public HomeController(IPlanServices plans)
+        {
+            this.planservices = plans;
+        }
         public ActionResult Index()
         {
             return View();
@@ -22,23 +26,23 @@ namespace ikeepfit.web.Controllers
         {
             try
             {
-                //var usreinfo = userinfoservice.QueryWhere(c => c.uID > 2).FirstOrDefault();
-                for (int i = 0; i < 10; i++)
-                {
-                    planservices.Add(new mt_plan()
-                    {
-                        mt_plan_id="2"+i,
-                        mt_plan_name = "测试",
-                        mt_plan_title = "超级管理员",
-                        mt_plan_remarks = "测试",
-                        mt_plan_week = 5,
-                        mt_plan_day = 5,
-                        mt_plan_strength = "2"
-                    });
-                }
+                var plan = planservices.QueryWhere(c => c.mt_plan_day > 2).FirstOrDefault();
+                //for (int i = 0; i < 10; i++)
+                //{
+                //    planservices.add(new mt_plan()
+                //    {
+                //        mt_plan_id="2"+i,
+                //        mt_plan_name = "测试",
+                //        mt_plan_title = "超级管理员",
+                //        mt_plan_remarks = "测试",
+                //        mt_plan_week = 5,
+                //        mt_plan_day = 5,
+                //        mt_plan_strength = "2"
+                //    });
+                //}
 
-                planservices.SaverChanges();
-                return Content("添加数据成功");
+                //planservices.saverchanges();
+                return Content(plan.mt_plan_name);
             }
             catch (Exception ex)
             {

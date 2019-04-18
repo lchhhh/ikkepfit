@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using ikeepfit.web;
+using ikeepfit.web.App_Start;
 
 namespace ikeepfit.web
 {
@@ -16,6 +18,7 @@ namespace ikeepfit.web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutofacConfig.Register();
         }
     }
 }

@@ -74,3 +74,5 @@ D:\个人文件\ikeepfit\ikeepfit(user).web\obj\Debug\ikeepfit(user).web.pdb
 D:\个人文件\ikeepfit\ikeepfit(user).web\bin\Autofac.dll
 D:\个人文件\ikeepfit\ikeepfit(user).web\bin\Autofac.pdb
 D:\个人文件\ikeepfit\ikeepfit(user).web\bin\Autofac.xml
+D:\个人文件\ikeepfit\ikeepfit(user).web\bin\Autofac.Integration.Mvc.dll
+D:\个人文件\ikeepfit\ikeepfit(user).web\bin\Autofac.Integration.Mvc.xml

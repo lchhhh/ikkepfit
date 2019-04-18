@@ -12,7 +12,7 @@ namespace ikeepfit.Services
 {
     public class BaseServices<TEntity> : IBaseServices<TEntity> where TEntity : class
     {
-        public IBaseRepository<TEntity> baseDal = new BaseRepository<TEntity>();
+        public IBaseRepository<TEntity> baseDal;
 
         #region 查询
         /// <summary>
