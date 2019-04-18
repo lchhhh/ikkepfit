@@ -22,7 +22,7 @@
         <form class="layui-form" action="">
             <div class="layui-form-item">
                 <div class="layui-inline tool-btn">
-                    <button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs" data-url="menu-add2.html"><i class="layui-icon">&#xe654;</i></button>
+                    <button onclick="func7();" class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs" ><i class="layui-icon">&#xe654;</i></button>
                     <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs" data-url="/admin/category/listorderall.html"><i class="iconfont">&#xe656;</i></button>
                 </div>
                 <div class="layui-inline">
@@ -47,7 +47,21 @@
                         <th lay-data="{field:'classify', width:80}">每周天数</th>
                         <th lay-data="{field:'wealth', width:135, sort: true}">强度</th>
                         <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}">操作</th>
-                    </tr>
+                    </tr>         
+                    @foreach (var item in ViewBag.planlist)
+                    {
+                        <tr>
+                            <td>checkbox</td>
+                            <td>@item.mt_plan_id</td>
+                            <td>@item.mt_plan_name</td>
+                            <td>@item.mt_plan_title</td>
+                            <td>@item.mt_plan_remarks</td>
+                            <td>@item.mt_plan_week</td>
+                            <td>@item.mt_plan_day</td>
+                            <td>@item.mt_plan_strength</td>
+                            <td><a id="@item.mt_plan_id" class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a></td>
+                        </tr>
+                    }
                 </thead>
             </table>
             <script type="text/html" id="barDemo">
