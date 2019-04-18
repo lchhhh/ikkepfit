@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ikeepfitModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mt_knowledge">
+    <Key>
+      <PropertyRef Name="mt_knowledge_id" />
+    </Key>
+    <Property Name="mt_knowledge_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="mt_knowledge_title" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_knowledge_time" Type="date" />
+    <Property Name="mt_knowledge_remarks" Type="nvarchar(max)" />
+    <Property Name="mt_knowledge_content" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="mt_plan">
+    <Key>
+      <PropertyRef Name="mt_plan_id" />
+    </Key>
+    <Property Name="mt_plan_id" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="mt_plan_name" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_plan_title" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_plan_remarks" Type="nvarchar" MaxLength="50" />
+    <Property Name="mt_plan_week" Type="int" />
+    <Property Name="mt_plan_day" Type="int" />
+    <Property Name="mt_plan_strength" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityContainer Name="ikeepfitModel1StoreContainer">
+    <EntitySet Name="mt_knowledge" EntityType="Self.mt_knowledge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mt_plan" EntityType="Self.mt_plan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

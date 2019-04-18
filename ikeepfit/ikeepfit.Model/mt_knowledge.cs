@@ -14,17 +14,10 @@ namespace ikeepfit.Model
     
     public partial class mt_knowledge
     {
-        public mt_knowledge()
-        {
-            this.mt_knowledgemark = new HashSet<mt_knowledgemark>();
-        }
-    
         public string mt_knowledge_id { get; set; }
         public string mt_knowledge_title { get; set; }
         public Nullable<System.DateTime> mt_knowledge_time { get; set; }
         public string mt_knowledge_remarks { get; set; }
         public string mt_knowledge_content { get; set; }
-    
-        public virtual ICollection<mt_knowledgemark> mt_knowledgemark { get; set; }
     }
 }

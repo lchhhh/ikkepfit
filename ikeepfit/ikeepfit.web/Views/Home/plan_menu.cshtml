@@ -1,4 +1,5 @@
-﻿
+﻿@using ikeepfit.Model;
+@model List<ikeepfit.Model.mt_plan>
 @{
     Layout = null;
 }
@@ -39,9 +40,8 @@
                     <tr>
                         <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
                         <th lay-data="{field:'id', width:80, sort: true, fixed: true}">计划ID</th>
-                        <th lay-data="{field:'username', width:80}">计划名</th>
+                        <th lay-data="{field:'name', width:80}">计划名</th>
                         <th lay-data="{field:'sex', width:80, sort: true}">主标题</th>
-                        <th lay-data="{field:'city', width:80}">小标题</th>
                         <th lay-data="{field:'sign', width:160}">介绍</th>
                         <th lay-data="{field:'experience', width:80, sort: true}">课时长</th>
                         <th lay-data="{field:'classify', width:80}">每周天数</th>
@@ -116,7 +116,7 @@
               layer.msg(checkStatus.isAll ? '全选' : '未全选')
           }
         };
-         
+
         $('.demoTable .layui-btn').on('click', function () {
             var type = $(this).data('type');
             active[type] ? active[type].call(this) : '';
