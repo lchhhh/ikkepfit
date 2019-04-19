@@ -75,7 +75,7 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',   'element
 	$('#table-list').on('click', '.add-btn', function() {
 		var url=$(this).attr('data-url');
 		//将iframeObj传递给父级窗口
-		parent.page("菜单添加", url, iframeObj, w = "700px", h = "620px");
+		parent.page("添加计划", url, iframeObj, w = "700px", h = "620px");
 		return false;
 	})
 	//列表删除

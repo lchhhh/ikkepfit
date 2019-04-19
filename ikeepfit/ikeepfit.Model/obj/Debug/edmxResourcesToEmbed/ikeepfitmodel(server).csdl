@@ -15,6 +15,7 @@
   <EntityContainer Name="ikeepfitEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="mt_plan" EntityType="Self.mt_plan" />
     <EntitySet Name="mt_knowledge" EntityType="ikeepfitModel1.mt_knowledge" />
+    <EntitySet Name="mt_course" EntityType="ikeepfitModel1.mt_course" />
   </EntityContainer>
   <EntityType Name="mt_knowledge">
     <Key>
@@ -25,5 +26,13 @@
     <Property Name="mt_knowledge_time" Type="DateTime" Precision="0" />
     <Property Name="mt_knowledge_remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="mt_knowledge_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mt_course">
+    <Key>
+      <PropertyRef Name="mt_course_id" />
+    </Key>
+    <Property Name="mt_course_id" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="mt_course_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mt_course_video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
