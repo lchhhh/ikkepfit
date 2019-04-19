@@ -16,6 +16,12 @@
     <EntitySet Name="mt_plan" EntityType="Self.mt_plan" />
     <EntitySet Name="mt_knowledge" EntityType="ikeepfitModel1.mt_knowledge" />
     <EntitySet Name="mt_course" EntityType="ikeepfitModel1.mt_course" />
+    <EntitySet Name="mt_article" EntityType="ikeepfitModel1.mt_article" />
+    <EntitySet Name="mt_articletype" EntityType="ikeepfitModel1.mt_articletype" />
+    <AssociationSet Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC" Association="ikeepfitModel1.FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+      <End Role="mt_articletype" EntitySet="mt_articletype" />
+      <End Role="mt_article" EntitySet="mt_article" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="mt_knowledge">
     <Key>
@@ -35,4 +41,39 @@
     <Property Name="mt_course_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="mt_course_video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="mt_article">
+    <Key>
+      <PropertyRef Name="mt_article_id" />
+    </Key>
+    <Property Name="mt_articletype_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mt_article_id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mt_article_title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mt_article_time" Type="DateTime" Precision="0" />
+    <Property Name="mt_article_like" Type="Int32" />
+    <Property Name="mt_article_look" Type="Int32" />
+    <Property Name="mt_article_collect" Type="Int32" />
+    <Property Name="mt_article_cotent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mt_user_id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="mt_articletype" Relationship="ikeepfitModel1.FK_MT_ARTIC_REFERENCE_MT_ARTIC" FromRole="mt_article" ToRole="mt_articletype" />
+  </EntityType>
+  <EntityType Name="mt_articletype">
+    <Key>
+      <PropertyRef Name="mt_articletype_id" />
+    </Key>
+    <Property Name="mt_articletype_id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mt_articletype_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="mt_article" Relationship="ikeepfitModel1.FK_MT_ARTIC_REFERENCE_MT_ARTIC" FromRole="mt_articletype" ToRole="mt_article" />
+  </EntityType>
+  <Association Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+    <End Type="ikeepfitModel1.mt_articletype" Role="mt_articletype" Multiplicity="0..1" />
+    <End Type="ikeepfitModel1.mt_article" Role="mt_article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mt_articletype">
+        <PropertyRef Name="mt_articletype_id" />
+      </Principal>
+      <Dependent Role="mt_article">
+        <PropertyRef Name="mt_articletype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

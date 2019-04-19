@@ -154,6 +154,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ikeepfitmodel%28server%29.edmx</DependentUpon>
     </Compile>
+    <Compile Include="mt_article.cs">
+      <DependentUpon>ikeepfitmodel%28server%29.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mt_articletype.cs">
+      <DependentUpon>ikeepfitmodel%28server%29.tt</DependentUpon>
+    </Compile>
     <Compile Include="mt_course.cs">
       <DependentUpon>ikeepfitmodel%28server%29.tt</DependentUpon>
     </Compile>

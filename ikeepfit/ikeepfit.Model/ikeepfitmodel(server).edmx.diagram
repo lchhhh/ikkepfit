@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="ikeepfitModel1.mt_plan" PointX="0.75" PointY="0.75" Width="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ikeepfitModel1.mt_knowledge" Width="1.5" PointX="4.125" PointY="22.875" />
         <EntityTypeShape EntityType="ikeepfitModel1.mt_course" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ikeepfitModel1.mt_article" Width="1.5" PointX="5.625" PointY="4" />
+        <EntityTypeShape EntityType="ikeepfitModel1.mt_articletype" Width="1.5" PointX="3.375" PointY="4.625" />
+        <AssociationConnector Association="ikeepfitModel1.FK_MT_ARTIC_REFERENCE_MT_ARTIC" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

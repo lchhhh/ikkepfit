@@ -1,5 +1,7 @@
-﻿@using ikeepfit.Model;
-@model List<ikeepfit.Model.mt_course>
+﻿
+
+@using ikeepfit.Model;
+@model List<ikeepfit.Model.mt_articletype>
 @{
     Layout = null;
 }
@@ -21,15 +23,15 @@
     <div class="page-content-wrap">
         <form class="layui-form" action="">
             <div class="layui-form-item">
-                <div class="layui-inline">
-                    <input type="text" name="title" placeholder="请输入课程id" autocomplete="off" class="layui-input">
+                @*<div class="layui-inline">
+                    <input type="text" name="title" placeholder="请输入计划id" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-inline">
-                    <input type="text" name="title" placeholder="请输入课程名" autocomplete="off" class="layui-input">
+                    <input type="text" name="title" placeholder="请输入计划名" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-inline">
                     <button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
-                </div>
+                </div>*@
 
                 <div class="layui-inline">
                     <button onclick="func7();" class="layui-btn layui-btn-normal addBtn hidden-xs" data-id="1" data-url="plan_menu_add">添加</button>
@@ -41,25 +43,23 @@
                 <thead>
                     <tr>
                         <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
-                        <th lay-data="{field:'id', width:80, sort: true, fixed: true}">课程ID</th>
-                        <th lay-data="{field:'name', width:80}">课程名称</th>
-                        <th lay-data="{field:'sex', width:80, sort: true}">视频绝对路径</th>     
+                        <th lay-data="{field:'id', width:80, sort: true, fixed: true}">小红书类型ID</th>
+                        <th lay-data="{field:'name', width:80}">小红书类型名称</th>
                         <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}">操作</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in ViewBag.courselist)
+                    @foreach (var item in ViewBag.articletypelist)
                     {
                         <tr>
                             <td><input type="checkbox" name="" lay-skin="primary" data-id="3"></td>
-                            <td>@item.mt_course_id</td>
-                            <td>@item.mt_course_name</td>
-                            <td>@item.mt_course_video</td>
+                            <td>@item.mt_articletype_id</td>
+                            <td>@item.mt_articletype_name</td>
                             <td>
                                 <div class="layui-inline">
                                     <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url="menu-add.html">删除</button>
                                     <button class="layui-btn layui-btn-mini layui-btn-normal edit-btn" data-id="1" data-url="menu-add.html">编辑</button>
-                                    <button class="layui-btn layui-btn-mini" data-id="1" data-url="menu-add.html">添加课程</button>
+                                    <button class="layui-btn layui-btn-mini" data-id="1" data-url="menu-add.html">添加</button>
                                 </div>
                             </td>
                         </tr>

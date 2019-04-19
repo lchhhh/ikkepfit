@@ -34,5 +34,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="mt_article">
+      <EntityTypeMapping TypeName="ikeepfitModel1.mt_article">
+        <MappingFragment StoreEntitySet="mt_article">
+          <ScalarProperty Name="mt_user_id" ColumnName="mt_user_id" />
+          <ScalarProperty Name="mt_article_cotent" ColumnName="mt_article_cotent" />
+          <ScalarProperty Name="mt_article_collect" ColumnName="mt_article_collect" />
+          <ScalarProperty Name="mt_article_look" ColumnName="mt_article_look" />
+          <ScalarProperty Name="mt_article_like" ColumnName="mt_article_like" />
+          <ScalarProperty Name="mt_article_time" ColumnName="mt_article_time" />
+          <ScalarProperty Name="mt_article_title" ColumnName="mt_article_title" />
+          <ScalarProperty Name="mt_article_id" ColumnName="mt_article_id" />
+          <ScalarProperty Name="mt_articletype_id" ColumnName="mt_articletype_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mt_articletype">
+      <EntityTypeMapping TypeName="ikeepfitModel1.mt_articletype">
+        <MappingFragment StoreEntitySet="mt_articletype">
+          <ScalarProperty Name="mt_articletype_name" ColumnName="mt_articletype_name" />
+          <ScalarProperty Name="mt_articletype_id" ColumnName="mt_articletype_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

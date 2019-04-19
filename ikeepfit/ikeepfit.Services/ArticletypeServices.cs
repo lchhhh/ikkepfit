@@ -5,19 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using ikeepfit.Model;
 using ikeepfit.IServices;
+using ikeepfit.Services;
+using ikeepfit.Repository;
 using ikeepfit.IRepository;
-
 
 namespace ikeepfit.Services
 {
-    public partial class CourseServices : BaseServices<mt_course>, ICourseServices
+    public partial class ArticletypeServices : BaseServices<mt_articletype>, IArticletypeServices
     {
-        ICourseRepository dal;
-        public CourseServices(ICourseRepository dal)
+        IArticletypeRepository dal;
+        public ArticletypeServices(IArticletypeRepository dal)
         {
             this.dal = dal;
             base.baseDal = dal;
         }
 
     }
+   
+  
 }

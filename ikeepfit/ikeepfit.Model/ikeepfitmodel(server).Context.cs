@@ -28,5 +28,7 @@ namespace ikeepfit.Model
         public virtual DbSet<mt_plan> mt_plan { get; set; }
         public virtual DbSet<mt_knowledge> mt_knowledge { get; set; }
         public virtual DbSet<mt_course> mt_course { get; set; }
+        public virtual DbSet<mt_article> mt_article { get; set; }
+        public virtual DbSet<mt_articletype> mt_articletype { get; set; }
     }
 }
