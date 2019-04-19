@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseServices.cs" />
+    <Compile Include="ICourseServices.cs" />
     <Compile Include="IPlanServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

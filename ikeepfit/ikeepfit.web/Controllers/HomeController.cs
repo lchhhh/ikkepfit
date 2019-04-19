@@ -15,10 +15,13 @@ namespace ikeepfit.web.Controllers
     public class HomeController : BaseController
     {
         IPlanServices planservices;
+
+      
         public HomeController(IPlanServices plans)
         {
             this.planservices = plans;
         }
+        
         public ActionResult Index()
         {
             return View();
@@ -37,6 +40,7 @@ namespace ikeepfit.web.Controllers
         {
             return View();
         }
+      
         public ActionResult book_menu()
         {
             return View();
