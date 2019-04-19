@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ikeepfitModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mt_article">
+    <Key>
+      <PropertyRef Name="mt_article_id" />
+    </Key>
+    <Property Name="mt_articletype_id" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_article_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="mt_article_title" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_article_time" Type="date" />
+    <Property Name="mt_article_like" Type="int" />
+    <Property Name="mt_article_look" Type="int" />
+    <Property Name="mt_article_collect" Type="int" />
+    <Property Name="mt_article_cotent" Type="nvarchar(max)" />
+    <Property Name="mt_user_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mt_articletype">
+    <Key>
+      <PropertyRef Name="mt_articletype_id" />
+    </Key>
+    <Property Name="mt_articletype_id" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="mt_articletype_name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="mt_course">
+    <Key>
+      <PropertyRef Name="mt_course_id" />
+    </Key>
+    <Property Name="mt_course_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="mt_course_name" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_course_video" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="mt_knowledge">
+    <Key>
+      <PropertyRef Name="mt_knowledge_id" />
+    </Key>
+    <Property Name="mt_knowledge_id" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="mt_knowledge_title" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_knowledge_time" Type="date" />
+    <Property Name="mt_knowledge_remarks" Type="nvarchar(max)" />
+    <Property Name="mt_knowledge_content" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="mt_plan">
+    <Key>
+      <PropertyRef Name="mt_plan_id" />
+    </Key>
+    <Property Name="mt_plan_id" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="mt_plan_name" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_plan_title" Type="nvarchar" MaxLength="20" />
+    <Property Name="mt_plan_remarks" Type="nvarchar" MaxLength="50" />
+    <Property Name="mt_plan_week" Type="int" />
+    <Property Name="mt_plan_day" Type="int" />
+    <Property Name="mt_plan_strength" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <Association Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+    <End Role="mt_articletype" Type="Self.mt_articletype" Multiplicity="0..1" />
+    <End Role="mt_article" Type="Self.mt_article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mt_articletype">
+        <PropertyRef Name="mt_articletype_id" />
+      </Principal>
+      <Dependent Role="mt_article">
+        <PropertyRef Name="mt_articletype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ikeepfitModel1StoreContainer">
+    <EntitySet Name="mt_article" EntityType="Self.mt_article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mt_articletype" EntityType="Self.mt_articletype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mt_course" EntityType="Self.mt_course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mt_knowledge" EntityType="Self.mt_knowledge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mt_plan" EntityType="Self.mt_plan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC" Association="Self.FK_MT_ARTIC_REFERENCE_MT_ARTIC">
+      <End Role="mt_articletype" EntitySet="mt_articletype" />
+      <End Role="mt_article" EntitySet="mt_article" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
