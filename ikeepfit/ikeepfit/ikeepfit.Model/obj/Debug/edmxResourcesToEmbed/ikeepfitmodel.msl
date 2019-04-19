@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ikeepfitModelStoreContainer" CdmEntityContainer="ikeepfitEntities">
+    <EntitySetMapping Name="mt_plan">
+      <EntityTypeMapping TypeName="ikeepfitModel.mt_plan">
+        <MappingFragment StoreEntitySet="mt_plan">
+          <ScalarProperty Name="mt_plan_id" ColumnName="mt_plan_id" />
+          <ScalarProperty Name="mt_plan_name" ColumnName="mt_plan_name" />
+          <ScalarProperty Name="mt_plan_title" ColumnName="mt_plan_title" />
+          <ScalarProperty Name="mt_plan_remarks" ColumnName="mt_plan_remarks" />
+          <ScalarProperty Name="mt_plan_week" ColumnName="mt_plan_week" />
+          <ScalarProperty Name="mt_plan_day" ColumnName="mt_plan_day" />
+          <ScalarProperty Name="mt_plan_strength" ColumnName="mt_plan_strength" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
