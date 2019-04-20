@@ -257,6 +257,7 @@
     <Content Include="Content\images\login\yzm.jpg" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\js\common.js" />
+    <Content Include="Content\js\jquery\jquery-2.1.1.min.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\js\module\dialog.js" />
     <Content Include="Content\js\module\formate.js" />
@@ -716,9 +717,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\plan_menu.cshtml" />
-    <Content Include="Views\Home\book_menu.cshtml" />
-    <Content Include="Views\Home\knowledge_menu.cshtml" />
-    <Content Include="Views\Home\food_menu.cshtml" />
     <Content Include="Views\Home\plan_menu_add.cshtml" />
     <Content Include="Views\Course\course_menu.cshtml" />
     <Content Include="Views\Articletype\articletype_menu.cshtml" />
