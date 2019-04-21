@@ -25,6 +25,9 @@
                 })
             }
         }
+        function edit(plid){
+            $.post('@Url.Action("plan_menu_edit","Home")', {id:plid})
+        }
      </script>
 </head>
 
@@ -77,7 +80,7 @@
                                 <td>
                                     <div class="layui-inline">
                                         <button class="layui-btn layui-btn-mini " data-id="1" onclick="del(@item.mt_plan_id)">删除</button>
-                                        <button class="layui-btn layui-btn-mini layui-btn-normal edit-btn" data-id="1" data-url="menu-edit.html">编辑</button>
+                                        <button class="layui-btn layui-btn-mini layui-btn-normal edit-btn" data-id="1" onclick="edit(@item.mt_plan_id)" data-url="plan_menu_edit">编辑</button>
                                         <button class="layui-btn layui-btn-mini" data-id="1" data-url="menu-add.html">添加课程</button>
                                     </div>
                                 </td>

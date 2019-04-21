@@ -34,56 +34,56 @@
             @using (Ajax.BeginForm("plan_menu_add", "Home", new { }, new AjaxOptions() { HttpMethod = "post", OnSuccess = "AfterAddPlan" }, new { @class = "form-horizontal" }))
             {
                 <form class="layui-form" style="width: 90%;padding-top: 20px;">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">计划id：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="mt_plan_id" required lay-verify="required" placeholder="请输入计划id" autocomplete="off" class="layui-input">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">计划id：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="mt_plan_id" required lay-verify="required" placeholder="请输入计划id" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">计划名：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="mt_plan_name" required lay-verify="required" placeholder="请输入计划名" autocomplete="off" class="layui-input">
-                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">计划名：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="mt_plan_name" required lay-verify="required" placeholder="请输入计划名" autocomplete="off" class="layui-input">
+                            </div>
 
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">主标题：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="mt_plan_title" required lay-verify="required" placeholder="请输入主标题" autocomplete="off" class="layui-input">
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">介绍：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="mt_plan_remarks" required lay-verify="required" placeholder="请输入介绍" autocomplete="off" class="layui-input">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">主标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="mt_plan_title" required lay-verify="required" placeholder="请输入主标题" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">课程时长：</label>
-                        <div class="layui-input-block">
-                            <input type="number" name="mt_plan_week" required lay-verify="required" placeholder="请输入课程时长" autocomplete="off" class="layui-input">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">介绍：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="mt_plan_remarks" required lay-verify="required" placeholder="请输入介绍" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">每周天数：</label>
-                        <div class="layui-input-block">
-                            <input type="number" name="mt_plan_day" required lay-verify="required" placeholder="每周天数" autocomplete="off" class="layui-input">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">课程时长：</label>
+                            <div class="layui-input-block">
+                                <input type="number" name="mt_plan_week" required lay-verify="required" placeholder="请输入课程时长" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">强度：</label>
-                        <div class="layui-input-block">
-                            <input type="number" name="mt_plan_strength" required lay-verify="required" placeholder="强度" autocomplete="off" class="layui-input">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">每周天数：</label>
+                            <div class="layui-input-block">
+                                <input type="number" name="mt_plan_day" required lay-verify="required" placeholder="每周天数" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">立即提交</button>
-                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">强度：</label>
+                            <div class="layui-input-block">
+                                <input type="number" name="mt_plan_strength" required lay-verify="required" placeholder="强度" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
-                    </div>
-                </form>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+</form>
             }
         </div>
 </body>

@@ -27,7 +27,6 @@ namespace ikeepfit.web.Controllers
         }
         public ActionResult course_menu()
         {
-
             ViewBag.controllername = RouteData.Values["controller"].ToString().ToLower();
             ViewBag.courselist = courseservices.QueryWhere(a => true).OrderByDescending(a => a.mt_course_id);
             return View();
