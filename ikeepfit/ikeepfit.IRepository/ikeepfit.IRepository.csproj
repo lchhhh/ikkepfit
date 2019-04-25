@@ -138,6 +138,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdminRepository.cs" />
     <Compile Include="IArticletypeRepository.cs" />
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="ICourseRepository.cs" />

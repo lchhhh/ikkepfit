@@ -8,6 +8,9 @@ using System.Linq.Expressions;
 
 namespace ikeepfit.IRepository
 {
+
+
+    
     public interface IBaseRepository<TEntity> where TEntity : class
     {
         #region 查询
@@ -79,5 +82,12 @@ namespace ikeepfit.IRepository
         #region 调用存储过程返回一个指定的TResult
         List<TResult> RunProc<TResult>(string sql, params object[] pamrs);
         #endregion
+
+        /// <summary>
+        /// 查询数据
+        /// </summary>
+        /// <param name="whereLambda">查询表达式</param>
+        /// <returns>实体</returns>
+      
     }
 }

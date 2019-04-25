@@ -280,3 +280,4 @@ D:\ikeepfit\ikeepfit\ikeepfit(user).web\bin\zh-Hans\Microsoft.Owin.Security.Twit
 D:\ikeepfit\ikeepfit\ikeepfit(user).web\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\ikeepfit\ikeepfit\ikeepfit(user).web\obj\Debug\ikeepfit(user).web.dll
 D:\ikeepfit\ikeepfit\ikeepfit(user).web\obj\Debug\ikeepfit(user).web.pdb
+D:\ikeepfit\ikeepfit\ikeepfit(user).web\obj\Debug\ikeepfit(user).web.csprojResolveAssemblyReference.cache

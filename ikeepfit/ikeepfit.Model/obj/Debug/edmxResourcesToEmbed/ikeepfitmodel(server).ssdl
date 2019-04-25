@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ikeepfitModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ikeepfit.dbo.mt_admin”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="mt_admin">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" />
+    <Property Name="logindate" Type="datetime" />
+  </EntityType>
   <EntityType Name="mt_article">
     <Key>
       <PropertyRef Name="mt_article_id" />
@@ -69,6 +79,13 @@
     <EntitySet Name="mt_course" EntityType="Self.mt_course" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="mt_knowledge" EntityType="Self.mt_knowledge" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="mt_plan" EntityType="Self.mt_plan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mt_admin" EntityType="Self.mt_admin" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [mt_admin].[username] AS [username], 
+    [mt_admin].[password] AS [password], 
+    [mt_admin].[logindate] AS [logindate]
+    FROM [dbo].[mt_admin] AS [mt_admin]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_MT_ARTIC_REFERENCE_MT_ARTIC" Association="Self.FK_MT_ARTIC_REFERENCE_MT_ARTIC">
       <End Role="mt_articletype" EntitySet="mt_articletype" />
       <End Role="mt_article" EntitySet="mt_article" />

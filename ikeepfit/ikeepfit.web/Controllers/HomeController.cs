@@ -36,22 +36,30 @@ namespace ikeepfit.web.Controllers
         {
             return View();
         }
-        public ActionResult course_menu()
+
+        [HttpPost]
+        public ActionResult plan_menu_add(mt_plan plan)
         {
-            return View();
+            try
+            {
+                mt_plan mt_plan = new mt_plan();
+                planservices.Add(plan);
+                planservices.SaverChanges();
+                return Content("添加成功");
+            }
+            catch (Exception)
+            {
+                return Content("提交失败");
+            }
         }
-      
-        public ActionResult book_menu()
+
+        [HttpPost]
+        public ActionResult plan_menu_delete(string id)
         {
-            return View();
-        }
-        public ActionResult knowledge_menu()
-        {
-            return View();
-        }
-        public ActionResult food_menu()
-        {
-            return View();
+            mt_plan mt_plan = new mt_plan() { mt_plan_id=id};
+            planservices.Delete(mt_plan, false);
+            planservices.SaverChanges();
+            return Content("删除成功");
         }
 
 

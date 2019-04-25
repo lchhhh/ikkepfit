@@ -25,7 +25,7 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',   'element
 	$('.addBtn').click(function() {
 		var url=$(this).attr('data-url');
 		//将iframeObj传递给父级窗口,执行操作完成刷新
-		parent.page("菜单添加", url, iframeObj, w = "700px", h = "620px");
+		parent.page("添加计划", url, iframeObj, w = "700px", h = "620px");
 		return false;
 
 	}).mouseenter(function() {
@@ -85,10 +85,9 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',   'element
 		dialog.confirm({
 			message:'您确定要进行删除吗？',
 			success:function(){
-				layer.msg('确定了')
+				layer.msg('删除成功')
 			},
 			cancel:function(){
-				layer.msg('取消了')
 			}
 		})
 		return false;

@@ -138,6 +138,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAminServices.cs" />
     <Compile Include="IArticletypeServices.cs" />
     <Compile Include="IBaseServices.cs" />
     <Compile Include="ICourseServices.cs" />

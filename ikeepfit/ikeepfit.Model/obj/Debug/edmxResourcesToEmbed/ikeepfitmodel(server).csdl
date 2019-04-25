@@ -22,6 +22,7 @@
       <End Role="mt_articletype" EntitySet="mt_articletype" />
       <End Role="mt_article" EntitySet="mt_article" />
     </AssociationSet>
+    <EntitySet Name="mt_admin" EntityType="ikeepfitModel1.mt_admin" />
   </EntityContainer>
   <EntityType Name="mt_knowledge">
     <Key>
@@ -76,4 +77,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="mt_admin">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="logindate" Type="DateTime" Precision="3" />
+  </EntityType>
 </Schema>

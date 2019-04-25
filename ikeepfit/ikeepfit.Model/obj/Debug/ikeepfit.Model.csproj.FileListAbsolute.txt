@@ -156,3 +156,4 @@ D:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\zh-Hans\System.Web.WebPages.Deploy
 D:\ikeepfit\ikeepfit\ikeepfit.Model\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\ikeepfit\ikeepfit\ikeepfit.Model\obj\Debug\ikeepfit.Model.dll
 D:\ikeepfit\ikeepfit\ikeepfit.Model\obj\Debug\ikeepfit.Model.pdb
+D:\ikeepfit\ikeepfit\ikeepfit.Model\obj\Debug\ikeepfit.Model.csprojResolveAssemblyReference.cache

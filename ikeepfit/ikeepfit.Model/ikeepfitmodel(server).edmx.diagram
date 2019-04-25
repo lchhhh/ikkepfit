@@ -11,6 +11,7 @@
         <EntityTypeShape EntityType="ikeepfitModel1.mt_article" Width="1.5" PointX="5.625" PointY="4" />
         <EntityTypeShape EntityType="ikeepfitModel1.mt_articletype" Width="1.5" PointX="3.375" PointY="4.625" />
         <AssociationConnector Association="ikeepfitModel1.FK_MT_ARTIC_REFERENCE_MT_ARTIC" />
+        <EntityTypeShape EntityType="ikeepfitModel1.mt_admin" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="false" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

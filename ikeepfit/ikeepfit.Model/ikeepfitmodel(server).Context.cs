@@ -30,5 +30,6 @@ namespace ikeepfit.Model
         public virtual DbSet<mt_course> mt_course { get; set; }
         public virtual DbSet<mt_article> mt_article { get; set; }
         public virtual DbSet<mt_articletype> mt_articletype { get; set; }
+        public virtual DbSet<mt_admin> mt_admin { get; set; }
     }
 }

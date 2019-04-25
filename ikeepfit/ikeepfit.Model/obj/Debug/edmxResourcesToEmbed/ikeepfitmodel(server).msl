@@ -57,5 +57,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="mt_admin">
+      <EntityTypeMapping TypeName="ikeepfitModel1.mt_admin">
+        <MappingFragment StoreEntitySet="mt_admin">
+          <ScalarProperty Name="logindate" ColumnName="logindate" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
