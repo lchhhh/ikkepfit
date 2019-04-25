@@ -1,0 +1,14 @@
+F:\product3\sportsWeb\Model\bin\Debug\SP.Model.dll
+F:\product3\sportsWeb\Model\bin\Debug\SP.Model.pdb
+F:\product3\sportsWeb\Model\obj\Debug\SP.Model.dll
+F:\product3\sportsWeb\Model\obj\Debug\SP.Model.pdb
+E:\毕业设计\新建文件夹\561sportsWeb\Model\bin\Debug\SP.Model.dll
+E:\毕业设计\新建文件夹\561sportsWeb\Model\bin\Debug\SP.Model.pdb
+E:\毕业设计\新建文件夹\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\毕业设计\新建文件夹\561sportsWeb\Model\obj\Debug\SP.Model.dll
+E:\毕业设计\新建文件夹\561sportsWeb\Model\obj\Debug\SP.Model.pdb
+D:\xmh\毕设文件\bishe\561sportsWeb\Model\bin\Debug\SP.Model.dll
+D:\xmh\毕设文件\bishe\561sportsWeb\Model\bin\Debug\SP.Model.pdb
+D:\xmh\毕设文件\bishe\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\xmh\毕设文件\bishe\561sportsWeb\Model\obj\Debug\SP.Model.dll
+D:\xmh\毕设文件\bishe\561sportsWeb\Model\obj\Debug\SP.Model.pdb

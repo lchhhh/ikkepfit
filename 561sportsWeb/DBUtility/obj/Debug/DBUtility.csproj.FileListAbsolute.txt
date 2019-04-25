@@ -1,0 +1,9 @@
+F:\product3\sportsWeb\DBUtility\bin\Debug\SP.DBUtility.dll
+F:\product3\sportsWeb\DBUtility\bin\Debug\SP.DBUtility.pdb
+F:\product3\sportsWeb\DBUtility\obj\Debug\SP.DBUtility.dll
+F:\product3\sportsWeb\DBUtility\obj\Debug\SP.DBUtility.pdb
+E:\毕业设计\新建文件夹\561sportsWeb\DBUtility\bin\Debug\SP.DBUtility.dll
+E:\毕业设计\新建文件夹\561sportsWeb\DBUtility\bin\Debug\SP.DBUtility.pdb
+E:\毕业设计\新建文件夹\561sportsWeb\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+E:\毕业设计\新建文件夹\561sportsWeb\DBUtility\obj\Debug\SP.DBUtility.dll
+E:\毕业设计\新建文件夹\561sportsWeb\DBUtility\obj\Debug\SP.DBUtility.pdb
