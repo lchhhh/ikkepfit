@@ -25,3 +25,12 @@ D:\xmh\毕设文件\bishe\561sportsWeb\DAL\bin\Debug\SP.Model.pdb
 D:\xmh\毕设文件\bishe\561sportsWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\xmh\毕设文件\bishe\561sportsWeb\DAL\obj\Debug\SP.DAL.dll
 D:\xmh\毕设文件\bishe\561sportsWeb\DAL\obj\Debug\SP.DAL.pdb
+E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DAL.dll
+E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DAL.pdb
+E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DBUtility.dll
+E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.Model.dll
+E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DBUtility.pdb
+E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.Model.pdb
+E:\ikeepfit\561sportsWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\ikeepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.dll
+E:\ikeepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.pdb
