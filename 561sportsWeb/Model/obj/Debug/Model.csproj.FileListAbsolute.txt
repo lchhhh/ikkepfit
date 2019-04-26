@@ -17,3 +17,8 @@ E:\ikeepfit\561sportsWeb\Model\bin\Debug\SP.Model.pdb
 E:\ikeepfit\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\ikeepfit\561sportsWeb\Model\obj\Debug\SP.Model.dll
 E:\ikeepfit\561sportsWeb\Model\obj\Debug\SP.Model.pdb
+D:\ikeepfit\561sportsWeb\Model\bin\Debug\SP.Model.dll
+D:\ikeepfit\561sportsWeb\Model\bin\Debug\SP.Model.pdb
+D:\ikeepfit\561sportsWeb\Model\obj\Debug\SP.Model.dll
+D:\ikeepfit\561sportsWeb\Model\obj\Debug\SP.Model.pdb
+D:\ikeepfit\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

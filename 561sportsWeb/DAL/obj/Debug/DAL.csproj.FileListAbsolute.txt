@@ -34,3 +34,12 @@ E:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.Model.pdb
 E:\ikeepfit\561sportsWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\ikeepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.dll
 E:\ikeepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.pdb
+D:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DAL.dll
+D:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DAL.pdb
+D:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DBUtility.dll
+D:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.Model.dll
+D:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.DBUtility.pdb
+D:\ikeepfit\561sportsWeb\DAL\bin\Debug\SP.Model.pdb
+D:\ikeepfit\561sportsWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\ikeepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.dll
+D:\ikeepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.pdb

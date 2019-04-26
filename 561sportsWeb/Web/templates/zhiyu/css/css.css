@@ -84,7 +84,15 @@ a,li,input,img,em{ text-decoration:none; list-style:none; font-style:normal;}
 .gszc_title p{float:left; line-height:40px; font-family:"微软雅黑"; font-size:16px; color:#fff;padding-left:30px;}
 .more1{float:right; height:40px; line-height:40px;padding-right:7px;}
 .more1 a{padding-right:14px; background:url(../images/more.png) no-repeat right center; font-family:"微软雅黑"; font-size:14px; color:#474747;}
-.gszc_contect{width:312px;float:right; border:1px solid #47AE6E; border-top:none;margin-right:1px; display:inline; background:#fff;padding:0 0 5px 0;}
+.gszc_contect{border-left: 1px solid #47AE6E;
+    border-right: 1px solid #47AE6E;
+    border-bottom: 1px solid #47AE6E;
+width:310px;
+    float:right; margin-right:1px; display:inline; background:#fff;padding:0 0 5px 0;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: medium;
+}
 .gszc_contect ul li{width:295px;float:left; height:34px; border-bottom:1px dashed #ccc;padding-left:17px;}
 .gszc_contect ul li a{width:295px;float:left; height:34px; line-height:34px;padding-left:15px; background:url(../images/jiantou.png) no-repeat left center; color:#474747;}
 .gszc_contect ul li a:hover{ color:red;}

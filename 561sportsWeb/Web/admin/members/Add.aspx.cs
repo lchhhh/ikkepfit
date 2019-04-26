@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Text;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 public partial class members_Add : System.Web.UI.Page
 {
@@ -21,7 +22,17 @@ public partial class members_Add : System.Web.UI.Page
         
         }
     }
-
+    private static string Md5Hash(string input)
+    {
+        MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
+        byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
+        StringBuilder sBuilder = new StringBuilder();
+        for (int i = 0; i < data.Length; i++)
+        {
+            sBuilder.Append(data[i].ToString("x2"));
+        }
+        return sBuilder.ToString();
+    }
     /// <summary>
     /// 添加
     /// </summary>
@@ -50,7 +61,7 @@ public partial class members_Add : System.Web.UI.Page
         }
 
         string lname = txt_lname.Text;
-        string pass = txt_pass.Text;
+        string pass = Md5Hash(txt_pass.Text);
         string mname = txt_mname.Text;
         string sex = rtsex.SelectedValue;
         string tel = txt_tel.Text;

@@ -10,11 +10,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Text;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
 
-public partial class members_Modify : System.Web.UI.Page
+public partial class food_Modify : System.Web.UI.Page
 {
-    SP.BLL.members bll = new SP.BLL.members();
+    SP.BLL.food bll = new SP.BLL.food();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -23,40 +22,25 @@ public partial class members_Modify : System.Web.UI.Page
         }
     }
 
-
-    private static string Md5Hash(string input)
-    {
-        MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
-        byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
-        StringBuilder sBuilder = new StringBuilder();
-        for (int i = 0; i < data.Length; i++)
-        {
-            sBuilder.Append(data[i].ToString("x2"));
-        }
-        return sBuilder.ToString();
-    }
-
-   /// <summary>
+    /// <summary>
     /// 初始化
     /// </summary>
     protected void chushi()
     {
 
+
         //根据编号得到相应的记录
-        DataSet ds =bll.GetList("  lname='" + Request.QueryString["id"] + "'");
+        DataSet ds = bll.GetList("  id=" + Request.QueryString["id"]);
         if (ds.Tables[0].Rows.Count > 0)
         {
-            txt_lname.Text = ds.Tables[0].Rows[0]["lname"].ToString();
-            txt_pass.Text = ds.Tables[0].Rows[0]["pass"].ToString();
-            txt_mname.Text = ds.Tables[0].Rows[0]["mname"].ToString();
-            rtsex.SelectedValue=ds.Tables[0].Rows[0]["sex"].ToString();
-            txt_tel.Text = ds.Tables[0].Rows[0]["tel"].ToString();
+            txt_title.Text = ds.Tables[0].Rows[0]["title"].ToString();
             Labelpic.Text = ds.Tables[0].Rows[0]["pic"].ToString();
             if (Labelpic.Text != "" && Labelpic.Text.Length > 3)
             {
-               Imagepic.ImageUrl = "../../uploads/" + Labelpic.Text;
-               Imagepic.Visible = true;
-             }
+                Imagepic.ImageUrl = "../../uploads/" + Labelpic.Text;
+                Imagepic.Visible = true;
+            }
+            Textarea1.Value = ds.Tables[0].Rows[0]["memo"].ToString();
         }
     }
 
@@ -67,6 +51,7 @@ public partial class members_Modify : System.Web.UI.Page
     /// <param name="e"></param>
     protected void btnSave_Click(object sender, EventArgs e)
     {
+        //更新   
         string addrpic = Labelpic.Text;
         if (fppic.HasFile)
         {
@@ -80,22 +65,16 @@ public partial class members_Modify : System.Web.UI.Page
             addrpic = path;
         }
 
-        string lname = txt_lname.Text;
-        string pass = Md5Hash(txt_pass.Text);
-        string mname = txt_mname.Text;
-        string sex = rtsex.SelectedValue;
-        string tel = txt_tel.Text;
+        string title = txt_title.Text;
         string pic = addrpic;
+        string memo = Textarea1.Value;
 
 
-        SP.Model.members model = new SP.Model.members();
-        model.lname = lname;
-        model.pass = pass;
-        model.mname = mname;
-        model.sex = sex;
-        model.tel = tel;
+        SP.Model.food model = new SP.Model.food();
+        model.title = title;
         model.pic = pic;
-
+        model.memo = memo;
+        model.id = int.Parse(Request.QueryString["id"]);
 
         bll.Update(model);
 

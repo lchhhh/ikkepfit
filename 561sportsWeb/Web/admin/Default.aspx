@@ -44,12 +44,12 @@
             <div id="logo">
                 <span style="display: block; position: relative; width: 120px; height: 68px; background-image: url('../images/logo.gif');">
                     <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 30px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
-                        网站后台管理系统
+                        ikeepfit健身网站后台管理系统
                     </label>
                 </span>
             </div>
             <div id="menu">
-                <a href="../default.aspx" id="A8" class="menu_btn1" target="_blank">网站预览</a>
+                <a href="../default.aspx" id="A8" class="menu_btn1" target="_blank">ikeepfit健身网站预览</a>
                 <a href="logout.aspx" id="A8" class="menu_btn1">安全退出</a>
                 <div class="wel">
                     <label>
@@ -97,7 +97,7 @@
 
 
                             <dl>
-                                <dt><a class="ico1" href="javascript:;" onclick="show('plans');">健身方案管理</a></dt>
+                                <dt><a class="ico1" href="javascript:;" onclick="show('plans');">健身计划管理</a></dt>
                                 <div id="plans">
                                     <dd style="display: block;"><a href="plansType/Add.aspx" target="workspace" class="">健身计划类别添加</a></dd>
                                     <dd style="display: block;"><a href="plansType/List.aspx" target="workspace" class="">健身计划类别管理</a></dd>
@@ -109,10 +109,10 @@
 
 
                             <dl>
-                                <dt><a class="ico1" href="javascript:;" onclick="show('selection');">装备选择管理</a></dt>
-                                <div id="selection">
-                                    <dd style="display: block;"><a href="selection/Add.aspx" target="workspace" class="">装备选择添加</a></dd>
-                                    <dd style="display: block;"><a href="selection/List.aspx" target="workspace" class="">装备选择管理</a></dd>
+                                <dt><a class="ico1" href="javascript:;" onclick="show('food');">食物库管理</a></dt>
+                                <div id="food">
+                                    <dd style="display: block;"><a href="food/Add.aspx" target="workspace" class="">食物添加</a></dd>
+                                    <dd style="display: block;"><a href="food/List.aspx" target="workspace" class="">食物管理</a></dd>
                                 </div>
                             </dl>
                             <dl>

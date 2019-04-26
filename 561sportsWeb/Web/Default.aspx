@@ -15,7 +15,7 @@
             	<ul>
                     
                            
-                    <asp:Repeater ID="Repeater2" runat="server">
+                    <asp:Repeater ID="Repeater2" runat="server" >
                         <ItemTemplate>
                              	<li><a href="newView.aspx?id=<%# Eval("nid") %>"><%# Eval("title") %></a></li>
                         </ItemTemplate>

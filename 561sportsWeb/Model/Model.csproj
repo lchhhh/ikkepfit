@@ -118,6 +118,7 @@
     <Compile Include="admin.cs" />
     <Compile Include="article.cs" />
     <Compile Include="equip.cs" />
+    <Compile Include="food.cs" />
     <Compile Include="members.cs" />
     <Compile Include="news.cs" />
     <Compile Include="newsType.cs" />
