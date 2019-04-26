@@ -4,110 +4,205 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta name="msapplication-tap-highlight" content="no" />
     <title>运动健身网站</title>
     <link type="text/css" href="templates/zhiyu/css/css.css" rel="stylesheet" />
-<script src="templates/zhiyu/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="templates/zhiyu/js/foucsbox.js" type="text/javascript"></script>
-<script src="templates/zhiyu/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="scripts/assets/apple-icon-180x180.png" />
+    <link href="scripts/assets/favicon.ico" rel="icon" />
+    <link href="scripts/main.550dcf66.css" rel="stylesheet" />
+    <script src="templates/zhiyu/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="templates/zhiyu/js/foucsbox.js" type="text/javascript"></script>
+    <script src="templates/zhiyu/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/main.0cf8b554.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
     <style>
-        img{ border:0px;}
+        img {
+            border: 0px;
+        }
     </style>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <style>
+        .div-inline {
+            display: inline;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            navbarFixedTopAnimation();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            navActivePage();
+            scrollRevelation('.reveal');
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
- <div id="header">
-	<div id="wrap">
-    	<div class="logo">
-            <img src="images/lo.jpg" width="500" height="97">
+        <nav class="navbar navbar-default active">
+            <nav class="container">
+                <div class="navbar-header div-inline">
+                    <a class="navbar-brand" href="Default.aspx" title="">
+                        <img src="scripts/assets/images/mashup-icon.svg" class="navbar-logo-img" alt="" />
+                        ikeepfit
+                    </a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="news.aspx" title="">健身资讯</a></li>
+                        <li><a href="plan.aspx" title="">健身计划</a></li>
+                        <li><a href="yd.aspx" title="">健身动作库</a></li>
+                        <li><a href="bbs.aspx" title="">健身小红书</a></li>
+                        <li><a href="news.aspx" title="">健身工具</a></li>
+                    </ul>
+                    <div class="text" style="text-align: right;">
+
+                        <% if (Session["lname"] == null)
+                           { %>
+                        <asp:TextBox ID="txt_lname" runat="server" Width="70" Height="23"></asp:TextBox>
+                        <asp:TextBox ID="txt_pass" runat="server" TextMode="Password" Width="70" Height="23"></asp:TextBox>
+                        <asp:Button ID="btnLogin" runat="server" Text=" 登 录 " CausesValidation="false" Height="23" OnClick="btnLogin_Click" />
+                        <input id="Button1" type="button" value=" 注 册 " onclick="location.href = 'reg.aspx';" style="height: 23px;" />
+
+                        <%}
+                           else
+                           { %>
+                        <div style="margin-left: 120px;">
+                            您好：<b style="color: red;"><%= Session["lname"].ToString() %></b>，
+      
+                        <a href="mybbs.aspx">我的帖子</a> | 
+      
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" OnClick="LinkButton1_Click">退出登录</asp:LinkButton>
+                        </div>
+                        <%} %>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+        <%--<div id="header">
+            <div id="wrap">
+                <div class="logo">
+                    <img src="images/lo.jpg" width="500" height="97">
+                </div>
+                <div class="header_text">
+
+                    <% if (Session["lname"] == null)
+                       { %>
+                用户名:<asp:TextBox ID="txt_lname" runat="server" Width="70" Height="23"></asp:TextBox>
+                    密码:<asp:TextBox ID="txt_pass" runat="server" TextMode="Password" Width="70" Height="23"></asp:TextBox>
+                    <asp:Button ID="btnLogin" runat="server" Text=" 登 录 " CausesValidation="false" Height="23" OnClick="btnLogin_Click" />
+
+                    <input id="Button1" type="button" value=" 注 册 " onclick="location.href = 'reg.aspx';" style="height: 23px;" />
+
+                    <%}
+                       else
+                       { %>
+                    <div style="margin-left: 120px;">
+                        您好：<b style="color: red;"><%= Session["lname"].ToString() %></b>，
+      
+                        <a href="mybbs.aspx">我的帖子</a> | 
+      
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" OnClick="LinkButton1_Click">退出登录</asp:LinkButton>
+                    </div>
+                    <%} %>
+                </div>
             </div>
-        <div class="header_text">
-
-                <% if (Session["lname"] == null)
-                    { %>
-                用户名:<asp:TextBox ID="txt_lname" runat="server" width="70" Height="23"></asp:TextBox>
-                密码:<asp:TextBox ID="txt_pass" runat="server" TextMode="Password"   width="70" Height="23"></asp:TextBox>
-                <asp:Button ID="btnLogin" runat="server"  Text=" 登 录 "  CausesValidation="false" Height="23" OnClick="btnLogin_Click"    />
-            	
-                <input id="Button1" type="button" value=" 注 册 " onclick="location.href = 'reg.aspx';" style="height:23px;" />
-    
-                <%}
-    else { %>
-       <div style="margin-left:120px;"> 您好：<b style="color:red;"><%= Session["lname"].ToString() %></b>，
-       <a href="mybbs.aspx">我的帖子</a> | 
-       <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" OnClick="LinkButton1_Click">退出登录</asp:LinkButton>
-              </div>    <%} %>
+        </div>--%>
+        <%--<div id="nav">
+            <div id="wrap">
+                <div class="nav">
+                    <ul>
+                        <li><a href="Default.aspx">首页</a></li>
+                        <li><a href="news.aspx">运动新闻</a></li>
+                        <li><a href="plan.aspx">健身方案</a></li>
+                        <li><a href="zb.aspx">装备选择</a></li>
+                        <li><a href="yd.aspx">运动装备</a></li>
+                        <li><a href="bbs.aspx">论坛</a></li>
+                        <li><a href="reg.aspx">用户注册</a></li>
+                    </ul>
+                </div>
             </div>
-    </div>
-</div>
-        <div id="nav">
-	<div id="wrap">
-    	<div class="nav">
-        	<ul>
-            	<li><a href="Default.aspx">首页</a></li>
-                <li><a href="news.aspx">运动新闻</a></li>
-                      <li><a href="plan.aspx">健身方案</a></li>
-                <li><a href="zb.aspx">装备选择</a></li>
-                       <li><a href="yd.aspx">运动装备</a></li>
-                <li><a href="bbs.aspx">论坛</a></li>
-                <li><a href="reg.aspx">用户注册</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+        </div>--%>
+        <%--<div id="banner">
+            <div id="wrap">
+                <!-- 代码 开始 -->
+                <div id="foucsBox">
+                    <ul class="imgCon" style="width: 1994px; margin-left: 0px;">
+                        <!--展示图片开始-->
 
-        <div id="banner">
-	<div id="wrap">
-    	    <!-- 代码 开始 -->
-    <div id="foucsBox">
-        <ul class="imgCon" style="width: 1994px; margin-left: 0px;">
-            <!--展示图片开始-->       
-            
 
-            
-                    <li><a href="" target="_blank">
-                <img width="997" height="360" src="images/1.jpg"></a>
-                <div class="imgTitle"><a href="#" ></a></div>
-            </li>
-                
-                    <li><a href="" target="_blank">
-                <img width="997" height="360" src="images/2.jpg"></a>
-                <div class="imgTitle"><a href="#"></a></div>
-            </li>
-                
-                       <li><a href="" target="_blank">
-                <img width="997" height="360" src="images/3.jpg"></a>
-                <div class="imgTitle"><a href="#"></a></div>
-            </li>
-            <!--展示图片结束-->
-        </ul>
-        <div class="foucs"><span class="f"></span><span class=""></span></div>
-        <div class="rBtn foucsButton">
-            <span></span>
-            
-        </div>
-        <div class="lBtn foucsButton">
-            <span></span>
-            
-        </div>
-    </div>
-    <!-- 代码 结束 -->
-    </div>
-</div>
 
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        <li><a href="" target="_blank">
+                            <img width="997" height="360" src="images/1.jpg"></a>
+                            <div class="imgTitle"><a href="#"></a></div>
+                        </li>
+
+                        <li><a href="" target="_blank">
+                            <img width="997" height="360" src="images/2.jpg"></a>
+                            <div class="imgTitle"><a href="#"></a></div>
+                        </li>
+
+                        <li><a href="" target="_blank">
+                            <img width="997" height="360" src="images/3.jpg"></a>
+                            <div class="imgTitle"><a href="#"></a></div>
+                        </li>
+                        <!--展示图片结束-->
+                    </ul>
+                    <div class="foucs"><span class="f"></span><span class=""></span></div>
+                    <div class="rBtn foucsButton">
+                        <span></span>
+
+                    </div>
+                    <div class="lBtn foucsButton">
+                        <span></span>
+
+                    </div>
+                </div>
+                <!-- 代码 结束 -->
+            </div>
+        </div>--%>
+        <div class="hero-full-container background-image-container white-text-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>ikeepfit</h1>
+                        <p>运 动 让 生 活 更 美 好</p>
+                        <a href="scripts/project.html" class="btn btn-default btn-lg" >开启你的健身计划</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+
         <div id="foot">
-	<div id="wrap">
-    	<div class="foot" style="text-align:center;">
-    	 
-版权所有 © 2015-2016 运动健身网站&nbsp;&nbsp;&nbsp; <a href="admin/login.aspx">管理登录</a></div>
-    </div>
-</div>
+            <footer class="footer-container white-text-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>ikeepfit</h3>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-7">
+                                    <p>
+                                        <small>运 动 让 生 活 更 美 好-@2019-版权归ikeepfit健身网所有</small>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
     </form>
 </body>
 </html>
