@@ -1,0 +1,83 @@
+var oPopUp=null;
+function SoftKeyboard(pwdObjId){
+    var pwdObj=document.getElementById(pwdObjId);
+    oPopUp=window.createPopup();
+    var popBody=oPopUp.document.body;
+    popBody.style.backgroundColor = "#FFFF99";
+    popBody.style.border = "solid black 1px";
+    WriteToPopup(oPopUp,pwdObj);
+    oPopUp.show(0,22,240,100,pwdObj);
+}
+function WriteToPopup(oPopUp,pwdObj){
+    var strHTML="<html><head>";
+    strHTML+='<meta http-equiv="Content-Type" content="text/html; charset=gb2312">';
+    strHTML+='<style type="text/css">';
+    strHTML+='.td{text-align:center; background-color:#FFFF99; vertical-align:middle;font-size:13px;background-Image:(url:bg.gif); font-weight:800}';
+    strHTML+='.button{border:0;width:90%; height:95%;}';
+    strHTML+='</style>';
+    strHTML+='<script language="javascript">';
+    strHTML+='var arrLow=new Array("`","1","2","3","4","5","6","7","8","9","0","-","=","\","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","[","]",";","\'",",",".","/","");';
+    strHTML+='var arrUp =new Array("~","!","@","#","$","%","^","&","*","(",")","_","+","|","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","{","}",":","\\"","<",">","?",""); ';
+    strHTML+='var curOverTd=null; var curClkTd=null; var CapsStatus="black";';
+    strHTML+='var pwdObjectId=parent.document.getElementById("'+pwdObj.id+'");';
+    strHTML+='function TdMouseOver(TdObj){ ';
+    strHTML+='TdObj.style.backgroundColor="blue"; ';
+    strHTML+=' TdObj.style.color="white";';
+    strHTML+='curOverTd=TdObj;} ';
+    strHTML+='function TdMouseOut(TdObj){ ';
+    strHTML+='if(curClkTd==TdObj){ ';
+    strHTML+='TdObj.style.backgroundColor="red"; ';
+    strHTML+='TdObj.style.color="white"; ';
+    strHTML+='}else{ ';
+    strHTML+='TdObj.style.backgroundColor="#FFFF99"; ';
+    strHTML+='TdObj.style.color="black"; }';
+    strHTML+='} ';
+    strHTML+='function TdMouseClk(TdObj){ ';
+    strHTML+='if(curClkTd){ ';
+    strHTML+='curClkTd.style.backgroundColor="#FFFF99"; ';
+    strHTML+='curClkTd.style.color="black"; }';
+    strHTML+='TdObj.style.backgroundColor="red"; ';
+    strHTML+=' TdObj.style.color="white";';
+    strHTML+='curClkTd=TdObj; ';
+    strHTML+='curOverTd=null; ';
+    strHTML+='  pwdObjectId.value+=TdObj.innerText;';
+    strHTML+=' }';
+    strHTML+=' function btnCapsDown(btnObj){';
+    strHTML+='if(CapsStatus=="black"){ CapsStatus="green"; ChgText(arrUp);}';
+    strHTML+='else{ CapsStatus="black"; ChgText(arrLow);}; ';
+    strHTML+='btnObj.style.color=CapsStatus=="black"?"#000000":"#33FF66";';
+    strHTML+=' }';
+    strHTML+=' function ChgText(arr){';
+    strHTML+='var table=document.getElementById("tbKeyboard");';
+    strHTML+='for(var i=0;i<4;i++)';
+    strHTML+='for(var j=0;j<12;j++)';
+    strHTML+='table.rows[i].cells[j].innerText=arr[12*i+j];';
+    strHTML+=' }';
+    strHTML+=' function btnSpaceDown(){';
+    strHTML+='pwdObjectId.value+=" "';
+    strHTML+=' }';
+    strHTML+=' function btnBackDown(){';
+    strHTML+='pwdObjectId.value=pwdObjectId.value.substring(0,pwdObjectId.value.length-1)';
+    strHTML+=' }';
+    strHTML+=' function btnEnterDown(){';
+    strHTML+='parent.oPopUp.hide();';
+    strHTML+=' }';
+    strHTML+='</scr'+'ipt></head> ';
+    strHTML+='<body bgcolor="#FFFFFF" style="margin:0; border:0;overflow:hidden;" oncontextmenu="javascript:event.returnValue=false;" onselectstart="javascript:event.returnValue=false;"> ';
+    strHTML+='<table id="tbKeyboard" cellpadding="0" cellspacing="0" border="1" style="TABLE-LAYOUT: fixed; width:100%;height:100%; border-collapse:collapse; cursor:default" bordercolor="#111111">';
+    var arr=new Array("`","1","2","3","4","5","6","7","8","9","0","-","=","\\","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","[","]",";","\'",",",".","/","");
+    for(var i=0;i<4;i++){
+        strHTML+='<tr height="12">';
+        for(var j=0;j<12;j++)
+            strHTML+='<td class="td" valign="middle" onMouseOver="TdMouseOver(this)" onMouseOut="TdMouseOut(this)" onClick="TdMouseClk(this)">'+arr[i*12+j]+'</td>';
+            strHTML+='</tr">';
+    }
+    strHTML+='<tr height="12"><td class="td" colspan="12"><table width="100%"  border="0" cellpadding="0" cellspacing="0" style="margin:0">';
+    strHTML+='<tr><td class="td" width="20%" valign="middle"><input type="button" value="Shift" style="font-weight:800 " onclick="btnCapsDown(this)" class="button"></td>';
+    strHTML+='<td class="td" width="35%" valign="middle"><input type="button" value="Space" onclick="btnSpaceDown()" class="button"></td>';
+    strHTML+='<td class="td" width="25%" valign="middle"><input type="button" value="Back" onclick="btnBackDown()" class="button"></td>';
+    strHTML+='<td class="td" width="20%" valign="middle"><input type="button" value="Enter" onclick="btnEnterDown()" class="button"></td>';
+    strHTML+='</tr></table></td>';
+    strHTML+='</tr></table></body></html>';
+    oPopUp.document.write(strHTML);
+}
