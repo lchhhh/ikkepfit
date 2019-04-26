@@ -14,11 +14,13 @@ public partial class _login : System.Web.UI.Page
             litIP.Text = Request.UserHostAddress;
         }
     }
+ 
 
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         SP.BLL.admin bll = new SP.BLL.admin();
+       
         DataSet ds = bll.GetList(" lname='" + this.username.Value + "' and pwd='" + this.password.Value + "'");
 
         //判断用户是否存在

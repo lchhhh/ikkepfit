@@ -6,6 +6,8 @@ using System.Web.UI.WebControls;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 
 public partial class main  : System.Web.UI.MasterPage
@@ -20,6 +22,18 @@ public partial class main  : System.Web.UI.MasterPage
         }
     }
 
+    private static string Md5Hash(string input)
+    {
+        MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
+        byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
+        StringBuilder sBuilder = new StringBuilder();
+        for (int i = 0; i < data.Length; i++)
+        {
+            sBuilder.Append(data[i].ToString("x2"));
+        }
+        return sBuilder.ToString();
+    }
+
     /// <summary>
     /// 登录
     /// </summary>
@@ -29,7 +43,7 @@ public partial class main  : System.Web.UI.MasterPage
     {
         SP.BLL.members bll = new SP.BLL.members();
         //根据用户名和密码得到用户信息
-        DataSet ds = bll.GetList(" lname='" + txt_lname.Text + "' and pass='" + txt_pass.Text + "'");
+        DataSet ds = bll.GetList(" lname='" + txt_lname.Text + "' and pass='" + Md5Hash(txt_pass.Text) + "'");
 
         //判断用户是否存在
         if (ds.Tables[0].Rows.Count > 0)

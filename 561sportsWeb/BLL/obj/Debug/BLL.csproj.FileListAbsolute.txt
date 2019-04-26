@@ -42,3 +42,14 @@ E:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.DBUtility.pdb
 E:\ikeepfit\561sportsWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 E:\ikeepfit\561sportsWeb\BLL\obj\Debug\SP.BLL.dll
 E:\ikeepfit\561sportsWeb\BLL\obj\Debug\SP.BLL.pdb
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.BLL.dll
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.BLL.pdb
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.DAL.dll
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.Model.dll
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.DBUtility.dll
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.DAL.pdb
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.Model.pdb
+D:\ikeepfit\561sportsWeb\BLL\bin\Debug\SP.DBUtility.pdb
+D:\ikeepfit\561sportsWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\ikeepfit\561sportsWeb\BLL\obj\Debug\SP.BLL.dll
+D:\ikeepfit\561sportsWeb\BLL\obj\Debug\SP.BLL.pdb

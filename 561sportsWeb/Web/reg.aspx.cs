@@ -6,6 +6,8 @@ using System.Web.UI.WebControls;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 
 public partial class reg  : System.Web.UI.Page
@@ -18,6 +20,18 @@ public partial class reg  : System.Web.UI.Page
             
             
         }
+    }
+
+    private static string Md5Hash(string input)
+    {
+        MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
+        byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
+        StringBuilder sBuilder = new StringBuilder();
+        for (int i = 0; i < data.Length; i++)
+        {
+            sBuilder.Append(data[i].ToString("x2"));
+        }
+        return sBuilder.ToString();
     }
 
     
@@ -34,7 +48,7 @@ public partial class reg  : System.Web.UI.Page
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('该登录名已存在，请重新输入！');</script>");
             return;
         }
-
+        
         if(txt_pass.Text!=txt_pass2.Text)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('两次密码输入不一致，请重新输入！');</script>");
@@ -55,7 +69,7 @@ public partial class reg  : System.Web.UI.Page
         }
 
         string lname = txt_lname.Text;
-        string pass = txt_pass.Text;
+        string pass = Md5Hash(txt_pass.Text);
         string mname = txt_mname.Text;
         string sex = rtsex.SelectedValue;
         string tel = txt_tel.Text;
