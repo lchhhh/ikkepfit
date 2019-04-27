@@ -27,6 +27,7 @@ public partial class _Default  : System.Web.UI.Page
     /// </summary>
     protected void bind()
     {
+
         Repeater1.DataSource = new SP.BLL.equip().GetList(15, "", " atime desc");
         Repeater1.DataBind();
 
@@ -38,6 +39,7 @@ public partial class _Default  : System.Web.UI.Page
 
         Repeater4.DataSource = new SP.BLL.selection().GetList(10, "", " atime desc ");
         Repeater4.DataBind();
+
     }
 
 

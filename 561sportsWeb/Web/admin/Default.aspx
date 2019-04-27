@@ -43,13 +43,13 @@
         <div id="head">
             <div id="logo">
                 <span style="display: block; position: relative; width: 120px; height: 68px; background-image: url('../images/logo.gif');">
-                    <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 30px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
-                        ikeepfit健身网站后台管理系统
+                    <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 15px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
+                        ikeepfit后台管理系统
                     </label>
                 </span>
             </div>
             <div id="menu">
-                <a href="../default.aspx" id="A8" class="menu_btn1" target="_blank">ikeepfit健身网站预览</a>
+                <a href="../default.aspx" id="A8" class="menu_btn1" target="_blank">网站预览</a>
                 <a href="logout.aspx" id="A8" class="menu_btn1">安全退出</a>
                 <div class="wel">
                     <label>
