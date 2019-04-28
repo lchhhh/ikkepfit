@@ -14,6 +14,7 @@ namespace SP.Model
 		private string _title;
         private int? _tid;
 		private string _memo;
+        private string _remarks;
 		private DateTime? _atime;
 		/// <summary>
 		/// 编号
@@ -47,6 +48,11 @@ namespace SP.Model
 			set{ _memo=value;}
 			get{return _memo;}
 		}
+
+        public string remarks
+        { set{_remarks=value;}
+        get{return _remarks;}
+        }
 		/// <summary>
 		/// 发布时间
 		/// </summary>
