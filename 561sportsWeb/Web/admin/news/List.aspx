@@ -13,7 +13,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">运动新闻管理---运动新闻列表</span></label></td>
+                        <td><label><span id="navTitle">健身资讯管理---健身资讯列表</span></label></td>
                     </tr>
                 </table>
             </td>
@@ -39,14 +39,14 @@
            <tr>
             <td align="center">
          <strong> 所属类别</strong><asp:DropDownList ID="ddltid" runat="server" Width="150">
-</asp:DropDownList>   <strong> 新闻标题:</strong><asp:TextBox ID="txt_title" runat="server" width="150"></asp:TextBox>
+</asp:DropDownList>   <strong> 资讯标题:</strong><asp:TextBox ID="txt_title" runat="server" width="150"></asp:TextBox>
 
     <asp:Button ID="Button1" runat="server" Text="搜 索"   onclick="btnSearch_Click" />
           
               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" GridLines="None" AllowPaging="True" onpageindexchanging="GridView1_PageIndexChanging">
         <RowStyle Height="25px" HorizontalAlign="Center" />
         <Columns>       
-            <asp:BoundField HeaderText="新闻标题" DataField="title" />
+            <asp:BoundField HeaderText="资讯标题" DataField="title" />
             <asp:BoundField HeaderText="所属类别" DataField="tname" />
             <asp:BoundField HeaderText="发布时间" DataField="atime" />
             <asp:HyperLinkField   DataNavigateUrlFormatString="Show.aspx?id={0}" DataNavigateUrlFields="nid" HeaderText="详细" Text="详细"  >

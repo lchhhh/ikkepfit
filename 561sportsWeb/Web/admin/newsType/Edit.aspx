@@ -18,7 +18,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">运动新闻管理---编辑新闻类别</span></label></td>
+                        <td><label><span id="navTitle">健身资讯管理---编辑资讯类别</span></label></td>
                     </tr>
                 </table>
             </td>

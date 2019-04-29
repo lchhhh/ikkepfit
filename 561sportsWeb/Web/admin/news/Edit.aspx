@@ -45,7 +45,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">运动新闻管理---编辑运动新闻</span></label></td>
+                        <td><label><span id="navTitle">健身资讯管理---编辑健身资讯</span></label></td>
                     </tr>
                 </table>
             </td>
@@ -69,7 +69,7 @@
             
           <table width="100%"  border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#ecf5ff">
              <tr>
-<td  style=" text-align:right; width:20%;">新闻标题:</td>
+<td  style=" text-align:right; width:20%;">资讯标题:</td>
 <td class="tbright"><div style="display:inline;float:left;">
 <asp:TextBox ID="txt_title" runat="server" width="200"></asp:TextBox></div><div id="ctl00_ContentPlaceHolder1_txt_titleTip" style="width:250px;display:inline;float:left;text-align:left;"></div>
  </td></tr>
@@ -81,7 +81,7 @@
 </asp:DropDownList> </td></tr>
 
 <tr>
-<td  style=" text-align:right; width:20%;">新闻内容:</td>
+<td  style=" text-align:right; width:20%;">资讯内容:</td>
 <td class="tbright"><div style="display:inline;float:left;">
 <textarea id="Textarea1" runat="server" cols="100" rows="8" style="width:700px;height:300px;visibility:hidden;"></textarea></div>
  </td></tr>
@@ -103,7 +103,7 @@
 <script language="javascript" type="text/javascript">
     $(document).ready(function() {
         $.formValidator.initConfig({ onError: function(msg) { alert(msg) } });
-        $("#ctl00_ContentPlaceHolder1_txt_title").formValidator({ onshow: "请输入新闻标题", onfocus: "新闻标题不能为空", oncorrect: "合法" }).InputValidator({ min: 1, onerror: "新闻标题不能为空,请确认" });
+        $("#ctl00_ContentPlaceHolder1_txt_title").formValidator({ onshow: "请输入资讯标题", onfocus: "资讯标题不能为空", oncorrect: "合法" }).InputValidator({ min: 1, onerror: "资讯标题不能为空,请确认" });
     });
 </script>
 
