@@ -45,7 +45,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">运动装备管理---编辑运动装备</span></label></td>
+                        <td><label><span id="navTitle">健身器械管理---编辑健身器械</span></label></td>
                     </tr>
                 </table>
             </td>
@@ -69,19 +69,19 @@
             
           <table width="100%"  border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#ecf5ff">
              <tr>
-<td  style=" text-align:right; width:20%;">装备名称:</td>
+<td  style=" text-align:right; width:20%;">器械名称:</td>
 <td class="tbright"><div style="display:inline;float:left;">
 <asp:TextBox ID="txt_title" runat="server" width="200"></asp:TextBox></div><div id="ctl00_ContentPlaceHolder1_txt_titleTip" style="width:250px;display:inline;float:left;text-align:left;"></div>
  </td></tr>
 
 <tr>
-<td  style=" text-align:right; width:20%;">装备图片:</td>
+<td  style=" text-align:right; width:20%;">器械图片:</td>
 <td class="tbright"><div style="display:inline;float:left;">
 <asp:Image ID="Imagepic" runat="server"  Width="60px" Height="60px" /><asp:Label ID="Labelpic"  Visible="false" runat="server"  ></asp:Label><asp:FileUpload ID="fppic" runat="server" Width="250" />支持格式为：.jpg | .gif | .png
  </td></tr>
 
 <tr>
-<td  style=" text-align:right; width:20%;">装备描述:</td>
+<td  style=" text-align:right; width:20%;">器械描述:</td>
 <td class="tbright"><div style="display:inline;float:left;">
 <textarea id="Textarea1" runat="server" cols="100" rows="8" style="width:700px;height:300px;visibility:hidden;"></textarea></div>
  </td></tr>
@@ -103,7 +103,7 @@
 <script language="javascript" type="text/javascript">
     $(document).ready(function() {
         $.formValidator.initConfig({ onError: function(msg) { alert(msg) } });
-        $("#ctl00_ContentPlaceHolder1_txt_title").formValidator({ onshow: "请输入装备名称", onfocus: "装备名称不能为空", oncorrect: "合法" }).InputValidator({ min: 1, onerror: "装备名称不能为空,请确认" });
+        $("#ctl00_ContentPlaceHolder1_txt_title").formValidator({ onshow: "请输入器械名称", onfocus: "器械名称不能为空", oncorrect: "合法" }).InputValidator({ min: 1, onerror: "器械名称不能为空,请确认" });
     });
 </script>
 
