@@ -36,7 +36,6 @@ public partial class plans_Detail : System.Web.UI.Page
                 lbltitle.Text = sdr["title"].ToString();
                 lbltid.Text = sdr["tname"].ToString();
                 lblmemo.Text = sdr["memo"].ToString();
-                lblremarks.Text = sdr["remarks"].ToString();
                 lblatime.Text = sdr["atime"].ToString();
             }
 

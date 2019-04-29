@@ -52,11 +52,6 @@
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblmemo" runat="server" Text=""></asp:Label></td>
 	</tr>
  <tr>
-      <tr>
-	<td height="25" width="20%" align="right">摘要：</td>
-	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblremarks" runat="server" Text=""></asp:Label></td>
-	</tr>
- <tr>
 	<td height="25" width="20%" align="right">发布时间：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblatime" runat="server" Text=""></asp:Label></td>
 	</tr>

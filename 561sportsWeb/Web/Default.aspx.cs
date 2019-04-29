@@ -34,11 +34,14 @@ public partial class _Default  : System.Web.UI.Page
         Repeater2.DataSource = new SP.BLL.news().GetList(10, "", " atime desc ");
         Repeater2.DataBind();
 
-        Repeater3.DataSource = new SP.BLL.plans().GetList(10, "", " atime desc ");
+        Repeater3.DataSource = new SP.BLL.plans().GetList(6, "", " atime desc ");
         Repeater3.DataBind();
 
         Repeater4.DataSource = new SP.BLL.selection().GetList(10, "", " atime desc ");
         Repeater4.DataBind();
+
+        Repeater5.DataSource = new SP.BLL.plansType().GetList(5,""," tid");
+        Repeater5.DataBind();
 
     }
 

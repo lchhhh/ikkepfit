@@ -48,7 +48,6 @@
         <Columns>       
             <asp:BoundField HeaderText="标题" DataField="title" />
             <asp:BoundField HeaderText="所属类别" DataField="tname" />
-              <asp:BoundField HeaderText="摘要" DataField="remarks" />
             <asp:BoundField HeaderText="发布时间" DataField="atime" />
             <asp:HyperLinkField   DataNavigateUrlFormatString="Show.aspx?id={0}" DataNavigateUrlFields="pid" HeaderText="详细" Text="详细"  >
                 <ItemStyle Width="50px" />

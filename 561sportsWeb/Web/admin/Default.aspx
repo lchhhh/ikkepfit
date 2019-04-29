@@ -43,7 +43,7 @@
         <div id="head">
             <div id="logo">
                 <span style="display: block; position: relative; width: 120px; height: 68px; background-image: url('../images/logo.gif');">
-                    <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 24px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
+                    <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 15px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
                         ikeepfit后台管理系统
                     </label>
                 </span>
@@ -86,12 +86,12 @@
 
 
                             <dl>
-                                <dt><a class="ico1" href="javascript:;" onclick="show('news');">健身资讯管理</a></dt>
+                                <dt><a class="ico1" href="javascript:;" onclick="show('news');">运动新闻管理</a></dt>
                                 <div id="news">
-                                    <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">资讯类别添加</a></dd>
-                                    <dd style="display: block;"><a href="newsType/List.aspx" target="workspace" class="">健身资讯管理</a></dd>
-                                    <dd style="display: block;"><a href="news/Add.aspx" target="workspace" class="">健身资讯添加</a></dd>
-                                    <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">健身资讯管理</a></dd>
+                                    <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">新闻类别添加</a></dd>
+                                    <dd style="display: block;"><a href="newsType/List.aspx" target="workspace" class="">运动新闻管理</a></dd>
+                                    <dd style="display: block;"><a href="news/Add.aspx" target="workspace" class="">运动新闻添加</a></dd>
+                                    <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">运动新闻管理</a></dd>
                                 </div>
                             </dl>
 
@@ -125,18 +125,18 @@
 
 
                             <dl>
-                                <dt><a class="ico1" href="javascript:;" onclick="show('equip');">健身器械管理</a></dt>
+                                <dt><a class="ico1" href="javascript:;" onclick="show('equip');">运动装备管理</a></dt>
                                 <div id="equip">
-                                    <dd style="display: block;"><a href="equip/Add.aspx" target="workspace" class="">健身器械添加</a></dd>
-                                    <dd style="display: block;"><a href="equip/List.aspx" target="workspace" class="">健身器械管理</a></dd>
+                                    <dd style="display: block;"><a href="equip/Add.aspx" target="workspace" class="">运动装备添加</a></dd>
+                                    <dd style="display: block;"><a href="equip/List.aspx" target="workspace" class="">运动装备管理</a></dd>
                                 </div>
                             </dl>
 
 
                             <dl>
-                                <dt><a class="ico1" href="javascript:;" onclick="show('article');">小红书管理</a></dt>
+                                <dt><a class="ico1" href="javascript:;" onclick="show('article');">帖子管理</a></dt>
                                 <div id="article">
-                                    <dd style="display: block;"><a href="article/List.aspx" target="workspace" class="">小红书管理</a></dd>
+                                    <dd style="display: block;"><a href="article/List.aspx" target="workspace" class="">帖子管理</a></dd>
                                 </div>
                             </dl>
 

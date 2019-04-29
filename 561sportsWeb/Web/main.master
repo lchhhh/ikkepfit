@@ -121,18 +121,6 @@
             </div>
           </div>
         </div>
-        <div class="my-3 my-md-5">
-          <div class="container">
-			  <div class="jumbotron" style="background-image:url(scripts/66.svg)" >
-				  <div class="container">
-			    <h1 style="font-size: 40px">ikeepfit</h1>
-			    <p>——"运  动  让  生  活  更  美  好"</p>
-			    <h1></h1>
-                 <p><a class="btn btn-primary btn-lg" href="#" role="button">开启你的健身计划</a></p>
-				  </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
         
