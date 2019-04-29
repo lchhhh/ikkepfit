@@ -22,17 +22,17 @@ public partial class password: System.Web.UI.Page
         }
     }
 
-    private static string Md5Hash(string input)
-    {
-        MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
-        byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
-        StringBuilder sBuilder = new StringBuilder();
-        for (int i = 0; i < data.Length; i++)
-        {
-            sBuilder.Append(data[i].ToString("x2"));
-        }
-        return sBuilder.ToString();
-    }
+    //private static string Md5Hash(string input)
+    //{
+    //    MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
+    //    byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
+    //    StringBuilder sBuilder = new StringBuilder();
+    //    for (int i = 0; i < data.Length; i++)
+    //    {
+    //        sBuilder.Append(data[i].ToString("x2"));
+    //    }
+    //    return sBuilder.ToString();
+    //}
 
 
     /// <summary>
@@ -48,14 +48,14 @@ public partial class password: System.Web.UI.Page
         if (TextBox1.Text == TextBox2.Text)
         {
             //根据用户编号和原密码得到用户信息
-            DataSet ds = bll.GetList(" lname=" + Session["lname"].ToString() + " and pass='" + Md5Hash(txt_pwd.Text)+"'");
+            DataSet ds = bll.GetList(" lname=" + Session["lname"].ToString() + " and pass='" + txt_pwd.Text+"'");
 
             //判断原密码是否正确
             if (ds.Tables[0].Rows.Count > 0)
             {
                 //更新新密码
                 SP.Model.members model = new SP.Model.members();
-                model.pass =Md5Hash( TextBox1.Text);
+                model.pass = TextBox1.Text;
                 model.lname = Session["lname"].ToString();
 
                 bll.Update(model);

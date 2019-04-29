@@ -43,7 +43,7 @@
         <div id="head">
             <div id="logo">
                 <span style="display: block; position: relative; width: 120px; height: 68px; background-image: url('../images/logo.gif');">
-                    <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 15px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
+                    <label style="position: absolute; width: 300px; top: 20px; font-family: 微软雅黑; font-weight: bold; font-size: 24px; color: #1c7ec7; letter-spacing: 3px; border: 0px;">
                         ikeepfit后台管理系统
                     </label>
                 </span>
