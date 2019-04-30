@@ -61,7 +61,7 @@
                     <% if (Session["lname"] == null)
                        { %>
                   <div class="input-group" style="margin:0px 10px 0px 10px">
-                       <span class="input-group-text" style="font-size:small;width:60px;height:35px;">登录名</span>
+                       <span class="input-group-text" style="font-size:small;width:60px;height:35px;">登陆名</span>
                        <asp:TextBox ID="txt_lname" runat="server" Width="70" Height="35" type="text" class="form-control"></asp:TextBox>
                   </div>
                   <div class="input-group" style="margin:0px 10px 0px 10px">
