@@ -101,8 +101,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-md-6 col-xl-4">
         </div>
 
 

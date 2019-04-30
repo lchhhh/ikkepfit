@@ -41,7 +41,7 @@ public partial class about  : System.Web.UI.Page
         }
         else
         {
-            Literal1.Text = "运动新闻";
+            Literal1.Text = "健身资讯";
         }
 
         int pagesize = this.AspNetPager1.PageSize;

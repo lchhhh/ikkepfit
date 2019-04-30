@@ -12,3 +12,8 @@ D:\ikeepfit\561sportsWeb\DBUtility\bin\Debug\SP.DBUtility.pdb
 D:\ikeepfit\561sportsWeb\DBUtility\obj\Debug\SP.DBUtility.dll
 D:\ikeepfit\561sportsWeb\DBUtility\obj\Debug\SP.DBUtility.pdb
 D:\ikeepfit\561sportsWeb\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\个人文件\毕设\git\561sportsWeb\DBUtility\bin\Debug\SP.DBUtility.dll
+D:\个人文件\毕设\git\561sportsWeb\DBUtility\bin\Debug\SP.DBUtility.pdb
+D:\个人文件\毕设\git\561sportsWeb\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\个人文件\毕设\git\561sportsWeb\DBUtility\obj\Debug\SP.DBUtility.dll
+D:\个人文件\毕设\git\561sportsWeb\DBUtility\obj\Debug\SP.DBUtility.pdb
