@@ -37,12 +37,16 @@ public partial class plans_Add : System.Web.UI.Page
     protected void btnSave_Click(object sender, EventArgs e)
     {
         string title = txt_title.Text;
+        int mark = int.Parse(txt_mark.Text);
+        int tid = int.Parse(ddltid.SelectedValue);
         string memo = Textarea1.Value;
         string remarks = txt_remarks.Text;
         DateTime atime = DateTime.Now;
 
         SP.Model.plans model = new SP.Model.plans();
         model.title = title;
+        model.tid = tid;
+        model.mark = mark;
         model.memo = memo;
         model.remarks = remarks;
         model.atime = atime;
