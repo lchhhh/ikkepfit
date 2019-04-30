@@ -90,7 +90,15 @@
                             </asp:DropDownList>
                     </td>
                 </tr>
-
+                                <tr>
+                    <td style="text-align: right; width: 20%;">标签:</td>
+                    <td class="tbright">
+                        <div style="display: inline; float: left;">
+                            <asp:TextBox ID="txt_mark" runat="server" Width="200"></asp:TextBox>
+                        </div>
+                        <div id="ctl00_ContentPlaceHolder1_txt_titleTip" style="width: 250px; display: inline; float: left; text-align: left;"></div>
+                    </td>
+                </tr>
                 <tr>
 
                     <tr>

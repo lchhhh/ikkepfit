@@ -45,6 +45,7 @@ public partial class plans_Modify : System.Web.UI.Page
         {
             txt_title.Text = ds.Tables[0].Rows[0]["title"].ToString();
             ddltid.SelectedValue = ds.Tables[0].Rows[0]["tid"].ToString();
+            txt_mark.Text = ds.Tables[0].Rows[0]["mark"].ToString();
             Textarea1.Value = ds.Tables[0].Rows[0]["memo"].ToString();
             txt_remarks.Text = ds.Tables[0].Rows[0]["remarks"].ToString();
         }
@@ -59,6 +60,7 @@ public partial class plans_Modify : System.Web.UI.Page
     {
         string title = txt_title.Text;
         int tid = int.Parse(ddltid.SelectedValue);
+        int  mark=int.Parse(txt_mark.Text);
         string memo = Textarea1.Value;
         string remarks = txt_remarks.Text;
         DateTime atime = DateTime.Now;
@@ -67,6 +69,7 @@ public partial class plans_Modify : System.Web.UI.Page
         SP.Model.plans model = new SP.Model.plans();
         model.title = title;
         model.tid = tid;
+        model.mark = mark;
         model.memo = memo;
         model.remarks = remarks;
         model.atime = atime;
