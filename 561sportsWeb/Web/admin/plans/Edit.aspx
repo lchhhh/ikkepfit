@@ -90,6 +90,11 @@
                             </asp:DropDownList>
                     </td>
                 </tr>
+                <tr>
+<td  style=" text-align:right; width:20%;">计划图片:</td>
+<td class="tbright"><div style="display:inline;float:left;">
+<asp:Image ID="Imagepic" runat="server"  Width="60px" Height="60px" /><asp:Label ID="Labelbgpic"  Visible="false" runat="server"  ></asp:Label><asp:FileUpload ID="fppic" runat="server" Width="250" />支持格式为：.jpg | .gif | .png
+ </td></tr>
                                <tr>
                     <td style="text-align: right; width: 20%;">标签:</td>
                     <td class="tbright">

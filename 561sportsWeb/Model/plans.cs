@@ -13,6 +13,7 @@ namespace SP.Model
 		private int _pid;
 		private string _title;
         private int? _tid;
+        private string _bgpic;
 		private string _memo;
         private string _remarks;
         private int? _mark;
@@ -41,7 +42,14 @@ namespace SP.Model
             set { _tid = value; }
             get { return _tid; }
         }
-
+        /// <summary>
+        /// 图片
+        /// </summary>
+        public string bgpic
+        {
+            set { _bgpic = value; }
+            get { return _bgpic; }
+        }
         /// <summary>
         /// 标签
         /// </summary>

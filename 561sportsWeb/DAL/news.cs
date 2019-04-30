@@ -46,19 +46,21 @@ namespace SP.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into news(");
-			strSql.Append("title,tid,memo,atime)");
+			strSql.Append("title,tid,bgpic,memo,atime)");
 			strSql.Append(" values (");
-			strSql.Append("@title,@tid,@memo,@atime)");
+			strSql.Append("@title,@tid,@bgpic,@memo,@atime)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@title", SqlDbType.VarChar,50),
 					new SqlParameter("@tid", SqlDbType.Int,4),
+                    new SqlParameter("@bgpic", SqlDbType.VarChar,100),
 					new SqlParameter("@memo", SqlDbType.NText),
 					new SqlParameter("@atime", SqlDbType.DateTime)};
 			parameters[0].Value = model.title;
 			parameters[1].Value = model.tid;
-			parameters[2].Value = model.memo;
-			parameters[3].Value = model.atime;
+            parameters[2].Value = model.bgpic;
+			parameters[3].Value = model.memo;
+			parameters[4].Value = model.atime;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -79,17 +81,20 @@ namespace SP.DAL
 			strSql.Append("update news set ");
 			strSql.Append("title=@title,");
 			strSql.Append("tid=@tid,");
+            strSql.Append("bgpic=@bgpic,");
 			strSql.Append("memo=@memo");
 			strSql.Append(" where nid=@nid");
 			SqlParameter[] parameters = {
 					new SqlParameter("@title", SqlDbType.VarChar,50),
 					new SqlParameter("@tid", SqlDbType.Int,4),
+                    new SqlParameter("@bgpic", SqlDbType.VarChar,100),
 					new SqlParameter("@memo", SqlDbType.NText),
 					new SqlParameter("@nid", SqlDbType.Int,4)};
 			parameters[0].Value = model.title;
 			parameters[1].Value = model.tid;
-			parameters[2].Value = model.memo;
-			parameters[3].Value = model.nid;
+            parameters[2].Value = model.bgpic;
+			parameters[3].Value = model.memo;
+			parameters[4].Value = model.nid;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -153,7 +158,7 @@ namespace SP.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 nid,title,tid,memo,atime from news ");
+			strSql.Append("select  top 1 nid,title,tid,bgpic,memo,atime from news ");
 			strSql.Append(" where nid=@nid");
 			SqlParameter[] parameters = {
 					new SqlParameter("@nid", SqlDbType.Int,4)
@@ -193,6 +198,10 @@ namespace SP.DAL
 				{
 					model.tid=int.Parse(row["tid"].ToString());
 				}
+                if (row["bgpic"] != null)
+                {
+                    model.bgpic = row["bgpic"].ToString();
+                }
 				if(row["memo"]!=null)
 				{
 					model.memo=row["memo"].ToString();
@@ -230,7 +239,7 @@ namespace SP.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" nid,title,tid,memo,atime ");
+			strSql.Append(" nid,title,tid,bgpic,memo,atime ");
 			strSql.Append(" FROM news ");
 			if(strWhere.Trim()!="")
 			{

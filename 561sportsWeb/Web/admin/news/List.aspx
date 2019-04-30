@@ -48,6 +48,11 @@
         <Columns>       
             <asp:BoundField HeaderText="资讯标题" DataField="title" />
             <asp:BoundField HeaderText="所属类别" DataField="tname" />
+                        <asp:TemplateField HeaderText="资讯图片">
+            <ItemTemplate>
+            <img alt="" src="../../uploads/<%#Eval("bgpic")%>" width="100"  height="80" />
+            </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField HeaderText="发布时间" DataField="atime" />
             <asp:HyperLinkField   DataNavigateUrlFormatString="Show.aspx?id={0}" DataNavigateUrlFields="nid" HeaderText="详细" Text="详细"  >
                 <ItemStyle Width="50px" />

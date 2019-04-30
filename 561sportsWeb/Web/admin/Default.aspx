@@ -86,21 +86,19 @@
 
 
                             <dl>
-<<<<<<< HEAD
                                 <dt><a class="ico1" href="javascript:;" onclick="show('news');">运动新闻管理</a></dt>
                                 <div id="news">
                                     <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">新闻类别添加</a></dd>
                                     <dd style="display: block;"><a href="newsType/List.aspx" target="workspace" class="">运动新闻管理</a></dd>
                                     <dd style="display: block;"><a href="news/Add.aspx" target="workspace" class="">运动新闻添加</a></dd>
                                     <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">运动新闻管理</a></dd>
-=======
+
                                 <dt><a class="ico1" href="javascript:;" onclick="show('news');">健身资讯管理</a></dt>
                                 <div id="news">
                                     <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">健身资讯类别添加</a></dd>
                                     <dd style="display: block;"><a href="newsType/List.aspx" target="workspace" class="">健身资讯类别管理</a></dd>
                                     <dd style="display: block;"><a href="news/Add.aspx" target="workspace" class="">健身资讯添加</a></dd>
                                     <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">健身资讯 管理</a></dd>
->>>>>>> upstream/master
                                 </div>
                             </dl>
 

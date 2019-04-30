@@ -42,6 +42,12 @@ public partial class news_Modify : System.Web.UI.Page
         {
             txt_title.Text = ds.Tables[0].Rows[0]["title"].ToString();
             ddltid.SelectedValue=ds.Tables[0].Rows[0]["tid"].ToString();
+            Labelbgpic.Text = ds.Tables[0].Rows[0]["bgpic"].ToString();
+            if (Labelbgpic.Text != "" && Labelbgpic.Text.Length > 3)
+            {
+                Imagepic.ImageUrl = "../../uploads/" + Labelbgpic.Text;
+                Imagepic.Visible = true;
+            }
             Textarea1.Value = ds.Tables[0].Rows[0]["memo"].ToString();
         }
     }
@@ -53,15 +59,30 @@ public partial class news_Modify : System.Web.UI.Page
     /// <param name="e"></param>
     protected void btnSave_Click(object sender, EventArgs e)
     {
+        //更新  
         //更新   
+        string addrpic = Labelbgpic.Text;
+        if (fppic.HasFile)
+        {
+            string name = this.fppic.PostedFile.FileName;
+            int i = name.LastIndexOf('.');
+            string extname = name.Substring(i);
+            string filename = DateTime.Now.ToString("yyyyMMddhhmmssfff");
+            string path = filename + extname;
+            string savePath = Server.MapPath(@"..\..\uploads\" + filename + extname);
+            fppic.PostedFile.SaveAs(savePath);
+            addrpic = path;
+        }
         string title = txt_title.Text;
         int tid = int.Parse(ddltid.SelectedValue);
+        string bgpic = addrpic;
         string memo = Textarea1.Value;
   
 
         SP.Model.news model = new SP.Model.news();
         model.title = title;
         model.tid = tid;
+        model.bgpic = bgpic;
         model.memo = memo;
         model.nid = int.Parse(Request.QueryString["id"]);
 

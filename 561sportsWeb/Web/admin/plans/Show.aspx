@@ -47,6 +47,10 @@
 	<td height="25" width="20%" align="right">所属类别：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lbltid" runat="server" Text=""></asp:Label></td>
 	</tr>
+                             <tr>
+	<td height="25" width="20%" align="right">资讯图片：</td>
+	<td height="25" width="*" align="left" style="text-align:left"><asp:Image ID="imgbgpic" runat="server" Width="120" Height="120" /></td>
+	</tr>
  <tr>
       <tr>
 	<td height="25" width="20%" align="right">标签：</td>

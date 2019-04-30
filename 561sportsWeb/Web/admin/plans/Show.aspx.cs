@@ -29,12 +29,14 @@ public partial class plans_Detail : System.Web.UI.Page
             SP.BLL.plans bll = new SP.BLL.plans();
             //根据编号得到相应的记录
             DataSet ds = bll.GetList("  pid=" + Request.QueryString["id"]);
+            SP.Model.plans model = bll.GetModel(int.Parse(Request.QueryString["id"]));
             if (ds.Tables[0].Rows.Count > 0)
             {
                 DataRow sdr = ds.Tables[0].Rows[0];
                 lblpid.Text = sdr["pid"].ToString();
                 lbltitle.Text = sdr["title"].ToString();
                 lbltid.Text = sdr["tname"].ToString();
+                imgbgpic.ImageUrl = "../../uploads/" + model.bgpic;
                 lblmark.Text = sdr["mark"].ToString();
                 lblmemo.Text = sdr["memo"].ToString();
                 lblremarks.Text = sdr["remarks"].ToString();

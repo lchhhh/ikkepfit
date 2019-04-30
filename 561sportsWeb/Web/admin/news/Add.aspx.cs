@@ -36,14 +36,29 @@ public partial class news_Add : System.Web.UI.Page
     /// <param name="e"></param>
     protected void btnSave_Click(object sender, EventArgs e)
     {
+
+        string addrpic = "";
+        if (fppic.HasFile)
+        {
+            string name = this.fppic.PostedFile.FileName;
+            int i = name.LastIndexOf('.');
+            string extname = name.Substring(i);
+            string filename = DateTime.Now.ToString("yyyyMMddhhmmssfff");
+            string path = filename + extname;
+            string savePath = Server.MapPath(@"..\..\uploads\" + filename + extname);
+            fppic.PostedFile.SaveAs(savePath);
+            addrpic = path;
+        }
         string title = txt_title.Text;
         int tid = int.Parse(ddltid.SelectedValue);
+        string bgpic = addrpic;
         string memo = Textarea1.Value;
         DateTime atime = DateTime.Now;
 
         SP.Model.news model = new SP.Model.news();
         model.title = title;
         model.tid = tid;
+        model.bgpic = bgpic;
         model.memo = memo;
         model.atime = atime;
 

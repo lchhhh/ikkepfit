@@ -29,12 +29,16 @@ public partial class news_Detail : System.Web.UI.Page
             SP.BLL.news bll = new SP.BLL.news();
             //根据编号得到相应的记录
             DataSet ds = bll.GetList("  nid=" + Request.QueryString["id"]);
+            SP.Model.news model = bll.GetModel(int.Parse(Request.QueryString["id"]));
             if (ds.Tables[0].Rows.Count > 0)
             {
+                
+                
                 DataRow sdr = ds.Tables[0].Rows[0];
                 lblnid.Text = sdr["nid"].ToString();
                 lbltitle.Text = sdr["title"].ToString();
                 lbltid.Text = sdr["tname"].ToString();
+                imgbgpic.ImageUrl = "../../uploads/" + model.bgpic;
                 lblmemo.Text = sdr["memo"].ToString();
                 lblatime.Text = sdr["atime"].ToString();
             }
