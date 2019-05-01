@@ -16,6 +16,7 @@ namespace SP.Model
 		private int? _total1;
 		private string _lname;
 		private DateTime? _atime;
+        private string _pic;
 		/// <summary>
 		/// 编号
 		/// </summary>
@@ -64,6 +65,14 @@ namespace SP.Model
 			set{ _atime=value;}
 			get{return _atime;}
 		}
+        /// <summary>
+        /// 图片
+        /// </summary>
+        public string pic
+        {
+            set { _pic = value; }
+            get { return _pic; }
+        }
 		#endregion Model
 
 	}

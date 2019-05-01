@@ -48,7 +48,7 @@
         <Columns>       
             <asp:BoundField HeaderText="资讯标题" DataField="title" />
             <asp:BoundField HeaderText="所属类别" DataField="tname" />
-                        <asp:TemplateField HeaderText="资讯图片">
+            <asp:TemplateField HeaderText="资讯图片">
             <ItemTemplate>
             <img alt="" src="../../uploads/<%#Eval("bgpic")%>" width="100"  height="80" />
             </ItemTemplate>
