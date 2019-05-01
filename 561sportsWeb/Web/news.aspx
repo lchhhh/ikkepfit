@@ -18,13 +18,33 @@
                     <div class="card" style="width: 925px; margin: 30px 3px 10px 0px">
                         <div class="card-header">
                             <div class="row">
-                                <p style="margin: 0px 20px 0px 0px">您当前的位置：<span><a href="default.aspx">首页</a> &gt;
-                                    <asp:Literal ID="Literal1" runat="server"></asp:Literal></span></p>
+                                <p style="margin: 0px 20px 0px 0px">
+                                    您当前的位置：<span><a href="default.aspx">首页</a> &gt;
+                                    <asp:Literal ID="Literal1" runat="server"></asp:Literal></span>
+                                </p>
                             </div>
                         </div>
                         <div class="card-body">
+                            <asp:Repeater ID="Repeater1" runat="server">
+                                <ItemTemplate>
+                                    <div class="card card-aside">
+                                        <img class="card-aside-column" src="../../uploads/<%#Eval("bgpic")%>" width="100" height="180" />
+                                        <div class="card-body d-flex flex-column">
+                                            <h4><a href="newView.aspx?id=<%# Eval("nid") %>"><%# Eval("title") %></a></h4>
+                                            <div class="text-muted"><%# StringOper.Substr( Eval("memo").ToString(),30) %></div>
+                                            <div class="d-flex align-items-center pt-5 mt-auto">
+                                                <div>
+                                                    <small class="d-block text-muted"><i class="fe fe-clock"></i><%#Eval("atime") %></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div class="list-group">
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+
+                        <%--                            <div class="list-group">
                                 <asp:Repeater ID="Repeater1" runat="server">
                                     <ItemTemplate>
                                         <a href="newView.aspx?id=<%# Eval("nid") %>" class="list-group-item">
@@ -33,9 +53,9 @@
                                         </a>
                                     </ItemTemplate>
                                 </asp:Repeater>
-                            </div>
+                            </div>--%>
 
-                            <%--<asp:Repeater ID="Repeater1" runat="server">
+                        <%--<asp:Repeater ID="Repeater1" runat="server">
                                     <ItemTemplate>
                                         <div class="col-lg">
                                             <div class="card ">
@@ -53,21 +73,17 @@
                                 </asp:Repeater>--%>
 
 
-                            <div class="showpages">
-                                <div class="scott" style="padding-top: 10px;">
-                                    <webdiyer:AspNetPager ID="AspNetPager1" runat="server" AlwaysShow="false" FirstPageText="首页" LastPageText="末页" NextPageText="下一页" OnPageChanged="AspNetPager1_PageChanged" PageIndexBoxType="DropDownList" PageSize="10" PrevPageText="上一页" ShowPageIndexBox="Always" Width="90%"></webdiyer:AspNetPager>
-                                </div>
-
+                        <div class="showpages">
+                            <div class="scott" style="padding-top: 10px;">
+                                <webdiyer:AspNetPager ID="AspNetPager1" runat="server" AlwaysShow="false" FirstPageText="首页" LastPageText="末页" NextPageText="下一页" OnPageChanged="AspNetPager1_PageChanged" PageIndexBoxType="DropDownList" PageSize="10" PrevPageText="上一页" ShowPageIndexBox="Always" Width="90%"></webdiyer:AspNetPager>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </div>
 
-</asp:Content>
+ </asp:Content>
 

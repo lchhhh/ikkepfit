@@ -50,7 +50,7 @@ namespace SP.DAL
 			strSql.Append(" values (");
 			strSql.Append("@title,@memo,@total1,@lname,@atime)");
 			strSql.Append(";select @@IDENTITY");
-			SqlParameter[] parameters = {
+            SqlParameter[] parameters = {
 					new SqlParameter("@title", SqlDbType.VarChar,100),
 					new SqlParameter("@memo", SqlDbType.NText),
 					new SqlParameter("@total1", SqlDbType.Int,4),
