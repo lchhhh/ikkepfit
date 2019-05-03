@@ -47,6 +47,10 @@
 	<td height="25" width="20%" align="right">食物图片：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Image ID="imgpic" runat="server" Width="120" Height="120" /></td>
 	</tr>
+               <tr>
+	<td height="25" width="20%" align="right">食物热量：</td>
+	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblfcal" runat="server" Text=""></asp:Label></td>
+	</tr>
  <tr>
 	<td height="25" width="20%" align="right">食物描述：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblmemo" runat="server" Text=""></asp:Label></td>

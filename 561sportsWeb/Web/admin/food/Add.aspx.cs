@@ -45,12 +45,14 @@ public partial class food_Add : System.Web.UI.Page
 
         string title = txt_title.Text;
         string pic = addrpic;
+        int fcal = int.Parse(txt_fcal.Text);
         string memo = Textarea1.Value;
         DateTime atime = DateTime.Now;
 
         SP.Model.food model = new SP.Model.food();
         model.title = title;
         model.pic = pic;
+        model.fcal = fcal;
         model.memo = memo;
         model.atime = atime;
 

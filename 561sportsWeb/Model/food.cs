@@ -13,6 +13,7 @@ namespace SP.Model
         private int _id;
         private string _title;
         private string _pic;
+        private int _fcal;
         private string _memo;
         private DateTime? _atime;
         /// <summary>
@@ -38,6 +39,12 @@ namespace SP.Model
         {
             set { _pic = value; }
             get { return _pic; }
+        }
+
+        public int fcal
+        {
+            set { _fcal = value; }
+            get { return _fcal; }
         }
         /// <summary>
         /// 食物描述

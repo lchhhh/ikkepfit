@@ -79,6 +79,11 @@
 <td class="tbright"><div style="display:inline;float:left;">
 <asp:FileUpload ID="fppic" runat="server" Width="250" />支持格式为：.jpg | .gif | .png
  </td></tr>
+                           <tr>
+<td  style=" text-align:right; width:20%;">食物热量:</td>
+<td class="tbright"><div style="display:inline;float:left;">
+<asp:TextBox ID="txt_fcal" runat="server" width="200"></asp:TextBox></div><div id="ctl00_ContentPlaceHolder1_txt_fcalTip" style="width:250px;display:inline;float:left;text-align:left;"></div>
+ </td></tr>
 
 <tr>
 <td  style=" text-align:right; width:20%;">食物描述:</td>

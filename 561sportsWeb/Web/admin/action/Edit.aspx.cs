@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 public partial class action_Modify : System.Web.UI.Page
 {
     SP.BLL.action bll = new SP.BLL.action();
+    SP.BLL.actionType bll2 = new SP.BLL.actionType();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -27,7 +28,11 @@ public partial class action_Modify : System.Web.UI.Page
     /// </summary>
     protected void chushi()
     {
-
+        DataSet dstid = bll2.GetAllList();
+        ddllevid.DataSource = dstid;
+        ddllevid.DataTextField = "levname";
+        ddllevid.DataValueField = "levid";
+        ddllevid.DataBind();
 
         //根据编号得到相应的记录
         DataSet ds = bll.GetList("  id=" + Request.QueryString["id"]);
@@ -40,6 +45,8 @@ public partial class action_Modify : System.Web.UI.Page
                 Imagepic.ImageUrl = "../../uploads/" + Labelpic.Text;
                 Imagepic.Visible = true;
             }
+            ddllevid.SelectedValue = ds.Tables[0].Rows[0]["levid"].ToString();
+            txt_acal.Text = ds.Tables[0].Rows[0]["acal"].ToString();
             Textarea1.Value = ds.Tables[0].Rows[0]["memo"].ToString();
         }
     }
@@ -67,13 +74,18 @@ public partial class action_Modify : System.Web.UI.Page
 
         string title = txt_title.Text;
         string pic = addrpic;
+        int levid = int.Parse(ddllevid.SelectedValue);
+        int acal = int.Parse(txt_acal.Text);
         string memo = Textarea1.Value;
-
+        DateTime atime = DateTime.Now;
 
         SP.Model.action model = new SP.Model.action();
         model.title = title;
         model.pic = pic;
+        model.levid = levid;
+        model.acal = acal;
         model.memo = memo;
+        model.atime = atime;
         model.id = int.Parse(Request.QueryString["id"]);
 
         bll.Update(model);

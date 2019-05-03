@@ -51,6 +51,7 @@
             <img alt="" src="../../uploads/<%#Eval("pic")%>" width="100"  height="80" />
             </ItemTemplate>
             </asp:TemplateField>
+            <asp:BoundField HeaderText="食物热量" DataField="fcal" />
             <asp:BoundField HeaderText="发布时间" DataField="atime" />
             <asp:HyperLinkField   DataNavigateUrlFormatString="Show.aspx?id={0}" DataNavigateUrlFields="id" HeaderText="详细" Text="详细"  >
                 <ItemStyle Width="50px" />

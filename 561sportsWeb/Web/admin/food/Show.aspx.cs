@@ -33,6 +33,7 @@ public partial class food_Detail : System.Web.UI.Page
             this.lblid.Text = model.id.ToString();
             this.lbltitle.Text = model.title;
             imgpic.ImageUrl = "../../uploads/" + model.pic;
+            this.lblfcal.Text = model.fcal.ToString();
             this.lblmemo.Text = model.memo;
             this.lblatime.Text = model.atime.ToString();
         }

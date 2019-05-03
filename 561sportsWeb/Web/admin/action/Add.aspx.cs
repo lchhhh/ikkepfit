@@ -14,11 +14,16 @@ using System.Data.SqlClient;
 public partial class action_Add : System.Web.UI.Page
 {
     SP.BLL.action bll = new SP.BLL.action();
+    SP.BLL.actionType bll2 = new SP.BLL.actionType();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-
+            DataSet dstid = bll2.GetAllList();
+            ddllevid.DataSource = dstid;
+            ddllevid.DataTextField = "levname";
+            ddllevid.DataValueField = "levid";
+            ddllevid.DataBind();
         }
     }
 
@@ -45,12 +50,16 @@ public partial class action_Add : System.Web.UI.Page
 
         string title = txt_title.Text;
         string pic = addrpic;
+        int levid = int.Parse(ddllevid.SelectedValue);
+        int acal = int.Parse(txt_acal.Text);
         string memo = Textarea1.Value;
         DateTime atime = DateTime.Now;
 
         SP.Model.action model = new SP.Model.action();
         model.title = title;
         model.pic = pic;
+        model.levid = levid;
+        model.acal = acal;
         model.memo = memo;
         model.atime = atime;
 

@@ -9,21 +9,13 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 
-public partial class action_Manage : System.Web.UI.Page
+public partial class actionType_Manage : System.Web.UI.Page
 {
-    SP.BLL.action bll = new SP.BLL.action();
-    SP.BLL.actionType bll2 = new SP.BLL.actionType();
+    SP.BLL.actionType bll = new SP.BLL.actionType();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            DataSet dstid = bll2.GetAllList();
-            ddllevid.DataSource = dstid;
-            ddllevid.DataTextField = "levname";
-            ddllevid.DataValueField = "levid";
-            ddllevid.DataBind();
-            ddllevid.Items.Insert(0, new ListItem("---全部---", ""));
-
 
             bind();
         }
@@ -34,16 +26,7 @@ public partial class action_Manage : System.Web.UI.Page
     /// </summary>
     private void bind()
     {
-        string where = "  1=1 ";
-
-        if (txt_title.Text != "")
-        {
-            where += " and title like '%" + txt_title.Text + "%' ";
-        }
-
-
-
-        GridView1.DataSource = bll.GetList(where + " order by id desc");
+        GridView1.DataSource = bll.GetAllList();
         GridView1.DataBind();
 
     }

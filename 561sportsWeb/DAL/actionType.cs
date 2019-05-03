@@ -6,11 +6,11 @@ using SP.DBUtility;//Please add references
 namespace SP.DAL
 {
     /// <summary>
-    /// 数据访问类:action
+    /// 数据访问类:actionType
     /// </summary>
-    public partial class action
+    public partial class actionType
     {
-        public action()
+        public actionType()
         { }
 
 
@@ -19,21 +19,21 @@ namespace SP.DAL
         /// </summary>
         public int GetMaxId()
         {
-            return DbHelperSQL.GetMaxID("id", "action");
+            return DbHelperSQL.GetMaxID("levid", "actionType");
         }
 
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(int id)
+        public bool Exists(int levid)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) from action");
-            strSql.Append(" where id=@id");
+            strSql.Append("select count(1) from actionType");
+            strSql.Append(" where levid=@levid");
             SqlParameter[] parameters = {
-					new SqlParameter("@id", SqlDbType.Int,4)
+					new SqlParameter("@levid", SqlDbType.Int,4)
 			};
-            parameters[0].Value = id;
+            parameters[0].Value = levid;
 
             return DbHelperSQL.Exists(strSql.ToString(), parameters);
         }
@@ -42,28 +42,17 @@ namespace SP.DAL
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public int Add(SP.Model.action model)
+        public int Add(SP.Model.actionType model)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("insert into action(");
-            strSql.Append("title,pic,levid,acal,memo,atime)");
+            strSql.Append("insert into actionType(");
+            strSql.Append("levname)");
             strSql.Append(" values (");
-            strSql.Append("@title,@pic,@levid,@acal,@memo,@atime)");
+            strSql.Append("@levname)");
             strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
-					new SqlParameter("@title", SqlDbType.VarChar,50),
-					new SqlParameter("@pic", SqlDbType.VarChar,100),
-                    new SqlParameter("@levid",SqlDbType.Int,4),
-                    new SqlParameter("@acal",SqlDbType.Int,4),
-					new SqlParameter("@memo", SqlDbType.NText),
-					new SqlParameter("@atime", SqlDbType.DateTime)};
-            parameters[0].Value = model.title;
-            parameters[1].Value = model.pic;
-            parameters[2].Value = model.levid;
-            parameters[3].Value = model.acal;
-            parameters[4].Value = model.memo;
-            parameters[5].Value = model.atime;
-
+					new SqlParameter("@levname", SqlDbType.VarChar,50)};
+            parameters[0].Value = model.levname;
 
             object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
             if (obj == null)
@@ -78,32 +67,17 @@ namespace SP.DAL
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(SP.Model.action model)
+        public bool Update(SP.Model.actionType model)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("update action set ");
-            strSql.Append("title=@title,");
-            strSql.Append("pic=@pic,");
-            strSql.Append("levid=@levid,");
-            strSql.Append("acal=@acal,");
-            strSql.Append("memo=@memo");
-
-            strSql.Append(" where id=@id");
+            strSql.Append("update actionType set ");
+            strSql.Append("levname=@levname");
+            strSql.Append(" where levid=@levid");
             SqlParameter[] parameters = {
-					new SqlParameter("@title", SqlDbType.VarChar,50),
-					new SqlParameter("@pic", SqlDbType.VarChar,100),
-                    new SqlParameter("@levid",SqlDbType.Int,4),
-                    new SqlParameter("@acal",SqlDbType.Int,4),
-					new SqlParameter("@memo", SqlDbType.NText),
-            new SqlParameter("@id",SqlDbType.Int,4)};
-
-            parameters[0].Value = model.title;
-            parameters[1].Value = model.pic;
-            parameters[2].Value = model.levid;
-            parameters[3].Value = model.acal;
-            parameters[4].Value = model.memo;
-            parameters[5].Value = model.id;
-
+					new SqlParameter("@levname", SqlDbType.VarChar,50),
+					new SqlParameter("@levid", SqlDbType.Int,4)};
+            parameters[0].Value = model.levname;
+            parameters[1].Value = model.levid;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -119,16 +93,16 @@ namespace SP.DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int id)
+        public bool Delete(int levid)
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from action ");
-            strSql.Append(" where id=@id");
+            strSql.Append("delete from actionType ");
+            strSql.Append(" where levid=@levid");
             SqlParameter[] parameters = {
-					new SqlParameter("@id", SqlDbType.Int,4)
+					new SqlParameter("@levid", SqlDbType.Int,4)
 			};
-            parameters[0].Value = id;
+            parameters[0].Value = levid;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -143,11 +117,11 @@ namespace SP.DAL
         /// <summary>
         /// 批量删除数据
         /// </summary>
-        public bool DeleteList(string idlist)
+        public bool DeleteList(string levidlist)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from action ");
-            strSql.Append(" where id in (" + idlist + ")  ");
+            strSql.Append("delete from actionType ");
+            strSql.Append(" where levid in (" + levidlist + ")  ");
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
             if (rows > 0)
             {
@@ -163,18 +137,18 @@ namespace SP.DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public SP.Model.action GetModel(int id)
+        public SP.Model.actionType GetModel(int levid)
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 id,title,pic,levid,acal,memo,atime from action ");
-            strSql.Append(" where id=@id");
+            strSql.Append("select  top 1 levid,levname from actionType ");
+            strSql.Append(" where levid=@levid");
             SqlParameter[] parameters = {
-					new SqlParameter("@id", SqlDbType.Int,4)
+					new SqlParameter("@levid", SqlDbType.Int,4)
 			};
-            parameters[0].Value = id;
+            parameters[0].Value = levid;
 
-            SP.Model.action model = new SP.Model.action();
+            SP.Model.actionType model = new SP.Model.actionType();
             DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -190,38 +164,18 @@ namespace SP.DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public SP.Model.action DataRowToModel(DataRow row)
+        public SP.Model.actionType DataRowToModel(DataRow row)
         {
-            SP.Model.action model = new SP.Model.action();
+            SP.Model.actionType model = new SP.Model.actionType();
             if (row != null)
             {
-                if (row["id"] != null && row["id"].ToString() != "")
-                {
-                    model.id = int.Parse(row["id"].ToString());
-                }
-                if (row["title"] != null)
-                {
-                    model.title = row["title"].ToString();
-                }
-                if (row["pic"] != null)
-                {
-                    model.pic = row["pic"].ToString();
-                }
                 if (row["levid"] != null && row["levid"].ToString() != "")
                 {
                     model.levid = int.Parse(row["levid"].ToString());
                 }
-                if (row["acal"] != null && row["acal"].ToString() != "")
+                if (row["levname"] != null)
                 {
-                    model.acal = int.Parse(row["acal"].ToString());
-                }
-                if (row["memo"] != null)
-                {
-                    model.memo = row["memo"].ToString();
-                }
-                if (row["atime"] != null && row["atime"].ToString() != "")
-                {
-                    model.atime = DateTime.Parse(row["atime"].ToString());
+                    model.levname = row["levname"].ToString();
                 }
             }
             return model;
@@ -230,11 +184,11 @@ namespace SP.DAL
         /// <summary>
         /// 获得数据列表
         /// </summary>
- 
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  a.*,b.levname from action a  left join actionType b on a.levid=b.levid ");
+            strSql.Append("select levid,levname ");
+            strSql.Append(" FROM actionType ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
@@ -253,8 +207,8 @@ namespace SP.DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" id,title,pic,levid,acal,memo,atime ");
-            strSql.Append(" FROM action ");
+            strSql.Append(" levid,levname ");
+            strSql.Append(" FROM actionType ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
@@ -269,7 +223,7 @@ namespace SP.DAL
         public int GetRecordCount(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) FROM action ");
+            strSql.Append("select count(1) FROM actionType ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
@@ -298,9 +252,9 @@ namespace SP.DAL
             }
             else
             {
-                strSql.Append("order by T.id desc");
+                strSql.Append("order by T.levid desc");
             }
-            strSql.Append(")AS Row, T.*  from action T ");
+            strSql.Append(")AS Row, T.*  from actionType T ");
             if (!string.IsNullOrEmpty(strWhere.Trim()))
             {
                 strSql.Append(" WHERE " + strWhere);
@@ -325,8 +279,8 @@ namespace SP.DAL
                     new SqlParameter("@OrderType", SqlDbType.Bit),
                     new SqlParameter("@strWhere", SqlDbType.VarChar,1000),
                     };
-            parameters[0].Value = "action";
-            parameters[1].Value = "id";
+            parameters[0].Value = "actionType";
+            parameters[1].Value = "levid";
             parameters[2].Value = PageSize;
             parameters[3].Value = PageIndex;
             parameters[4].Value = 0;

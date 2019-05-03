@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/site.master" AutoEventWireup="true" CodeFile="List.aspx.cs" Inherits="action_Manage" Title="" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/site.master" AutoEventWireup="true" CodeFile="List.aspx.cs" Inherits="actionType_Manage" Title="" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -13,7 +13,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">动作库管理---运动动作列表</span></label></td>
+                        <td><label><span id="navTitle">动作等级管理---动作等级列表</span></label></td>
                     </tr>
                 </table>
             </td>
@@ -37,33 +37,18 @@
             
           <table width="100%"  border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#ecf5ff">
            <tr>
-            <td align="center"><strong> 动作等级</strong><asp:DropDownList ID="ddllevid" runat="server" Width="150">
-</asp:DropDownList> 
-            <strong> 动作名称:</strong><asp:TextBox ID="txt_title" runat="server" width="150"></asp:TextBox>
-
-    <asp:Button ID="Button1" runat="server" Text="搜 索"   onclick="btnSearch_Click" />
-          
+            <td align="center">
+                      
               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" GridLines="None" AllowPaging="True" onpageindexchanging="GridView1_PageIndexChanging">
         <RowStyle Height="25px" HorizontalAlign="Center" />
         <Columns>       
-            <asp:BoundField HeaderText="动作名称" DataField="title" />
-            <asp:TemplateField HeaderText="动作图片">
-            <ItemTemplate>
-            <img alt="" src="../../uploads/<%#Eval("pic")%>" width="100"  height="80" />
-            </ItemTemplate>
-            </asp:TemplateField>
-             <asp:BoundField HeaderText="动作等级" DataField="levid" />
-              <asp:BoundField HeaderText="动作卡路里" DataField="acal" />
-            <asp:BoundField HeaderText="发布时间" DataField="atime" />
-            <asp:HyperLinkField   DataNavigateUrlFormatString="Show.aspx?id={0}" DataNavigateUrlFields="id" HeaderText="详细" Text="详细"  >
-                <ItemStyle Width="50px" />
-            </asp:HyperLinkField>
-            <asp:HyperLinkField DataNavigateUrlFormatString="Edit.aspx?id={0}"  DataNavigateUrlFields="id" HeaderText="编辑" Text="编辑"  >                
+            <asp:BoundField HeaderText="等级名称" DataField="levname" />
+            <asp:HyperLinkField DataNavigateUrlFormatString="Edit.aspx?id={0}"  DataNavigateUrlFields="levid" HeaderText="编辑" Text="编辑"  >                
                 <ItemStyle Width="50px" />
             </asp:HyperLinkField>   
             <asp:TemplateField HeaderText="删除" >
                 <ItemTemplate>
-                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False"   CommandName='<%#Eval("id") %>' OnClick="lnk_Click" Text="删除" OnClientClick='return confirm("您确定要删除此信息么？");'></asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False"   CommandName='<%#Eval("levid") %>' OnClick="lnk_Click" Text="删除" OnClientClick='return confirm("您确定要删除此信息么？");'></asp:LinkButton>
                 </ItemTemplate>
                 <ItemStyle Width="50px" />
             </asp:TemplateField>   

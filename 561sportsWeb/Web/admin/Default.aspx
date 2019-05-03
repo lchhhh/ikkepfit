@@ -91,7 +91,7 @@
                                     <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">健身资讯类别添加</a></dd>
                                     <dd style="display: block;"><a href="newsType/List.aspx" target="workspace" class="">健身资讯类别管理</a></dd>
                                     <dd style="display: block;"><a href="news/Add.aspx" target="workspace" class="">健身资讯添加</a></dd>
-                                    <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">健身资讯 管理</a></dd>
+                                    <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">健身资讯管理</a></dd>
                                 </div>
                             </dl>
 
@@ -118,6 +118,8 @@
                             <dl>
                                 <dt><a class="ico1" href="javascript:;" onclick="show('action');">动作库管理</a></dt>
                                 <div id="action">
+                                    <dd style="display: block;"><a href="actionType/Add.aspx" target="workspace" class="">动作等级添加</a></dd>
+                                    <dd style="display: block;"><a href="actionType/List.aspx" target="workspace" class="">动作等级管理</a></dd>
                                     <dd style="display: block;"><a href="action/Add.aspx" target="workspace" class="">动作添加</a></dd>
                                     <dd style="display: block;"><a href="action/List.aspx" target="workspace" class="">动作管理</a></dd>
                                 </div>

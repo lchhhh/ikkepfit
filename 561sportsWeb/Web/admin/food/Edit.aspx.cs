@@ -40,6 +40,7 @@ public partial class food_Modify : System.Web.UI.Page
                 Imagepic.ImageUrl = "../../uploads/" + Labelpic.Text;
                 Imagepic.Visible = true;
             }
+            txt_fcal.Text = ds.Tables[0].Rows[0]["fcal"].ToString();
             Textarea1.Value = ds.Tables[0].Rows[0]["memo"].ToString();
         }
     }
@@ -67,12 +68,14 @@ public partial class food_Modify : System.Web.UI.Page
 
         string title = txt_title.Text;
         string pic = addrpic;
+        int fcal = int.Parse(txt_fcal.Text);
         string memo = Textarea1.Value;
 
 
         SP.Model.food model = new SP.Model.food();
         model.title = title;
         model.pic = pic;
+        model.fcal = fcal;
         model.memo = memo;
         model.id = int.Parse(Request.QueryString["id"]);
 

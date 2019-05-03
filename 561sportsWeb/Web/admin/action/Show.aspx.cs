@@ -33,6 +33,8 @@ public partial class action_Detail : System.Web.UI.Page
             this.lblid.Text = model.id.ToString();
             this.lbltitle.Text = model.title;
             imgpic.ImageUrl = "../../uploads/" + model.pic;
+            this.lbllevid.Text = model.levid.ToString();
+            this.lblacal.Text = model.acal.ToString();
             this.lblmemo.Text = model.memo;
             this.lblatime.Text = model.atime.ToString();
         }

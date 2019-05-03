@@ -48,17 +48,19 @@ namespace SP.DAL
             strSql.Append("insert into food(");
             strSql.Append("title,pic,memo,atime)");
             strSql.Append(" values (");
-            strSql.Append("@title,@pic,@memo,@atime)");
+            strSql.Append("@title,@pic,@fcal,@memo,@atime)");
             strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
 					new SqlParameter("@title", SqlDbType.VarChar,50),
 					new SqlParameter("@pic", SqlDbType.VarChar,100),
+                    new SqlParameter("@fcal",SqlDbType.Int,8),
 					new SqlParameter("@memo", SqlDbType.NText),
 					new SqlParameter("@atime", SqlDbType.DateTime)};
             parameters[0].Value = model.title;
             parameters[1].Value = model.pic;
-            parameters[2].Value = model.memo;
-            parameters[3].Value = model.atime;
+            parameters[2].Value = model.fcal;
+            parameters[3].Value = model.memo;
+            parameters[4].Value = model.atime;
 
             object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
             if (obj == null)
@@ -79,18 +81,21 @@ namespace SP.DAL
             strSql.Append("update food set ");
             strSql.Append("title=@title,");
             strSql.Append("pic=@pic,");
+            strSql.Append("fcal=@fcal,");
             strSql.Append("memo=@memo");
 
             strSql.Append(" where id=@id");
             SqlParameter[] parameters = {
 					new SqlParameter("@title", SqlDbType.VarChar,50),
 					new SqlParameter("@pic", SqlDbType.VarChar,100),
+                    new SqlParameter("@fcal",SqlDbType.Int,8),
 					new SqlParameter("@memo", SqlDbType.NText),
 					new SqlParameter("@id", SqlDbType.Int,4)};
             parameters[0].Value = model.title;
             parameters[1].Value = model.pic;
-            parameters[2].Value = model.memo;
-            parameters[3].Value = model.id;
+            parameters[2].Value = model.fcal;
+            parameters[3].Value = model.memo;
+            parameters[4].Value = model.id;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -154,7 +159,7 @@ namespace SP.DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 id,title,pic,memo,atime from food ");
+            strSql.Append("select  top 1 id,title,pic,fcal,memo,atime from food ");
             strSql.Append(" where id=@id");
             SqlParameter[] parameters = {
 					new SqlParameter("@id", SqlDbType.Int,4)
@@ -194,6 +199,10 @@ namespace SP.DAL
                 {
                     model.pic = row["pic"].ToString();
                 }
+                if (row["fcal"] != null)
+                {
+                    model.fcal = int.Parse(row["fcal"].ToString());
+                }
                 if (row["memo"] != null)
                 {
                     model.memo = row["memo"].ToString();
@@ -212,7 +221,7 @@ namespace SP.DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select id,title,pic,memo,atime ");
+            strSql.Append("select id,title,pic,fcal,memo,atime ");
             strSql.Append(" FROM food ");
             if (strWhere.Trim() != "")
             {
@@ -232,7 +241,7 @@ namespace SP.DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" id,title,pic,memo,atime ");
+            strSql.Append(" id,title,pic,fcal,memo,atime ");
             strSql.Append(" FROM food ");
             if (strWhere.Trim() != "")
             {

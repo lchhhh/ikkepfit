@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="action.cs" />
+    <Compile Include="actionType.cs" />
     <Compile Include="admin.cs" />
     <Compile Include="article.cs" />
     <Compile Include="equip.cs" />
