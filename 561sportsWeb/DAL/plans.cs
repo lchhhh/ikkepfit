@@ -214,7 +214,7 @@ namespace SP.DAL
                 {
                     model.tid = int.Parse(row["tid"].ToString());
                 }
-                if (row["pic"] != null)
+                if (row["bgpic"] != null)
                 {
                     model.bgpic = row["bgpic"].ToString();
                 }

@@ -86,13 +86,6 @@
 
 
                             <dl>
-                                <dt><a class="ico1" href="javascript:;" onclick="show('news');">运动新闻管理</a></dt>
-                                <div id="news">
-                                    <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">新闻类别添加</a></dd>
-                                    <dd style="display: block;"><a href="newsType/List.aspx" target="workspace" class="">运动新闻管理</a></dd>
-                                    <dd style="display: block;"><a href="news/Add.aspx" target="workspace" class="">运动新闻添加</a></dd>
-                                    <dd style="display: block;"><a href="news/List.aspx" target="workspace" class="">运动新闻管理</a></dd>
-
                                 <dt><a class="ico1" href="javascript:;" onclick="show('news');">健身资讯管理</a></dt>
                                 <div id="news">
                                     <dd style="display: block;"><a href="newsType/Add.aspx" target="workspace" class="">健身资讯类别添加</a></dd>
@@ -132,17 +125,11 @@
 
 
                             <dl>
-<<<<<<< HEAD
+
                                 <dt><a class="ico1" href="javascript:;" onclick="show('equip');">运动装备管理</a></dt>
                                 <div id="equip">
                                     <dd style="display: block;"><a href="equip/Add.aspx" target="workspace" class="">运动装备添加</a></dd>
-                                    <dd style="display: block;"><a href="equip/List.aspx" target="workspace" class="">运动装备管理</a></dd>
-=======
-                                <dt><a class="ico1" href="javascript:;" onclick="show('equip');">健身器械管理</a></dt>
-                                <div id="equip">
-                                    <dd style="display: block;"><a href="equip/Add.aspx" target="workspace" class="">健身器械添加</a></dd>
-                                    <dd style="display: block;"><a href="equip/List.aspx" target="workspace" class="">健身器械管理</a></dd>
->>>>>>> upstream/master
+                                    <dd style="display: block;"><a href="equip/List.aspx" target="workspace" class="">运动装备管理</a></dd>              
                                 </div>
                             </dl>
 

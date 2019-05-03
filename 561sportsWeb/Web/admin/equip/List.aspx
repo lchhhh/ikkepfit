@@ -13,7 +13,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">健身器械管理---健身器械列表</span></label></td>
+                        <td><label><span id="navTitle">健身装备管理---健身装备列表</span></label></td>
                     </tr>
                 </table>
             </td>
@@ -38,15 +38,15 @@
           <table width="100%"  border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#ecf5ff">
            <tr>
             <td align="center">
-            <strong> 器械名称:</strong><asp:TextBox ID="txt_title" runat="server" width="150"></asp:TextBox>
+            <strong> 装备名称:</strong><asp:TextBox ID="txt_title" runat="server" width="150"></asp:TextBox>
 
     <asp:Button ID="Button1" runat="server" Text="搜 索"   onclick="btnSearch_Click" />
           
               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" GridLines="None" AllowPaging="True" onpageindexchanging="GridView1_PageIndexChanging">
         <RowStyle Height="25px" HorizontalAlign="Center" />
         <Columns>       
-            <asp:BoundField HeaderText="器械名称" DataField="title" />
-            <asp:TemplateField HeaderText="器械图片">
+            <asp:BoundField HeaderText="装备名称" DataField="title" />
+            <asp:TemplateField HeaderText="装备图片">
             <ItemTemplate>
             <img alt="" src="../../uploads/<%#Eval("pic")%>" width="100"  height="80" />
             </ItemTemplate>
