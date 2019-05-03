@@ -24,6 +24,6 @@ D:\ikeepfit\561sportsWeb\Model\obj\Debug\SP.Model.pdb
 D:\ikeepfit\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\个人文件\毕设\git\561sportsWeb\Model\bin\Debug\SP.Model.dll
 D:\个人文件\毕设\git\561sportsWeb\Model\bin\Debug\SP.Model.pdb
-D:\个人文件\毕设\git\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\个人文件\毕设\git\561sportsWeb\Model\obj\Debug\SP.Model.dll
 D:\个人文件\毕设\git\561sportsWeb\Model\obj\Debug\SP.Model.pdb
+D:\个人文件\毕设\git\561sportsWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

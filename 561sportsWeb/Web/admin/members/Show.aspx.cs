@@ -33,7 +33,7 @@ public partial class members_Detail : System.Web.UI.Page
             this.lblmname.Text = model.mname;
             this.lblsex.Text = model.sex;
             this.lbltel.Text = model.tel;
-            imgpic.ImageUrl = "../../uploads/" + model.pic;
+            imgpic.ImageUrl = "../../uploads/" + model.mpic;
                this.lblregtime.Text = model.regtime.ToString();
 
            

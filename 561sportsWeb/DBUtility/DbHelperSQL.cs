@@ -17,7 +17,7 @@ namespace SP.DBUtility
         //数据库连接字符串(web.config来配置)，多数据库可使用DbHelperSQLP来实现.
         public static string connectionString = ConfigurationManager.AppSettings["ConnectionString"].ToString();
         public DbHelperSQL()
-        {            
+        {
         }
 
         #region 公用方法
@@ -171,7 +171,7 @@ namespace SP.DBUtility
                 }
             }
         }
-      
+
 
         /// <summary>
         /// 执行多条SQL语句，实现数据库事务。
@@ -387,7 +387,7 @@ namespace SP.DBUtility
             catch (System.Data.SqlClient.SqlException e)
             {
                 throw e;
-            }   
+            }
 
         }
         /// <summary>
@@ -683,7 +683,7 @@ namespace SP.DBUtility
             command.CommandType = CommandType.StoredProcedure;
             returnReader = command.ExecuteReader(CommandBehavior.CloseConnection);
             return returnReader;
-            
+
         }
 
 

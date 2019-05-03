@@ -43,7 +43,8 @@
             <asp:BoundField HeaderText="主题" DataField="title" />
             <asp:BoundField HeaderText="浏览次数" DataField="total1" />
             <asp:BoundField HeaderText="发贴人" DataField="lname" />
-            <asp:BoundField HeaderText="发布时间" DataField="atime" />
+            <asp:BoundField HeaderText="图片" DataField="pic" />
+
             <asp:HyperLinkField   DataNavigateUrlFormatString="Show.aspx?id={0}" DataNavigateUrlFields="aid" HeaderText="详细" Text="详细"  >
                 <ItemStyle Width="50px" />
             </asp:HyperLinkField>

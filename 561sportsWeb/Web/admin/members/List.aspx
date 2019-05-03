@@ -52,7 +52,7 @@
             <asp:BoundField HeaderText="联系方式" DataField="tel" />
             <asp:TemplateField HeaderText="头像">
             <ItemTemplate>
-            <img alt="" src="../../uploads/<%#Eval("pic")%>" width="100"  height="80" />
+            <img alt="" src="../../uploads/<%#Eval("mpic")%>" width="100"  height="80" />
             </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField HeaderText="注册时间" DataField="regtime" />

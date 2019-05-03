@@ -43,6 +43,10 @@
 	<td height="25" width="20%" align="right">主题：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lbltitle" runat="server" Text=""></asp:Label></td>
 	</tr>
+               <tr>
+	<td height="25" width="20%" align="right">图片：</td>
+	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblpic" runat="server" Text=""></asp:Label></td>
+	</tr>
  <tr>
 	<td height="25" width="20%" align="right">内容：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblmemo" runat="server" Text=""></asp:Label></td>

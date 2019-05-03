@@ -26,10 +26,10 @@ public partial class about  : System.Web.UI.Page
     {
         string where = " 1=1 ";
 
-       
         int pagesize = this.AspNetPager1.PageSize;
         int pageindex = this.AspNetPager1.CurrentPageIndex;
-        Repeater1.DataSource = bll.GetListByPage(where, " atime desc ", 1 + (AspNetPager1.CurrentPageIndex - 1) * AspNetPager1.PageSize, AspNetPager1.CurrentPageIndex * AspNetPager1.PageSize);
+        //Repeater1.DataSource = bll.GetListByPage(where, " atime desc ", 1 + (AspNetPager1.CurrentPageIndex - 1) * AspNetPager1.PageSize, AspNetPager1.CurrentPageIndex * AspNetPager1.PageSize);
+        Repeater1.DataSource = bll.GetList(10, "", "aid");
         Repeater1.DataBind();
 
         this.AspNetPager1.RecordCount = bll.GetRecordCount(where);
@@ -60,11 +60,11 @@ public partial class about  : System.Web.UI.Page
 
     //    SP.Model.article model = new SP.Model.article();
 
-    //   model.title = txt_title.Text;
-    //   model.memo = Textarea1.Value;
-    //   model.total1 = 0;
-    //   model.lname = Session["lname"].ToString();
-    //   model.atime = DateTime.Now;
+    //    model.title = txt_title.Text;
+    //    model.memo = Textarea1.Value;
+    //    model.total1 = 0;
+    //    model.lname = Session["lname"].ToString();
+    //    model.atime = DateTime.Now;
 
     //    bll.Add(model);
 

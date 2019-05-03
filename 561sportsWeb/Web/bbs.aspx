@@ -43,31 +43,27 @@
                     <div class="card-header">
                         <div class="row">
                             <p style="margin: 0px 20px 0px 0px">
-                                您当前的位置：<span><a href="default.aspx">首页</a> &gt;健身小红书</span>
+                                您当前的位置：<span><a href="bbsAdd.aspx">首页</a> &gt;健身小红书</span>
                             </p>
                         </div>
                     </div>
                     <div class="card-body">
+                        <a href="bbsAdd.aspx" class="btn btn-pill btn-primary" style="margin:0px 0px 25px 0px">+发布小红书</a>
                         <div class="row">
                         <asp:Repeater ID="Repeater1" runat="server">
                                 <ItemTemplate>
-                        <div class="card" style="width:300px">
-                            <a href="#"></a>
-                            <div class="card-body d-flex flex-column">
-                                <h4><a href="bbsView.aspx?id=<%# Eval("aid") %>"><%# Eval("title") %></a></h4>
-                                <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>
-                                <div class="d-flex align-items-center pt-5 mt-auto">
-                                    <div class="avatar avatar-md mr-3" style="background-image: url(./demo/faces/female/18.jpg)"></div>
-                                    <div>
-                                        <a href="./profile.html" class="text-default"><%# Eval("lname") %></a>
-                                        <small class="d-block text-muted"><%# Eval("atime") %></small>
+                        <div class="card card-aside">
+                                        <img class="card-aside-column" src="../../uploads/<%#Eval("pic")%>" width="100" height="180" />
+                                        <div class="card-body d-flex flex-column">
+                                            <h4><a href="bbsView.aspx?id=<%# Eval("aid") %>"><%# Eval("title") %></a></h4>
+                                            <div class="text-muted"><%# StringOper.Substr( Eval("memo").ToString(),180) %></div>
+                                            <div class="d-flex align-items-center pt-5 mt-auto">
+                                                <div>
+                                                    <small class="d-block text-muted"><i class="fe fe-user"></i><%#Eval("lname") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fe fe-clock"></i><%#Eval("atime") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fe fe-eye"></i><%#Eval("total1") %></small>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <%--<div class="ml-auto text-muted">
-                                        <a href="#" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i><%# Eval("total1") %>&gt;&gt;<i class="fe fe-eye"><%# Eval("tt") %></a>
-                                    </div>--%>
-                                </div>
-                            </div>
-                        </div>
                                     
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -85,30 +81,6 @@
             </div>
 
             <%--<div class="main_right">
-                <div class="dqwz">
-                    <div class="dqwz_title">
-                        <p>您当前的位置：</p>
-                        <span><a href="default.aspx">首页</a> &gt; 论坛</span>
-                    </div>
-                    <div class="dqwz_contect">
-                        <ul>
-                            <asp:Repeater ID="Repeater1" runat="server">
-                                <ItemTemplate>
-                                    <li>
-                                        <div class="dqwz_text">
-                                            <a href="bbsView.aspx?id=<%# Eval("aid") %>" title="<%# Eval("title") %>">&gt;&gt;<%# Eval("title") %></a><span>发布人：<%# Eval("lname") %>&nbsp;发布时间：<%# Eval("atime") %>&nbsp;阅读：<%# Eval("total1") %>/回复<b style="color: red"><%# Eval("tt") %></b></span>
-                                        </div>
-                                    </li>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </ul>
-                        <div class="showpages">
-                            <div class="scott" style="padding-top: 10px;">
-
-                                <webdiyer:AspNetPager ID="AspNetPager1" runat="server" AlwaysShow="false" FirstPageText="首页" LastPageText="末页" NextPageText="下一页" OnPageChanged="AspNetPager1_PageChanged" PageIndexBoxType="DropDownList" PageSize="10" PrevPageText="上一页" ShowPageIndexBox="Always" Width="90%"></webdiyer:AspNetPager>
-
-
-                            </div>
                             <table width="95%">
                                 <tr>
                                     <td style="text-align: right; width: 20%;">主题:</td>
@@ -144,11 +116,7 @@
                                     $("#ctl00_ContentPlaceHolder1_txt_title").formValidator({ onshow: "请输入主题", onfocus: "主题不能为空", oncorrect: "合法" }).InputValidator({ min: 1, onerror: "主题不能为空,请确认" });
                                 });
 </script>
-                        </div>
-                    </div>
-
-                </div>
-            </div>--%>
+                        </div>--%>
         </div>
 
 

@@ -105,16 +105,19 @@
                           <a href="plan.aspx" class="nav-link"><i class="fe fe-calendar"></i>健身计划</a>
                       </li>
                       <li class="nav-item">
-                          <a href="yd.aspx" class="nav-link"><i class="fe fe-file"></i>健身动作库</a>
-                      </li>
-                      <li class="nav-item">
                           <a href="bbs.aspx" class="nav-link"><i class="fe fe-check-square"></i>健身小红书</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link"><i class="fe fe-image"></i>饮食查询</a>
+                          <a href="yd.aspx" class="nav-link"><i class="fe fe-file"></i>健身动作库</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link"><i class="fe fe-file-text"></i>健身工具</a>
+                          <a href="zb.aspx" class="nav-link"><i class="fe fe-file"></i>健身装备</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="food.aspx#" class="nav-link"><i class="fe fe-image"></i>饮食查询</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="tools.aspx" class="nav-link"><i class="fe fe-file-text"></i>健身工具</a>
                       </li>
                   </ul>
               </div>
