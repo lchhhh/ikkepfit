@@ -3291,7 +3291,9 @@ tbody.collapse.show {
   flex-wrap: wrap;
   -ms-flex-align: stretch;
   align-items: stretch;
-  width: 100%;
+  width: 68%;
+    top: -5px;
+    left: -350px;
 }
 
 .input-group > .form-control,

@@ -11,12 +11,21 @@
             <div class="card" style="width:87%; margin: 30px 85px 10px 85px">
                 <div class="card-status bg-blue"></div>
                 <div class="card-body">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item active">一分钟了解自己</a>
-                        <a href="#" class="list-group-item">身体质量指数（BMI）</a>
-                        <a href="#" class="list-group-item">标准体重计算</a>
-                        <a href="#" class="list-group-item">基础代谢计算</a>
-                        <a href="#" class="list-group-item">燃脂运动计算</a>
+                    <div class="jumbotron" style="background-image: url(images/tools/banner1.png);height:600px">
+                        </div>
+                    <div class="row" style="margin:10px 0px 0px 0px">
+                        <div class="list-group" style="width:100%;">
+                            <a href="tool1.aspx" class="list-group-item " style="text-align:center;margin:10px 0px 0px 0px">一分钟认识自己&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag tag-rounded">健身计算器</span></a>
+                        </div>
+                        <div class="list-group" style="width:100%;">
+                            <a href="tool2.aspx" class="list-group-item " style="text-align:center;margin:10px 0px 0px 0px">身体质量指数（BMI）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag tag-rounded">健身计算器</span></a>
+                        </div>
+                        <div class="list-group" style="width:100%;">
+                            <a href="tool3.aspx" class="list-group-item " style="text-align:center;margin:10px 0px 0px 0px">标准体重计算&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag tag-rounded">健身计算器</span></a>
+                        </div>
+                        <div class="list-group" style="width:100%;">
+                            <a href="tool4.aspx" class="list-group-item " style="text-align:center;margin:10px 0px 0px 0px">热量计算器&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag tag-rounded">健身计算器</span></a>
+                        </div>
                     </div>
                 </div>
             </div>

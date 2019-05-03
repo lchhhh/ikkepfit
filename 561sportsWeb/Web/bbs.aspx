@@ -48,11 +48,11 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <a href="bbsAdd.aspx" class="btn btn-pill btn-primary" style="margin:0px 0px 25px 0px">+发布小红书</a>
+                        <a href="bbsAdd.aspx" class="btn btn-pill btn-primary" style="margin: 0px 0px 25px 0px">+发布小红书</a>
                         <div class="row">
-                        <asp:Repeater ID="Repeater1" runat="server">
+                            <asp:Repeater ID="Repeater1" runat="server">
                                 <ItemTemplate>
-                        <div class="card card-aside">
+                                    <div class="card card-aside">
                                         <img class="card-aside-column" src="../../uploads/<%#Eval("pic")%>" width="100" height="180" />
                                         <div class="card-body d-flex flex-column">
                                             <h4><a href="bbsView.aspx?id=<%# Eval("aid") %>"><%# Eval("title") %></a></h4>
@@ -64,10 +64,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </ItemTemplate>
                             </asp:Repeater>
-                            </div>
+                        </div>
 
                         <div class="showpages">
                             <div class="scott" style="padding-top: 10px;">
@@ -79,44 +79,6 @@
                     </div>
                 </div>
             </div>
-
-            <%--<div class="main_right">
-                            <table width="95%">
-                                <tr>
-                                    <td style="text-align: right; width: 20%;">主题:</td>
-                                    <td class="tbright">
-                                        <div style="display: inline; float: left;">
-                                            <asp:TextBox ID="txt_title" runat="server"></asp:TextBox>
-                                        </div>
-                                        <div id="ctl00_ContentPlaceHolder1_txt_titleTip" style="width: 250px; display: inline; float: left; text-align: left;"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align: right; width: 20%;">内容:</td>
-                                    <td class="tbright">
-                                        <div style="display: inline; float: left;">
-                                            <textarea id="Textarea1" runat="server" cols="100" rows="8" style="width: 100%; height: 200px; visibility: hidden;"></textarea>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align: right; width: 20%;"></td>
-                                    <td class="tbright">
-                                        <div style="display: inline; float: left;">
-                                            <asp:Button ID="btnPass" runat="server" Text=" 发 表 " OnClick="btnMess_Click" OnClientClick="return jQuery.formValidator.PageIsValid('1'); " />
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            </table>
-
-                            <script language="javascript" type="text/javascript">
-                                $(document).ready(function () {
-                                    $.formValidator.initConfig({ onError: function (msg) { alert(msg) } });
-                                    $("#ctl00_ContentPlaceHolder1_txt_title").formValidator({ onshow: "请输入主题", onfocus: "主题不能为空", oncorrect: "合法" }).InputValidator({ min: 1, onerror: "主题不能为空,请确认" });
-                                });
-</script>
-                        </div>--%>
         </div>
 
 

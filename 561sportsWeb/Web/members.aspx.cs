@@ -38,7 +38,7 @@ public partial class members_Modify : System.Web.UI.Page
                 txt_mname.Text = ds.Tables[0].Rows[0]["mname"].ToString();
                 rtsex.SelectedValue = ds.Tables[0].Rows[0]["sex"].ToString();
                 txt_tel.Text = ds.Tables[0].Rows[0]["tel"].ToString();
-                Labelpic.Text = ds.Tables[0].Rows[0]["pic"].ToString();
+                Labelpic.Text = ds.Tables[0].Rows[0]["mpic"].ToString();
                 if (Labelpic.Text != "" && Labelpic.Text.Length > 3)
                 {
                     Imagepic.ImageUrl = "../../uploads/" + Labelpic.Text;

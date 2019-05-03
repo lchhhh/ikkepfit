@@ -103,50 +103,6 @@
         </div>
         </div>
 
-
-
-        <%--<div class="dbzz">
-
-                <div class="gszc_title">
-                    <p>健身方案</p>
-                    <div class="more1"><a href="plan.aspx">more</a></div>
-                </div>
-                <div class="gszc_contect" style="height: 356px; font-size: small;">
-                    <ul>
-
-                        <asp:Repeater ID="Repeater3" runat="server">
-                            <ItemTemplate>
-                                <li><a href="planView.aspx?id=<%# Eval("pid") %>"><%# Eval("title") %></a></li>
-                            </ItemTemplate>
-                        </asp:Repeater>
-
-
-
-                    </ul>
-                </div>
-            </div>--%>
-
-        <%--<div class="kjfw">
-
-                <div class="gszc_title">
-                    <p>装备选择</p>
-                    <div class="more1"><a href="zb.aspx">more</a></div>
-                </div>
-                <div class="gszc_contect" style="height: 356px; font-size: small;">
-                    <ul>
-
-
-
-                        <asp:Repeater ID="Repeater4" runat="server">
-                            <ItemTemplate>
-                                <li><a href="zbView.aspx?id=<%# Eval("id") %>"></a></li>
-                            </ItemTemplate>
-                        </asp:Repeater>
-
-                    </ul>
-                </div>
-            </div>--%>
-
         <div class="box">
             <div class="bd">
                 <div class="tempWrap" style="overflow: hidden; position: relative; width: 966px">
@@ -177,6 +133,5 @@
         <div class="tu1">
             <img src="/templates/zhiyu/images/tu1.jpg" width="997" height="17">
         </div>
-    </div>
     </div>
 </asp:Content>

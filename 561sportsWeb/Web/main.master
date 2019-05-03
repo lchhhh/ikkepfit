@@ -80,7 +80,7 @@
                        { %>
                     <div style="margin-left: 120px;">
                         您好：<b style="color: red;"><a href="members.aspx?id=<%# Eval("lname") %> "/><%= Session["lname"].ToString() %> </b>，
-       <a href="mybbs.aspx">我的帖子</a> | 
+       <a href="mybbs.aspx">我的小红书</a> | 
        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" OnClick="LinkButton1_Click">退出登录</asp:LinkButton>
                     </div>
                     <%} %>
@@ -126,62 +126,6 @@
         </div>
       </div>
     </div>
-        
-
-        <%--<div id="nav">
-            <div id="wrap">
-                <div class="nav">
-                    <ul>
-                        <li><a href="Default.aspx">首页</a></li>
-                        <li><a href="news.aspx">运动新闻</a></li>
-                        <li><a href="plan.aspx">健身方案</a></li>
-                        <li><a href="zb.aspx">装备选择</a></li>
-                        <li><a href="yd.aspx">运动装备</a></li>
-                        <li><a href="bbs.aspx">论坛</a></li>
-                        <li><a href="reg.aspx">用户注册</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>--%>
-
-        <%--<div id="banner">
-            <div id="wrap">
-                <!-- 代码 开始 -->
-                <div id="foucsBox">
-                    <ul class="imgCon" style="width: 1994px; margin-left: 0px;">
-                        <!--展示图片开始-->
-
-
-
-                        <li><a href="" target="_blank">
-                            <img width="997" height="360" src="images/1.jpg"></a>
-                            <div class="imgTitle"><a href="#"></a></div>
-                        </li>
-
-                        <li><a href="" target="_blank">
-                            <img width="997" height="360" src="images/2.jpg"></a>
-                            <div class="imgTitle"><a href="#"></a></div>
-                        </li>
-
-                        <li><a href="" target="_blank">
-                            <img width="997" height="360" src="images/3.jpg"></a>
-                            <div class="imgTitle"><a href="#"></a></div>
-                        </li>
-                        <!--展示图片结束-->
-                    </ul>
-                    <div class="foucs"><span class="f"></span><span class=""></span></div>
-                    <div class="rBtn foucsButton">
-                        <span></span>
-
-                    </div>
-                    <div class="lBtn foucsButton">
-                        <span></span>
-
-                    </div>
-                </div>
-                <!-- 代码 结束 -->
-            </div>
-        </div>--%>
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>

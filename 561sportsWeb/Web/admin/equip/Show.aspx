@@ -12,7 +12,7 @@
                 <table>
                     <tr>
                         <td><img src="../../images/main_home.gif" width="16" height="16" /></td>
-                        <td><label><span id="navTitle">健身器械管理---查看健身器械</span></label></td>
+                        <td><label><span id="navTitle">健身装备管理---查看健身装备</span></label></td>
                     </tr>
                 </table>
             </td>
@@ -40,15 +40,15 @@
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblid" runat="server" Text=""></asp:Label></td>
 	</tr>
  <tr>
-	<td height="25" width="20%" align="right">器械名称：</td>
+	<td height="25" width="20%" align="right">装备名称：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lbltitle" runat="server" Text=""></asp:Label></td>
 	</tr>
  <tr>
-	<td height="25" width="20%" align="right">器械图片：</td>
+	<td height="25" width="20%" align="right">装备图片：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Image ID="imgpic" runat="server" Width="120" Height="120" /></td>
 	</tr>
  <tr>
-	<td height="25" width="20%" align="right">器械描述：</td>
+	<td height="25" width="20%" align="right">装备描述：</td>
 	<td height="25" width="*" align="left" style="text-align:left"><asp:Label ID="lblmemo" runat="server" Text=""></asp:Label></td>
 	</tr>
  <tr>

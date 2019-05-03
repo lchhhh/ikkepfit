@@ -93,45 +93,6 @@
                         </div>
                     </div>
 
-                    <%--<table width="95%">
-                        <tr>
-                            <td style="text-align: right; width: 20%;">主题:</td>
-                            <td class="tbright">
-                                <div style="display: inline; float: left;">
-                                    <asp:TextBox ID="txt_title" runat="server"></asp:TextBox>
-                                </div>
-                                <div id="ctl00_ContentPlaceHolder1_txt_titleTip" style="width: 250px; display: inline; float: left; text-align: left;"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: right; width: 20%;">图片:</td>
-                            <td class="tbright">
-                                <div style="display: inline; float: left;">
-                                    <asp:FileUpload ID="fppic" runat="server" Width="250" />
-                                    支持格式为：.jpg | .gif | .png
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="text-align: right; width: 20%;">内容:</td>
-                            <td class="tbright">
-                                <div style="display: inline; float: left;">
-                                    <textarea id="Textarea1" runat="server" cols="100" rows="8" style="width: 100%; height: 200px; visibility: hidden;"></textarea>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: right; width: 20%;"></td>
-                            <td class="tbright">
-                                <div style="display: inline; float: left;">
-                                    <asp:Button ID="btnPass" runat="server" Text=" 发 表 " OnClick="btnMess_Click" OnClientClick="return jQuery.formValidator.PageIsValid('1'); " />
-                                </div>
-                            </td>
-                        </tr>
-
-                    </table>--%>
-
                     <script language="javascript" type="text/javascript">
                         $(document).ready(function () {
                             $.formValidator.initConfig({ onError: function (msg) { alert(msg) } });
