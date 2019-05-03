@@ -14,19 +14,21 @@
                     <h4 class="card-title" style="font-size:medium">一分钟了解自己</h4>
                 </div>
                 <div class="card-body">
-
+                    <div class="alert alert-primary" role="alert" style="font-size:small;color:#494949">
+                    <i class="fe fe-bell mr-2" aria-hidden="true"></i>1分钟彻底了解自己的标准体重、健康体重范围、BMI指数（即身体质量指数）、基础代谢率和燃脂运动中低强度运动心率，看看自己是否需要减肥了。身体质量指数(BMI)：评估体重与身高比例的常用工具，适用范围：18至65岁的人士。儿童、发育中的青少年、孕妇、乳母、老人及身型健硕的运动员除外。
+                    </div>
                     <fieldset class="form-fieldset">
                         <div class="custom-controls-stacked"  style="margin: 0px 10px 20px 10px">
-                            <div class="row">
+                            <label ><i class="fe fe-edit"></i>请输入您的性别、年龄、身高和体重：</label>
+                            <div class="row" style="margin: 20px 0px 20px 0px">性别：
                           <label class="custom-control custom-radio">
                             <input ID="checkbox1" runat="server" type="radio" class="custom-control-input" name="example-radios" value="option1" checked/>
                             <div class="custom-control-label">男</div>
-                          </label>
+                          </label>&nbsp;&nbsp;&nbsp;
                           <label class="custom-control custom-radio">
                             <input ID="checkbox2" runat="server" type="radio" class="custom-control-input" name="example-radios" value="option2"/>
                             <div class="custom-control-label">女</div>
                           </label>
-                            </div>
                             </div>
 
                         <div class="row">
