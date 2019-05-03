@@ -46,19 +46,20 @@ namespace SP.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into reply(");
-			strSql.Append("aid,memo,lname,atime)");
+            strSql.Append("aid,rmemo,lname,rtime)");
 			strSql.Append(" values (");
-			strSql.Append("@aid,@memo,@lname,@atime)");
+            strSql.Append("@aid,@rmemo,@lname,@rtime)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@aid", SqlDbType.Int,4),
-					new SqlParameter("@memo", SqlDbType.NText),
+					new SqlParameter("@rmemo", SqlDbType.NText),
 					new SqlParameter("@lname", SqlDbType.VarChar,50),
-					new SqlParameter("@atime", SqlDbType.DateTime)};
+					new SqlParameter("@rtime", SqlDbType.DateTime)};
 			parameters[0].Value = model.aid;
-			parameters[1].Value = model.memo;
+            parameters[1].Value = model.rmemo;
 			parameters[2].Value = model.lname;
-			parameters[3].Value = model.atime;
+            parameters[3].Value = model.rtime;
+
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -78,20 +79,20 @@ namespace SP.DAL
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update reply set ");
 			strSql.Append("aid=@aid,");
-			strSql.Append("memo=@memo,");
+            strSql.Append("rmemo=@rmemo,");
 			strSql.Append("lname=@lname,");
-			strSql.Append("atime=@atime");
+            strSql.Append("rtime=@rtime");
 			strSql.Append(" where rid=@rid");
 			SqlParameter[] parameters = {
 					new SqlParameter("@aid", SqlDbType.Int,4),
-					new SqlParameter("@memo", SqlDbType.NText),
+					new SqlParameter("@rmemo", SqlDbType.NText),
 					new SqlParameter("@lname", SqlDbType.VarChar,50),
-					new SqlParameter("@atime", SqlDbType.DateTime),
+					new SqlParameter("@rtime", SqlDbType.DateTime),
 					new SqlParameter("@rid", SqlDbType.Int,4)};
 			parameters[0].Value = model.aid;
-			parameters[1].Value = model.memo;
+            parameters[1].Value = model.rmemo;
 			parameters[2].Value = model.lname;
-			parameters[3].Value = model.atime;
+            parameters[3].Value = model.rtime;
 			parameters[4].Value = model.rid;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
@@ -156,7 +157,7 @@ namespace SP.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 rid,aid,memo,lname,atime from reply ");
+            strSql.Append("select  top 1 rid,aid,rmemo,lname,rtime from reply ");
 			strSql.Append(" where rid=@rid");
 			SqlParameter[] parameters = {
 					new SqlParameter("@rid", SqlDbType.Int,4)
@@ -192,17 +193,17 @@ namespace SP.DAL
 				{
 					model.aid=int.Parse(row["aid"].ToString());
 				}
-				if(row["memo"]!=null)
+                if (row["rmemo"] != null)
 				{
-					model.memo=row["memo"].ToString();
+                    model.rmemo = row["rmemo"].ToString();
 				}
 				if(row["lname"]!=null)
 				{
 					model.lname=row["lname"].ToString();
 				}
-				if(row["atime"]!=null && row["atime"].ToString()!="")
+                if (row["rtime"] != null && row["atime"].ToString() != "")
 				{
-					model.atime=DateTime.Parse(row["atime"].ToString());
+                    model.rtime = DateTime.Parse(row["atime"].ToString());
 				}
 			}
 			return model;
@@ -214,7 +215,7 @@ namespace SP.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select rid,aid,memo,lname,atime ");
+            strSql.Append("select rid,aid,rmemo,lname,rtime ");
 			strSql.Append(" FROM reply ");
 			if(strWhere.Trim()!="")
 			{
@@ -234,7 +235,7 @@ namespace SP.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" rid,aid,memo,lname,atime ");
+            strSql.Append(" rid,aid,rmemo,lname,rtime ");
 			strSql.Append(" FROM reply ");
 			if(strWhere.Trim()!="")
 			{

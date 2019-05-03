@@ -39,6 +39,7 @@ public partial class about  : System.Web.UI.Page
                 Literal1.Text = sdr["title"].ToString();
                 Literal3.Text = sdr["total1"].ToString();
                 Literal2.Text = sdr["tt"].ToString();
+                Literal4.Text = sdr["memo"].ToString();
             }
 
         }
@@ -49,14 +50,13 @@ public partial class about  : System.Web.UI.Page
     /// </summary>
     protected void bind()
     {
-        string where = " aid="+Request.QueryString["id"];
+        string where = " aid=" + Request.QueryString["id"];
 
-       
+
         int pagesize = this.AspNetPager1.PageSize;
         int pageindex = this.AspNetPager1.CurrentPageIndex;
-        Repeater1.DataSource = bll.GetListByPage2(where, " atime desc ", 1 + (AspNetPager1.CurrentPageIndex - 1) * AspNetPager1.PageSize, AspNetPager1.CurrentPageIndex * AspNetPager1.PageSize);
+        Repeater1.DataSource = bll.GetListByPage2(where, " regtime desc ", 1 + (AspNetPager1.CurrentPageIndex - 1) * AspNetPager1.PageSize, AspNetPager1.CurrentPageIndex * AspNetPager1.PageSize);
         Repeater1.DataBind();
-
         this.AspNetPager1.RecordCount = bll.GetRecordCount2(where);
     }
 
@@ -72,7 +72,11 @@ public partial class about  : System.Web.UI.Page
 
 
 
-
+    /// <summary>
+    /// »Ø¸´
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     protected void btnSave_Click(object sender, EventArgs e)
     {
         if (Session["lname"] == null)
@@ -89,9 +93,9 @@ public partial class about  : System.Web.UI.Page
         SP.Model.reply model = new SP.Model.reply();
 
         model.aid =int.Parse( Request.QueryString["id"]);
-       model.memo = Textarea1.Value;
+        model.rmemo = Textarea1.Value;
         model.lname = Session["lname"].ToString();
-     model.atime= DateTime.Now;
+        model.rtime= DateTime.Now;
 
         bll2.Add(model);
 

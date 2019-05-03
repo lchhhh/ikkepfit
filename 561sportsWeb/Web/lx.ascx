@@ -3,7 +3,8 @@
 <div class="row">
     <div class="col-md-6 col-xl-4  float-left">
 
-        <div class="card" style="width: 250px; margin: 30px 85px 0px 75px">
+        <div>
+        <div class="card" style="width: 250px; margin: 30px 0px 0px 95px">
                     <div class="card-status bg-blue"></div>
                     <div class="card-header">
                             <p class="card-title" style="font-size:medium"><strong>健身计划</strong></p>
@@ -19,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="card" style="width: 250px; margin: 10px 85px 0px 75px">
+                <div class="card" style="width: 250px; margin: 10px 0px 10px 95px">
                     <div class="card-status bg-blue"></div>
                     <div class="card-header">
                             <p class="card-title" style="font-size:medium"><strong>健身资讯</strong></p>
@@ -36,5 +37,5 @@
                 </div>
 
         </div>
-
+        </div>
         </div>

@@ -65,7 +65,7 @@ public partial class members_Add : System.Web.UI.Page
         string mname = txt_mname.Text;
         string sex = rtsex.SelectedValue;
         string tel = txt_tel.Text;
-        string pic = addrpic;
+        string mpic = addrpic;
         DateTime regtime = DateTime.Now;
 
         SP.Model.members model = new SP.Model.members();
@@ -74,7 +74,7 @@ public partial class members_Add : System.Web.UI.Page
         model.mname = mname;
         model.sex = sex;
         model.tel = tel;
-        model.pic = pic;
+        model.mpic = mpic;
         model.regtime = regtime;
 
         bll.Add(model);

@@ -34,6 +34,7 @@ public partial class article_Detail : System.Web.UI.Page
             this.lbltotal1.Text = model.total1.ToString();
             this.lbllname.Text = model.lname;
             this.lblatime.Text = model.atime.ToString();
+            this.lblpic.Text = model.pic.ToString();
 
         }
     }

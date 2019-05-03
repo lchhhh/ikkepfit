@@ -12,9 +12,9 @@ namespace SP.Model
 		#region Model
 		private int _rid;
 		private int? _aid;
-		private string _memo;
+        private string _rmemo;
 		private string _lname;
-		private DateTime? _atime;
+		private DateTime? _rtime;
 		/// <summary>
 		/// 编号
 		/// </summary>
@@ -34,10 +34,10 @@ namespace SP.Model
 		/// <summary>
 		/// 回复内容
 		/// </summary>
-		public string memo
+        public string rmemo
 		{
-			set{ _memo=value;}
-			get{return _memo;}
+            set { _rmemo = value; }
+            get { return _rmemo; }
 		}
 		/// <summary>
 		/// 回复人
@@ -50,10 +50,10 @@ namespace SP.Model
 		/// <summary>
 		/// 回复时间
 		/// </summary>
-		public DateTime? atime
+		public DateTime? rtime
 		{
-			set{ _atime=value;}
-			get{return _atime;}
+			set{ _rtime=value;}
+			get{return _rtime;}
 		}
 		#endregion Model
 

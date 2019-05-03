@@ -43,7 +43,7 @@ public partial class main  : System.Web.UI.MasterPage
     {
         SP.BLL.members bll = new SP.BLL.members();
         //根据用户名和密码得到用户信息
-        DataSet ds = bll.GetList(" lname='" + txt_lname.Text + "' and pass='" + Md5Hash(txt_pass.Text) + "'");
+        DataSet ds = bll.GetList(" lname='" + txt_lname.Text + "' and pass='" + txt_pass.Text + "'");
 
         //判断用户是否存在
         if (ds.Tables[0].Rows.Count > 0)

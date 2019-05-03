@@ -46,21 +46,23 @@ namespace SP.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into article(");
-			strSql.Append("title,memo,total1,lname,atime)");
+			strSql.Append("title,memo,total1,lname,pic,atime)");
 			strSql.Append(" values (");
-			strSql.Append("@title,@memo,@total1,@lname,@atime)");
+			strSql.Append("@title,@memo,@total1,@lname,@pic,@atime)");
 			strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
 					new SqlParameter("@title", SqlDbType.VarChar,100),
 					new SqlParameter("@memo", SqlDbType.NText),
 					new SqlParameter("@total1", SqlDbType.Int,4),
 					new SqlParameter("@lname", SqlDbType.VarChar,20),
+                    new SqlParameter("@pic", SqlDbType.VarChar,100),
 					new SqlParameter("@atime", SqlDbType.DateTime)};
 			parameters[0].Value = model.title;
 			parameters[1].Value = model.memo;
 			parameters[2].Value = model.total1;
 			parameters[3].Value = model.lname;
-			parameters[4].Value = model.atime;
+            parameters[4].Value = model.pic;
+			parameters[5].Value = model.atime;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -149,7 +151,7 @@ namespace SP.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 aid,title,memo,total1,lname,atime from article ");
+			strSql.Append("select  top 1 aid,title,memo,total1,lname,pic,atime from article ");
 			strSql.Append(" where aid=@aid");
 			SqlParameter[] parameters = {
 					new SqlParameter("@aid", SqlDbType.Int,4)
@@ -197,6 +199,10 @@ namespace SP.DAL
 				{
 					model.lname=row["lname"].ToString();
 				}
+                if (row["pic"] != null)
+                {
+                    model.pic = row["pic"].ToString();
+                }
 				if(row["atime"]!=null && row["atime"].ToString()!="")
 				{
 					model.atime=DateTime.Parse(row["atime"].ToString());
@@ -211,7 +217,7 @@ namespace SP.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select aid,title,memo,total1,lname,atime ");
+			strSql.Append("select aid,title,memo,total1,lname,pic,atime");
 			strSql.Append(" FROM article ");
 			if(strWhere.Trim()!="")
 			{
@@ -246,7 +252,7 @@ namespace SP.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" aid,title,memo,total1,lname,atime ");
+			strSql.Append(" aid,title,memo,total1,lname,pic,atime ");
 			strSql.Append(" FROM article ");
 			if(strWhere.Trim()!="")
 			{

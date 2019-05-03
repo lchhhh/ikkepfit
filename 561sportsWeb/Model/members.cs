@@ -15,7 +15,7 @@ namespace SP.Model
 		private string _mname;
 		private string _sex;
 		private string _tel;
-		private string _pic;
+		private string _mpic;
 		private DateTime? _regtime;
 		/// <summary>
 		/// 登录名
@@ -60,10 +60,10 @@ namespace SP.Model
 		/// <summary>
 		/// 头像
 		/// </summary>
-		public string pic
+		public string mpic
 		{
-			set{ _pic=value;}
-			get{return _pic;}
+			set{ _mpic=value;}
+			get{return _mpic;}
 		}
 		/// <summary>
 		/// 注册时间

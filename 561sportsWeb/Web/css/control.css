@@ -71,13 +71,13 @@ body { background-color:#f4fbff; font-size:12px; overflow-y:auto;}
 }
 
 /*文本框*/
-textarea
+/*textarea
 {
 	margin:2px;
 	overflow-y:scroll;
 	word-break: break-all; 
 	border-collapse: collapse;
-}
+}*/
 
 /*内容-图片*/
 .fimage

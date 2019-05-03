@@ -28,7 +28,7 @@
                             <asp:Repeater ID="Repeater1" runat="server">
                                 <ItemTemplate>
                                     <div class="col-sm-6">
-                                        <div class="card" style="width: 350px;">
+                                        <div class="card" style="width: 430px;">
                                             <div class="card-body">
                                                 <h5 class="card-title"><%# Eval("title") %></h5>
                                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>

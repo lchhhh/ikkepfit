@@ -34,100 +34,76 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
     <div id="main">
-	<div id="wrap">
-    	<div class="main">
-            <uc1:lx runat="server" ID="lx" />
+        <div id="wrap">
+            <div class="main">
+                <div class="row">
+                    <uc1:lx runat="server" ID="lx" />
+                    <div class="col-lg">
+                        <div class="card" style="width: 925px; margin: 30px 3px 10px 0px">
+                            <div class="card-status bg-blue"></div>
+                            <div class="card-header">
+                                <h4 style="margin: 0px 30px 0px 0px"><asp:Literal ID="Literal1" runat="server"></asp:Literal></h4>
+                                <h6 style="margin: 0px 30px 0px 0px;color:#49a6ff"><i class="fe fe-edit"></i>评论 <asp:Literal ID="Literal2" runat="server"></asp:Literal></h6>
+                                <h6 style="margin: 0px 30px 0px 0px;color:#49a6ff"><i class="fe fe-eye"></i>浏览 <asp:Literal ID="Literal3" runat="server"></asp:Literal></h6>
+                            </div>
+                            <div class="card-body">
+                                <p><asp:Literal ID="Literal4" runat="server"></asp:Literal></p>
+                            </div>
+                        </div>
 
-            <div class="main_right">
-            	<div class="dqwz">
-                	<div class="dqwz_title"><p>您当前的位置：</p><span><a href="default.aspx">首页</a> &gt; 帖子详情</span></div>
-                    <div class="dqwz_contect">             
-                        <div class="showpages">
-                            <table class="auto-style1">
-    
-                             <tr>
-                                 <td style="font-size:16px; font-weight:bold;" width="60%"><asp:Literal ID="Literal1" runat="server"></asp:Literal></td>
-                                 <td align="right">回复：<Font style="color:red"><asp:Literal ID="Literal2" runat="server"></asp:Literal></Font> &nbsp; &nbsp; 浏览人次：<asp:Literal ID="Literal3" runat="server"></asp:Literal></td>
-                             </tr>
-                             <tr>
-                                 <td colspan="2">
-
-                                 <asp:Repeater ID="Repeater1" runat="server">
-                                     <ItemTemplate>
-                                                   <table class="auto-style1" style="border-bottom-style: dashed; border-bottom-width:1px; border-bottom-color: #339933">
-                                         <tr>
-                                             <td rowspan="2" width="120" valign="top" align="center">
-<img width="100" height="120" src="uploads/<%#Eval("pic") %>" /><br />
-                           <table  width="100%" style=" margin-left:8px;" >
-          <tr>
-            <td align="center">
-                <%#Eval("mname") %></td>
-        </tr>
-
-    </table>
-                                             </td>
-                                             <td><%#Eval("memo") %></td>
-                                         </tr>
-                                         <tr>
-                                             <td align="right" height="24p"><%#Eval("atime") %></td>
-                                         </tr>
-                                     </table>
-                                     </ItemTemplate>
-                                 </asp:Repeater>
-
-                                 </td>
-                             </tr>
-                           <tr>
-                                 <td colspan="2">
-                                    <webdiyer:AspNetPager ID="AspNetPager1" runat="server" AlwaysShow="false" FirstPageText="首页" LastPageText="末页" NextPageText="下一页" OnPageChanged="AspNetPager1_PageChanged"  PageIndexBoxType="DropDownList" PageSize="10" PrevPageText="上一页" ShowPageIndexBox="Always" Width="90%" ></webdiyer:AspNetPager> </td></tr>
-
-                          <tr>
-                                 <td colspan="2">
-                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#BBD3EB">       
-        <tr>       
-        <td align="center" bgcolor="#FFFFFF">
-            <table style="width: 100%;line-height:25px;" cellpadding="2" cellspacing="1" class="border">
-        <tr>
-            <td class="tdbg">                
-                <table cellSpacing="0" cellPadding="0" width="100%" border="0">
-    
-<tr>
-<td  style=" text-align:right; width:10%;">内容:</td>
-<td class="tbright"><div style="display:inline;float:left;">
-<textarea id="Textarea1" runat="server" cols="100" rows="8" style="width:100%;height:150px;visibility:hidden;"></textarea></div>
- </td></tr>
-
+                        <div class="card" style="width: 925px; margin: 10px 3px 10px 0px">
+                            <div class="card-status bg-blue"></div>
+                            <div class="card-header">
+                                <h6 style="margin: 0px 30px 0px 0px;color:#49a6ff"><i class="fe fe-edit"></i>评论区</h6>
+                                </div>
+                            <div class="card-body">
+                                <asp:Repeater ID="Repeater1" runat="server">
+                                    <ItemTemplate>
+                                        <table class="row table card-table">
+                                            <tr>
+                                            <td class="text-center" style="margin:0px 20px 0px 0px">
+                                                <div class="avatar d-block avatar-md" style="background-image: url(uploads/<%#Eval("mpic")%>)">
+                                                    <span class="avatar-status bg-green"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><%#Eval("rmemo") %></div>
+                                                <div class="small text-muted">
+                                                    <%#Eval("mname") %> ——<%#Eval("regtime") %>
+                                                </div>
+                                                </td>
+                                                </tr>
+                                            </table>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <form action="" style="margin:50px 0px 0px 0px">
+                                    <div class="form-group">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-10">
+                                                <textarea id="Textarea1" runat="server" cols="100" rows="8" style="width: 100%; height: 200px; visibility: hidden;"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-list mt-4 text-left">
+                                        <asp:Button ID="Button1" runat="server" Text="发布评论" OnClick="btnSave_Click" class="btn btn-primary btn-space" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                                <tr>
+                                    <td colspan="2">
+                                        <webdiyer:AspNetPager ID="AspNetPager1" runat="server" AlwaysShow="false" FirstPageText="首页" LastPageText="末页" NextPageText="下一页" OnPageChanged="AspNetPager1_PageChanged" PageIndexBoxType="DropDownList" PageSize="10" PrevPageText="上一页" ShowPageIndexBox="Always" Width="90%"></webdiyer:AspNetPager>
+                                    </td>
+                                </tr>
 
 
-
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td class="tdbg" align="center" valign="bottom">  
-                <asp:Button ID="Button1" runat="server" Text=" 回 复" OnClick="btnSave_Click" class="inputbutton" ></asp:Button>
-
-            </td>
-        </tr>
-    </table>
-        </td>
-        </tr>       
-    </table> </td></tr>
-                         </table>
+                        </div>
                     </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
-
-
-
-    </div>
-</div>
-
 </asp:Content>
 

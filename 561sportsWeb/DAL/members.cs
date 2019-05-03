@@ -37,23 +37,23 @@ namespace SP.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into members(");
-			strSql.Append("lname,pass,mname,sex,tel,pic,regtime)");
+			strSql.Append("lname,pass,mname,sex,tel,mpic,regtime)");
 			strSql.Append(" values (");
-			strSql.Append("@lname,@pass,@mname,@sex,@tel,@pic,@regtime)");
+			strSql.Append("@lname,@pass,@mname,@sex,@tel,@mpic,@regtime)");
 			SqlParameter[] parameters = {
 					new SqlParameter("@lname", SqlDbType.VarChar,50),
 					new SqlParameter("@pass", SqlDbType.VarChar,50),
 					new SqlParameter("@mname", SqlDbType.VarChar,50),
 					new SqlParameter("@sex", SqlDbType.VarChar,20),
 					new SqlParameter("@tel", SqlDbType.VarChar,50),
-					new SqlParameter("@pic", SqlDbType.VarChar,50),
+					new SqlParameter("@mpic", SqlDbType.VarChar,50),
 					new SqlParameter("@regtime", SqlDbType.DateTime)};
 			parameters[0].Value = model.lname;
 			parameters[1].Value = model.pass;
 			parameters[2].Value = model.mname;
 			parameters[3].Value = model.sex;
 			parameters[4].Value = model.tel;
-			parameters[5].Value = model.pic;
+			parameters[5].Value = model.mpic;
 			parameters[6].Value = model.regtime;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
@@ -77,7 +77,7 @@ namespace SP.DAL
 			strSql.Append("mname=@mname,");
 			strSql.Append("sex=@sex,");
 			strSql.Append("tel=@tel,");
-			strSql.Append("pic=@pic");
+			strSql.Append("mpic=@mpic");
 	
 			strSql.Append(" where lname=@lname ");
 			SqlParameter[] parameters = {
@@ -85,13 +85,13 @@ namespace SP.DAL
 					new SqlParameter("@mname", SqlDbType.VarChar,50),
 					new SqlParameter("@sex", SqlDbType.VarChar,20),
 					new SqlParameter("@tel", SqlDbType.VarChar,50),
-					new SqlParameter("@pic", SqlDbType.VarChar,50),
+					new SqlParameter("@mpic", SqlDbType.VarChar,50),
 					new SqlParameter("@lname", SqlDbType.VarChar,50)};
 			parameters[0].Value = model.pass;
 			parameters[1].Value = model.mname;
 			parameters[2].Value = model.sex;
 			parameters[3].Value = model.tel;
-			parameters[4].Value = model.pic;
+			parameters[4].Value = model.mpic;
 			parameters[5].Value = model.lname;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
@@ -155,7 +155,7 @@ namespace SP.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 lname,pass,mname,sex,tel,pic,regtime from members ");
+			strSql.Append("select  top 1 lname,pass,mname,sex,tel,mpic,regtime from members ");
 			strSql.Append(" where lname=@lname ");
 			SqlParameter[] parameters = {
 					new SqlParameter("@lname", SqlDbType.VarChar,50)			};
@@ -202,9 +202,9 @@ namespace SP.DAL
 				{
 					model.tel=row["tel"].ToString();
 				}
-				if(row["pic"]!=null)
+				if(row["mpic"]!=null)
 				{
-					model.pic=row["pic"].ToString();
+					model.mpic=row["mpic"].ToString();
 				}
 				if(row["regtime"]!=null && row["regtime"].ToString()!="")
 				{
@@ -220,7 +220,7 @@ namespace SP.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select lname,pass,mname,sex,tel,pic,regtime ");
+			strSql.Append("select lname,pass,mname,sex,tel,mpic,regtime ");
 			strSql.Append(" FROM members ");
 			if(strWhere.Trim()!="")
 			{
@@ -240,7 +240,7 @@ namespace SP.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" lname,pass,mname,sex,tel,pic,regtime ");
+			strSql.Append(" lname,pass,mname,sex,tel,mpic,regtime ");
 			strSql.Append(" FROM members ");
 			if(strWhere.Trim()!="")
 			{
