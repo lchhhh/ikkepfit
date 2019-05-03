@@ -7,7 +7,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
-using System.Text;
+
 
 
 public partial class main  : System.Web.UI.MasterPage

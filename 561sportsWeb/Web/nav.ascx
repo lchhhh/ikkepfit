@@ -5,7 +5,7 @@
                 <div class="card" style="width: 250px; margin: 30px 0px 0px 95px">
                     <div class="card-status bg-blue"></div>
                     <div class="card-header">
-                            <p class="card-title" style="font-size:medium"><strong>新闻类别</strong></p>
+                            <p class="card-title" style="font-size:medium"><strong>资讯类别</strong></p>
                     </div>
                     <div class="card-body">
                         <asp:Repeater ID="Repeater3" runat="server">
