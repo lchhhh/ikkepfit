@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
@@ -11,18 +10,4 @@ public partial class about : System.Web.UI.Page
     {
 
     }
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-public partial class about : System.Web.UI.Page
-{
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
->>>>>>> upstream/master
 }

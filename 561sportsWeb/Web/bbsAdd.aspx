@@ -41,7 +41,6 @@
 
 
 </asp:Content>
-<<<<<<< HEAD
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
         <div id="main">
@@ -94,60 +93,6 @@
                         </div>
                     </div>
 
-=======
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
-        <div id="main">
-            <div id="wrap">
-                <div class="main">
-                    <div class="row">
-                    <uc1:lx runat="server" ID="lx" />
-
-                    <div class="col-lg">
-                        <div class="card" style="width: 925px; margin: 30px 3px 10px 0px">
-                            <div class="card-status bg-blue"></div>
-                            <div class="card-header">
-                                <h4 style="margin: 0px 30px 0px 0px">发布小红书</h4>
-                                <asp:Label ID="lblatime" runat="server" Text=""></asp:Label>
-                            </div>
-                            <div class="card-body">
-                                <form action="">
-                                    <div class="form-group">
-                                        <div class="row align-items-center">
-                                            <label class="col-sm-2">主题：</label>
-                                            <div class="col-sm-10">
-                                                <asp:TextBox ID="txt_title" runat="server" class="form-control"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row align-items-center">
-                                            <label class="col-sm-2">图片:</label>
-                                            <div class="col-sm-10">
-                                                <i class="fe fe-upload mr-2">
-                                                <asp:FileUpload ID="fppic" runat="server" Width="250"/></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row align-items-center">
-                                            <label class="col-sm-2">内容：</label>
-                                            <div class="col-sm-10">
-                                                <textarea id="Textarea1" runat="server" cols="100" rows="8" style="width: 100%; height: 500px; visibility: hidden;"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="btn-list mt-4 text-right">
-                                        <a href="bbs.aspx" class="btn btn-secondary">取消</a>
-                                        <asp:Button ID="btnPass" runat="server" Text="发布" OnClick="btnMess_Click" OnClientClick="return jQuery.formValidator.PageIsValid('1'); " class="btn btn-primary btn-space" />
-                                    </div>
-                                </form>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
->>>>>>> upstream/master
                     <script language="javascript" type="text/javascript">
                         $(document).ready(function () {
                             $.formValidator.initConfig({ onError: function (msg) { alert(msg) } });
