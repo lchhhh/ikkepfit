@@ -64,3 +64,14 @@ D:\个人文件\毕设\git\561sportsWeb\BLL\bin\Debug\SP.DBUtility.pdb
 D:\个人文件\毕设\git\561sportsWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\个人文件\毕设\git\561sportsWeb\BLL\obj\Debug\SP.BLL.dll
 D:\个人文件\毕设\git\561sportsWeb\BLL\obj\Debug\SP.BLL.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.BLL.dll
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.BLL.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.DAL.dll
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.Model.dll
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.DBUtility.dll
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.DAL.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.Model.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\bin\Debug\SP.DBUtility.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\obj\Debug\SP.BLL.dll
+F:\Googledownload\ikkepfit\561sportsWeb\BLL\obj\Debug\SP.BLL.pdb

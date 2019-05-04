@@ -52,3 +52,12 @@ D:\个人文件\毕设\git\561sportsWeb\DAL\bin\Debug\SP.Model.pdb
 D:\个人文件\毕设\git\561sportsWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\个人文件\毕设\git\561sportsWeb\DAL\obj\Debug\SP.DAL.dll
 D:\个人文件\毕设\git\561sportsWeb\DAL\obj\Debug\SP.DAL.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\bin\Debug\SP.DAL.dll
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\bin\Debug\SP.DAL.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\bin\Debug\SP.DBUtility.dll
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\bin\Debug\SP.Model.dll
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\bin\Debug\SP.DBUtility.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\bin\Debug\SP.Model.pdb
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.dll
+F:\Googledownload\ikkepfit\561sportsWeb\DAL\obj\Debug\SP.DAL.pdb
